@@ -5,6 +5,7 @@ from PyQt5.QtCore import QRect
 from PyQt5.QtGui import QPixmap
 import os, cv2, sys
 import numpy as np
+import pandas as pd
 
 class My_main_Window(QDialog):
 	def __init__(self):
@@ -92,7 +93,7 @@ class My_main_Window(QDialog):
 		font.setBold(True)
 		font.setWeight(75)
 		CSV_Button.setFont(font)
-		# CSV_Button.clicked.connect(self.CloseMe)
+		CSV_Button.clicked.connect(self.Exportcsv)
 
 		Exit_Button = QPushButton(" Exit App    ", self)
 		Exit_Button.setGeometry(QtCore.QRect(10, 310, 135, 45))
@@ -108,21 +109,27 @@ class My_main_Window(QDialog):
 		Exit_Button.clicked.connect(self.CloseMe)
 
 	def create_label(self):
-		self.labelImg = QLabel("PyQT5 GUI Application")
+		self.labelImgname = QLabel("Image Name")
+		self.labelImgname.setMinimumSize(25, 18)
+		self.labelImgname.setAlignment(QtCore.Qt.AlignCenter)
+		#self.labelImgname.setStyleSheet("background-color:yellow")
+
+		self.labelImg = QLabel("Image Block")
 		# layout.addWidget(self.label, 0, 0, 1, 2)
 		self.labelImg.setMinimumSize(250, 187)
 		self.labelImg.setAlignment(QtCore.Qt.AlignCenter)
 		self.labelImg.setStyleSheet("background-color:yellow")
 
-		self.labelcan = QLabel("PyQT5 GUI Application")
+		self.labelcan = QLabel("CannyEdge Block")
 		# layout.addWidget(self.label, 0, 0, 1, 2)
 		self.labelcan.setMinimumSize(250, 187)
 		self.labelcan.setAlignment(QtCore.Qt.AlignCenter)
 		self.labelcan.setStyleSheet("background-color:green")
 
 		grilayout = QGridLayout()
-		grilayout.addWidget(self.labelImg, 1, 0)  # , 1, 2)#(self.labelImg, 0, 1)
-		grilayout.addWidget(self.labelcan, 2, 0)
+		grilayout.addWidget(self.labelImgname, 1, 0)
+		grilayout.addWidget(self.labelImg, 2, 0)  # , 1, 2)#(self.labelImg, 0, 1)
+		grilayout.addWidget(self.labelcan, 3, 0)
 
 		self.groupbox = QGroupBox()
 		self.groupbox.setLayout(grilayout)
@@ -141,20 +148,24 @@ class My_main_Window(QDialog):
 
 	def loadImage(self):
 		filename, _ = QtWidgets.QFileDialog.getOpenFileName(
-			self, 'Select Image', '', 'Image Files (*.png *.jpg *.jpeg)')
+			self, 'Select Image', '', 'Image Files (*.png *.jpg)')
 		self.labelImg.setText("Image Type:" + filename)
+		#print(filename)
 		if filename:
 			pixmap = QtGui.QPixmap(filename).scaled(self.labelImg.size(),
 													QtCore.Qt.KeepAspectRatio)
 			if pixmap.isNull():
 				return
 			self.labelImg.setPixmap(pixmap)
+			self.labelImgname.setText(filename.split("/")[-1])
 			dirpath = os.path.dirname(filename)
-
+			if not os.path.exists(dirpath+"/CSV"): os.mkdir(dirpath+"/CSV")
+			if not os.path.exists(dirpath+"/canny"): os.mkdir(dirpath + "/canny")
+			print(dirpath)
 			self.fileList = []
 			for f in os.listdir(dirpath):
 				fpath = os.path.join(dirpath, f)
-				if os.path.isfile(fpath) and f.endswith(('.png', '.jpg', '.jpeg')):
+				if os.path.isfile(fpath) and f.endswith(('.png', '.jpg')):
 					self.fileList.append(fpath)
 			self.fileList.sort()
 			print(self.fileList)
@@ -162,9 +173,10 @@ class My_main_Window(QDialog):
 			# print(filename)
 			# print(next(self.dirIterator))
 			for i in range(0, len(self.fileList)):
+				#print(self.fileList[i])
 				# cycle through the iterator until the current file is found
 				# print(filename)
-				if self.fileList == filename:
+				if self.fileList[i] == filename:
 					self.currentImg = i
 					break
 
@@ -183,6 +195,7 @@ class My_main_Window(QDialog):
 					self.nextImage()
 				else:
 					self.labelImg.setPixmap(pixmap)
+					self.labelImgname.setText(filename.split("/")[-1])
 					self.Docanny()
 			except:
 				self.currentImg = -1
@@ -207,6 +220,7 @@ class My_main_Window(QDialog):
 					self.preImage()
 				else:
 					self.labelImg.setPixmap(pixmap)
+					self.labelImgname.setText(filename.split("/")[-1])
 					self.Docanny()
 			except:
 				sys.exit(0)
@@ -218,15 +232,24 @@ class My_main_Window(QDialog):
 			#self.loadImage()
 
 	def Docanny(self):
-		image = cv2.imread(self.fileList[self.currentImg])
-		kernel = np.ones((3, 3), np.uint8)
-		img_erosion = cv2.erode(image, kernel, iterations=6)
-		(thresh, blackAndWhiteImage) = cv2.threshold(img_erosion, 250, 255, cv2.THRESH_BINARY)
-		self.tight = cv2.Canny(blackAndWhiteImage, 240, 255)
-		self.coordinates = np.argwhere(self.tight == 255)
-		self.y, self.x = zip(*self.coordinates)
-		self.Draw_Image(self.tight)
+		try:
+			image = cv2.imread(self.fileList[self.currentImg])
+			image = cv2.blur(image, (5, 5),1.4)
+			kernel = np.ones((3, 3), np.uint8)
+			img_erosion = cv2.erode(image, kernel, iterations=6)
+			(thresh, blackAndWhiteImage) = cv2.threshold(img_erosion, 250, 255, cv2.THRESH_BINARY)
+			self.tight = cv2.Canny(blackAndWhiteImage, 240, 255)
+			self.coordinates = np.argwhere(self.tight == 255)
+			self.y, self.x = zip(*self.coordinates)
+			self.Draw_Image(self.tight)
 
+			cv2.imwrite(os.path.dirname(self.fileList[self.currentImg])+"/canny/canny_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".jpeg",self.tight)
+			print(os.path.dirname(self.fileList[self.currentImg])+"/canny/canny_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".jpeg")
+			print( "saving file " + self.fileList[self.currentImg].split(".")[0]+".jpeg")
+
+		except:
+			print("Please select the image first")
+			pass
 
 	def Draw_Image(self, cv_img):
 		"""Updates the image_label with a new opencv image"""
@@ -239,6 +262,7 @@ class My_main_Window(QDialog):
 		else:
 			self.labelcan.setPixmap(pixmap)
 
+
 	def convert_cv_to_qt(self, cv_img):
 		"""Convert from an opencv image to QPixmap"""
 		rgb_image = cv2.cvtColor(cv_img, cv2.COLOR_BGR2RGB)
@@ -246,6 +270,108 @@ class My_main_Window(QDialog):
 		bytes_per_line = ch * w
 		convert_to_Qt_format = QtGui.QImage(rgb_image.data, w, h, bytes_per_line, QtGui.QImage.Format_RGB888)
 		return QPixmap.fromImage(convert_to_Qt_format)
+
+
+	def Exportcsv(self):
+		try:
+			self.Docanny()
+			print( "csv file ",(self.fileList[self.currentImg].split("."))[0]+".csv" ,"exported")
+			#pd.DataFrame(self.coordinates).to_csv((self.fileList[self.currentImg].split("."))[0]+".csv", index=False,header=['y_coord', 'x_coord'])
+			pd.DataFrame(self.coordinates).to_csv(os.path.dirname(self.fileList[self.currentImg])+"/CSV/csv_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".csv", index=False,header=['y_coord', 'x_coord'])
+		except:
+			print("Please select the image first")
+			pass
+
+	def Canny_detector(img, weak_th=None, strong_th=None):
+
+		# conversion of image to grayscale
+		img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+		# Noise reduction step
+		img = cv2.GaussianBlur(img, (5, 5), 1.4)
+
+
+		# Calculating the gradients
+		gx = cv2.Sobel(np.float32(img), cv2.CV_64F, 1, 0, 3)
+		gy = cv2.Sobel(np.float32(img), cv2.CV_64F, 0, 1, 3)
+
+		# Conversion of Cartesian coordinates to polar
+		mag, ang = cv2.cartToPolar(gx, gy, angleInDegrees=True)
+
+		# setting the minimum and maximum thresholds
+		# for double thresholding
+		mag_max = np.max(mag)
+		if not weak_th: weak_th = mag_max * 0.1
+		if not strong_th: strong_th = mag_max * 0.5
+
+		# getting the dimensions of the input image
+		height, width = img.shape
+
+		# Looping through every pixel of the grayscale
+		# image
+		for i_x in range(width):
+			for i_y in range(height):
+
+				grad_ang = ang[i_y, i_x]
+				grad_ang = abs(grad_ang - 180) if abs(grad_ang) > 180 else abs(grad_ang)
+
+				# selecting the neighbours of the target pixel
+				# according to the gradient direction
+				# In the x axis direction
+				if grad_ang <= 22.5:
+					neighb_1_x, neighb_1_y = i_x - 1, i_y
+					neighb_2_x, neighb_2_y = i_x + 1, i_y
+
+				# top right (diagnol-1) direction
+				elif grad_ang > 22.5 and grad_ang <= (22.5 + 45):
+					neighb_1_x, neighb_1_y = i_x - 1, i_y - 1
+					neighb_2_x, neighb_2_y = i_x + 1, i_y + 1
+
+				# In y-axis direction
+				elif grad_ang > (22.5 + 45) and grad_ang <= (22.5 + 90):
+					neighb_1_x, neighb_1_y = i_x, i_y - 1
+					neighb_2_x, neighb_2_y = i_x, i_y + 1
+
+				# top left (diagnol-2) direction
+				elif grad_ang > (22.5 + 90) and grad_ang <= (22.5 + 135):
+					neighb_1_x, neighb_1_y = i_x - 1, i_y + 1
+					neighb_2_x, neighb_2_y = i_x + 1, i_y - 1
+
+				# Now it restarts the cycle
+				elif grad_ang > (22.5 + 135) and grad_ang <= (22.5 + 180):
+					neighb_1_x, neighb_1_y = i_x - 1, i_y
+					neighb_2_x, neighb_2_y = i_x + 1, i_y
+
+				# Non-maximum suppression step
+				if width > neighb_1_x >= 0 and height > neighb_1_y >= 0:
+					if mag[i_y, i_x] < mag[neighb_1_y, neighb_1_x]:
+						mag[i_y, i_x] = 0
+						continue
+
+				if width > neighb_2_x >= 0 and height > neighb_2_y >= 0:
+					if mag[i_y, i_x] < mag[neighb_2_y, neighb_2_x]:
+						mag[i_y, i_x] = 0
+
+			weak_ids = np.zeros_like(img)
+			strong_ids = np.zeros_like(img)
+			ids = np.zeros_like(img)
+
+			# double thresholding step
+			for i_x in range(width):
+				for i_y in range(height):
+
+					grad_mag = mag[i_y, i_x]
+
+					if grad_mag < weak_th:
+						mag[i_y, i_x] = 0
+					elif strong_th > grad_mag >= weak_th:
+						ids[i_y, i_x] = 1
+					else:
+						ids[i_y, i_x] = 2
+
+			# finally returning the magnitude of
+			# gradients of edges
+			return mag
 
 class Example_Window(QDialog):
 	def __init__(self):
