@@ -237,7 +237,7 @@ class My_main_Window(QDialog):
 			image = cv2.blur(image, (5, 5),1.4)
 			kernel = np.ones((3, 3), np.uint8)
 			img_erosion = cv2.erode(image, kernel, iterations=6)
-			(thresh, blackAndWhiteImage) = cv2.threshold(img_erosion, 250, 255, cv2.THRESH_BINARY)
+			(thresh, blackAndWhiteImage) = cv2.threshold(img_erosion, 200, 255, cv2.THRESH_BINARY)
 			self.tight = cv2.Canny(blackAndWhiteImage, 240, 255)
 			self.coordinates = np.argwhere(self.tight == 255)
 			self.y, self.x = zip(*self.coordinates)
