@@ -12,7 +12,7 @@ csvfiles = os.listdir(Dir)
 print(csvfiles)
 for fille in csvfiles:
     csv_file_wo_ext=fille.split(".")[0]
-    cmd_createWorkspace = "root -l -b -q "+"'analyse_data.C("+'"'+Dir+'","'+csv_file_wo_ext+'")'+"'"
+    cmd_createWorkspace = "root -l -b -q "+"'analyse_data_v07.C("+'"'+Dir+'","'+csv_file_wo_ext+'")'+"'"
     print(cmd_createWorkspace)
     os.system(cmd_createWorkspace)
 

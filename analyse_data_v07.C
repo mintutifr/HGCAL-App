@@ -14,6 +14,7 @@
 #include "TMath.h"
 #include <cstdio>
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -75,8 +76,19 @@ int Project(int imin, int imax, int xyProj[520], int& nBlk, int nBlkS[10], int n
 }
 
 
-void analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/",string csvfile = "csv_Hexaboard_87"){
+void analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/csv_Focused/",string csvfile = "csv_Hexaboard_87"){
   cout<<filedir+csvfile<<endl;
+  int imageNo = stoi(csvfile.substr(csvfile.find("_",4)+1)); 
+  int holeNo = int(imageNo/5)+1;
+  cout <<"ImageNo is "<< imageNo << '\n';
+  cout <<"HoleNo is "<< holeNo << '\n';
+
+  //int nn = stoi(csvfile);
+  //cout<< nn <<nn - 1<<endl;
+  for (unsigned i=0; i<csvfile.length(); ++i)
+  {
+    //std::cout << csvfile.at(nn-1);
+  }
   char in_dirpath[150], out_dirpath1[150], out_dirpath2[150];
   char fi1_name[70], fo1_name[70];
   char inpF[150], outF[150], lineStr[100], tmp[5];
@@ -106,13 +118,13 @@ void analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV
   sprintf(out_dirpath2, "check/dirpath2/");
   int iboard=5, ipass=1;
   cout<<"iboard = "<<iboard<<" "<<"ipass = "<<ipass<<endl;
-  sprintf(fo1_name, "Hexaboard_%03d_Pass_%d.root", iboard, ipass);
+  sprintf(fo1_name, "Hexaboard_%03d_Pass_%d_Image_%d.root", iboard, ipass,imageNo);
   cout << fo1_name << endl;
   sprintf(outF, "%s%s", out_dirpath2, fo1_name);
   cout << outF << endl;
   TFile *hfile = new TFile(outF, "recreate");
 
-  sprintf(fo1_name, "Hexaboard_%03d_Pass_%d.txt", iboard, ipass);
+  sprintf(fo1_name, "Hexaboard_%03d_Pass_%d_Image_%d.txt", iboard, ipass,imageNo);
   cout << fo1_name << endl;
   sprintf(outF, "%s%s", out_dirpath2, fo1_name);
   cout << outF << endl;
@@ -171,9 +183,11 @@ void analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV
   int iHole=0, iFile=0;
   //for(int fidx=0; fidx<8; fidx++){
   //for(int fidx=0; fidx<73; fidx++){
-    int fidx=0;
-    int idxx=File_Idx[fidx];
-    iHole = fidx+1; iFile=idxx;
+    //int idxx=File_Idx[fidx];
+    int idxx=imageNo;
+    //int fidx=0;
+    int fidx=holeNo-1;
+    iHole = holeNo; iFile=idxx;
     //if(iFile==22)continue;   //Skip as program crashes
     sprintf(hname, "histL1X_%02d", idxx);
     histL1X[fidx] = new TH1F(hname, "L1: X axis Projection", 520, 0, 520);
@@ -207,10 +221,10 @@ void analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV
     sprintf(inpF, "%s%s", in_dirpath,  fi1_name);
     cout << inpF << endl;
 
-    sprintf(fo1_name, "Hexaboard_%03d.pdf", idxx);
+    sprintf(fo1_name, "Hexaboard_%03d.png", idxx);
     sprintf(outF, "%s%s", out_dirpath1, fo1_name);
     cout << outF << endl;
-/*
+
     //Read the data and store in an array
     FILE *f1 = fopen (inpF,"r");
     if(f1 == NULL){
@@ -737,6 +751,6 @@ void analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV
 
   fclose(fptr);
   //hfile->Write();
-  hfile->Close();*/
+  hfile->Close();
 
 }
