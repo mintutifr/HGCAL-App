@@ -10,6 +10,7 @@ Files:
 
 Dependencies:
 Python v3.8+
+
 1.1 Install python 3.8 using: sudo apt-get install python3.8-venv
 
 1.2 Clone the repository https://github.com/mintutifr/HGCAL-App.git
