@@ -10,7 +10,9 @@ Files:
 
 Dependencies:
 Python v3.8+
-1. Install python 3.8 using: sudo apt-get install python3.8-venv
+1.1 Install python 3.8 using: sudo apt-get install python3.8-venv
+
+1.2 Clone the repository https://github.com/mintutifr/HGCAL-App.git
 
 How to run:
 
@@ -20,9 +22,9 @@ How to run:
 
       1. Open terminal
 
-      2. Select or create a folder where you want to create the environment
+      2. Select or create a folder where you want to create the environment (let say you want to create one inside the cloned repository)
 
-      3. Enter "cd folderName"
+      3. Enter "cd HGCAL-App"
 
       4. Enter "python3.8 -m venv pcb-ENV"
 
