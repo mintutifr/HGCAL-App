@@ -237,7 +237,7 @@ def validate_board(self):
 
         bno = bno.rjust(5, '0')
         self.lineEdit_board_no.setText(bno)
-        self.lineEdit_board_no.setReadOnly(True)
+        #self.lineEdit_board_no.setReadOnly(True)
         # Generate file name Proto_BoardXXXXX_Pass0_07.csv
         pathPass0CSV= pathPass0CSV + btype + "_Board" + bno +"_Pass0_07_"+dateStr +".csv"
         self.label_output_CSV_pass0.setText(pathPass0CSV)
