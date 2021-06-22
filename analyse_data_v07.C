@@ -76,13 +76,17 @@ int Project(int imin, int imax, int xyProj[520], int& nBlk, int nBlkS[10], int n
 }
 
 
-void analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/csv_Focused/",string csvfile = "csv_Hexaboard_87"){
-  cout<<filedir+csvfile<<endl;
+int analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/csv_Focused/",string csvfile = "csv_Hexaboard_216",double *slopanderror = NULL){
+  cout<<"-----------------------------begin-----"<<endl;
+  cout<<filedir<<","<<csvfile<<endl;
+  cout<<"-----------------------------endl-----"<<endl;
+  cout<<csvfile.substr(csvfile.find("_",4)+1)<<endl;
+
   int imageNo = stoi(csvfile.substr(csvfile.find("_",4)+1)); 
+  //int imageNo = int(csvfile.substr(csvfile.find("_",4)+1));
   int holeNo = int(imageNo/5)+1;
   cout <<"ImageNo is "<< imageNo << '\n';
   cout <<"HoleNo is "<< holeNo << '\n';
-
   //int nn = stoi(csvfile);
   //cout<< nn <<nn - 1<<endl;
   for (unsigned i=0; i<csvfile.length(); ++i)
@@ -752,5 +756,9 @@ void analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV
   fclose(fptr);
   //hfile->Write();
   hfile->Close();
-
+   if(slopanderror != NULL){
+	slopanderror[0]=  fL1A->GetParameter(1); 
+        slopanderror[1]=  fL1A->GetParError(1);
+    }
+  return 1;
 }
