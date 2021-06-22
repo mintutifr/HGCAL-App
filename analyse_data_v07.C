@@ -759,6 +759,24 @@ int analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/
    if(slopanderror != NULL){
 	slopanderror[0]=  fL1A->GetParameter(1); 
         slopanderror[1]=  fL1A->GetParError(1);
+	slopanderror[2]=  fL1B->GetParameter(1);
+        slopanderror[3]=  fL1B->GetParError(1);
+
+	slopanderror[4]=  fL2A->GetParameter(1);
+        slopanderror[5]=  fL2A->GetParError(1);
+        slopanderror[6]=  fL2B->GetParameter(1);
+        slopanderror[7]=  fL2B->GetParError(1);
+
+	slopanderror[8]=  fL3A->GetParameter(1);
+        slopanderror[9]=  fL3A->GetParError(1);
+        slopanderror[10]=  fL3B->GetParameter(1);
+        slopanderror[11]=  fL3B->GetParError(1);
+
+	slopanderror[12]=  sqrt((frm_center_x-centroid_x)*(frm_center_x-centroid_x) + (frm_center_y-centroid_y)*(frm_center_y-centroid_y));
+
     }
+//for(int i = 0;i<sizeof(slopanderror);i++){
+//	   cout<<slopanderror[i]<<endl;
+  // }
   return 1;
 }
