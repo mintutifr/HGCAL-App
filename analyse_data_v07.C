@@ -118,7 +118,7 @@ int analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/
   FILE *fptr;
   strcpy(in_dirpath, filedir.c_str()); 
   //sprintf(in_dirpath,   filedir.c_str());
-  sprintf(out_dirpath1, "check/dirpath1/");
+  sprintf(out_dirpath1, "%s../Centroid/",filedir.c_str());
   sprintf(out_dirpath2, "check/dirpath2/");
   int iboard=5, ipass=1;
   cout<<"iboard = "<<iboard<<" "<<"ipass = "<<ipass<<endl;
@@ -772,7 +772,7 @@ int analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/
         slopanderror[10]=  fL3B->GetParameter(1);
         slopanderror[11]=  fL3B->GetParError(1);
 
-	slopanderror[12]=  sqrt((frm_center_x-centroid_x)*(frm_center_x-centroid_x) + (frm_center_y-centroid_y)*(frm_center_y-centroid_y));
+	slopanderror[12]=  0.21*sqrt((frm_center_x-centroid_x)*(frm_center_x-centroid_x) + (frm_center_y-centroid_y)*(frm_center_y-centroid_y));
 
     }
 //for(int i = 0;i<sizeof(slopanderror);i++){
