@@ -3,6 +3,12 @@ import csv
 from array import array
 import math
 
+global dir_path
+dir_path = os.path.dirname(os.path.realpath(__file__))
+head_tail = os.path.split(dir_path)
+dir_path = head_tail[0]
+
+
 def csv_reader(file):
     x, y, z = array('d'), array('d'), array('d')
     with open(file) as csv_file:
@@ -77,9 +83,10 @@ def propagate_offset_weighted(x_measured, y_measured,  z_measured, x_offset,y_of
         #print("---------------------------------------------")
         
 def offCorrection(fileName_75_pcb, parsed_csv , pathPass1CSV):
-    
+   
+    global dir_path
     # read 7 hole values from gerber file
-    fileName_7_pcb = "../data/CSV/gerber/seven_hole_pcb.csv"
+    fileName_7_pcb = dir_path + "/data/CSV/gerber/seven_hole_pcb.csv"
     x_pcb,y_pcb,z_pcb = csv_reader(fileName_7_pcb)
 
     # read 7 holes Measured Values
@@ -97,7 +104,8 @@ def offCorrection(fileName_75_pcb, parsed_csv , pathPass1CSV):
     # Incase the values entered in table are zero
     if all([ v == 0 for v in x_measured ]):
         print ('measured values are zero')
-        fileName_7_measured = "../data/CSV/Pass0/hole_measure.csv"
+        fileName_7_measured = dir_path + "/data/CSV/Pass0/hole_measure.csv"
+        print("FILE NAME 7 MEASURED : " + fileName_7_measured)
         x_measured,y_measured,z_measured = csv_reader(fileName_7_measured)
     #print("slected holes = S01,S07,S73,S47,S43,S74,S69")
     date = datetime.datetime.now()

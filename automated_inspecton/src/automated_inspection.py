@@ -10,7 +10,7 @@ from subprocess import call, PIPE, Popen
 #from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog
 #from PyQt5.QtWidgets import QTableWidget,QTableWidgetItem, QMessageBox
 #from PyQt5.QtWidgets import QLineEdit
-
+import pathlib
 #import user programs
 from automated_inspection_gui import *
 import hole_offset_correction 
@@ -25,6 +25,12 @@ global btype
 global bno
 global inputGerber75
 global item
+global dir_path
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+head_tail = os.path.split(dir_path)
+dir_path = head_tail[0]
+print (dir_path)
 
 # Check the actions to be performed (Button of Menu)
 def signals(self):
@@ -138,6 +144,8 @@ def check_dir(od_dir):
 # Tranfer action to remote server
 def transfer(self):
 
+    global dir_path
+
     self.label_Finish_Pass.setText("TRANSFER START : ")
     self.lineEdit_password.setEchoMode(QtWidgets.QLineEdit.Password) # Protect password while typing
     
@@ -173,7 +181,7 @@ def transfer(self):
     
     # Set Default path if no path is given
     if (DESTPATH == ''):
-        DESTPATH = '~/automated_inspection/data/'
+        DESTPATH = dir_path + '/data/'
 
     # Display the values
     self.lineEdit_server.setText(SSHSERVER)
@@ -213,6 +221,7 @@ def validate_board(self):
     global passNo
     global btype
     global bno
+    global dir_path
 
     if self.lineEdit_board_no.text() =="":
         print("Empty Value Not Allowed")
@@ -224,7 +233,7 @@ def validate_board(self):
         bno = self.lineEdit_board_no.text()
         
         # Find path to store the CSV file generated in pass0  
-        pathPass0CSV = '../data/CSV/Pass0/'
+        pathPass0CSV = dir_path + '/data/CSV/Pass0/'
     
         if "Production" == (self.comboBox_board_type.currentText()):
             btype = "Prod"
@@ -320,9 +329,11 @@ def pass0(self):
 
 # Action to get the gerber file : curently hard coded
 def getGerber75():
+
+    global dir_path
     # open inputGerber75 and get inputGerber7
     global inputGerber75
-    inputGerber75 = "../data/CSV/gerber/pcb_cordinate_75.csv"
+    inputGerber75 = dir_path + "/data/CSV/gerber/pcb_cordinate_75.csv"
     return inputGerber75
 
 # Action for generation the Offset and MC5 file
@@ -333,16 +344,17 @@ def pass1(self):
     global inputGerber7
     global pathPath0CSV
     global item
+    global dir_path
 
     # Find path to store the CSV file generated in pass1  
-    pathPass1CSV = '../data/CSV/Pass1/'
+    pathPass1CSV = dir_path + '/data/CSV/Pass1/'
     pathPass1CSV= pathPass1CSV + btype + "_Board" + bno +"_75_Pass1_"+dateStr +".csv"
 
     # Generate string Proto_BoardXXXXX_75_Pass1.csv
     self.label_output_CSV_pass1.setText(pathPass1CSV)
 
     # Find path to store the MC5 file generated in pass1  
-    pathPass1MC5 = '../data/MC5/Pass1/'
+    pathPass1MC5 = dir_path + '/data/MC5/Pass1/'
     pathPass1MC5= pathPass1MC5 + btype + "_Board" + bno +"_75_Pass1_"+dateStr +".mc5"
 
     # Generate string Proto_BoardXXXXX_75_Pass1.mc5
@@ -364,7 +376,7 @@ def pass1(self):
     # Display default server values
     self.lineEdit_server.setPlaceholderText("158.144.55.17")
     self.lineEdit_user.setPlaceholderText("sipm")
-    self.lineEdit_destinationPath.setPlaceholderText("~/automated_inspection/data/")
+    self.lineEdit_destinationPath.setPlaceholderText(dir_path + "/data/")
     self.lineEdit_server.setFocus()
 
     # Enter Default values in the mesured table if values entered are zero
@@ -374,7 +386,8 @@ def pass1(self):
     z_measured = [float(item) for item in z_measured]
     if all([ v == 0 for v in x_measured ]): # Incase the values entered in table are zero
         print ('Measured values are zero: Displaying default measured values')
-        with open('../data/CSV/Pass0/hole_measure.csv', 'r') as file:
+        mhole_path = dir_path + "/data/CSV/Pass0/hole_measure.csv"
+        with open(mhole_path, 'r') as file:
             reader = csv.reader(file)
             headers = next(reader)
             row =0

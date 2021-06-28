@@ -1,6 +1,10 @@
 import fileinput, string, sys, os, time, datetime
 import csv
 
+global dir_path
+dir_path = os.path.dirname(os.path.realpath(__file__))
+head_tail = os.path.split(dir_path)
+dir_path = head_tail[0]
 
 
 
@@ -29,11 +33,13 @@ def CALL_CH_CMD(step):
     return '      <command step="'+str(step)+'" cmd_id="07" cmd_name="CALL CH." status="0">\n'
 
 def calculateMC5(pathPass1CSV, pathPass1MC5):
+
+    global dir_path
     f = open(pathPass1MC5,"w")
     line_count_csv = 0
     linecounter=1;
-    
-    for line in fileinput.input("Header.mc5"):
+    header_file = dir_path + "/src/Header.mc5"    
+    for line in fileinput.input(header_file):
         f.write(line)
 
     with open(pathPass1CSV) as csv_file:
@@ -78,8 +84,9 @@ def calculateMC5(pathPass1CSV, pathPass1MC5):
                 f.write(end_CMD())
                 step+=1
             line_count_csv+=1
-            
-    for line in fileinput.input("Bottom.mc5"):
+    
+    bottom_file = dir_path + "/src/Bottom.mc5"
+    for line in fileinput.input(bottom_file):
         f.write(line) 
     
     f.close()
