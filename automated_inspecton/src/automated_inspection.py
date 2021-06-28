@@ -144,8 +144,6 @@ def check_dir(od_dir):
 # Tranfer action to remote server
 def transfer(self):
 
-    global dir_path
-
     self.label_Finish_Pass.setText("TRANSFER START : ")
     self.lineEdit_password.setEchoMode(QtWidgets.QLineEdit.Password) # Protect password while typing
     
@@ -181,7 +179,7 @@ def transfer(self):
     
     # Set Default path if no path is given
     if (DESTPATH == ''):
-        DESTPATH = dir_path + '/data/'
+        DESTPATH = '~/automated_inspection/data/'
 
     # Display the values
     self.lineEdit_server.setText(SSHSERVER)
