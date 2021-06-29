@@ -297,6 +297,8 @@ def pass0(self):
     global bno
     global item
 
+    validate_board(self)
+
     with open(pathPass0CSV, 'w', newline='') as pass0_file:
         writer = csv.DictWriter(pass0_file, fieldnames = [('Board Type:',btype), ('Board No:',bno), ('Date:', dateStr)])
         writer = csv.DictWriter(pass0_file, fieldnames = ["Sr. no", "Hole no.", "X", "Y", "Z"])
@@ -374,7 +376,7 @@ def pass1(self):
     # Display default server values
     self.lineEdit_server.setPlaceholderText("158.144.55.17")
     self.lineEdit_user.setPlaceholderText("sipm")
-    self.lineEdit_destinationPath.setPlaceholderText(dir_path + "/data/")
+    self.lineEdit_destinationPath.setPlaceholderText("~/automated_inspection/data/")
     self.lineEdit_server.setFocus()
 
     # Enter Default values in the mesured table if values entered are zero
