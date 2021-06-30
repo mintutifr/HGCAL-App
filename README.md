@@ -13,7 +13,29 @@ Python v3.8+
 
 1.1 Install python 3.8 using: sudo apt-get install python3.8-venv
 
-1.2 Clone the repository https://github.com/mintutifr/HGCAL-App.git
+1.2 Install host certificate for the remote server required for the files transfer
+    # ssh user@server
+    example-
+    # ssh sipm@158.144.55.17
+    The authenticity of host '158.144.55.17 (158.144.55.17)' can't be established.
+    ECDSA key fingerprint is SHA256:i9HPM/u9ZfIqsUOa58UYKV6lgIH38pDRj9/RDohx6dA.
+    Are you sure you want to continue connecting (yes/no)? yes
+    
+1.3 Install "sshpass" utility this is used to provid user password for rsync command
+    For Ubuntu systems:  # sudo apt install sshpass
+    For Linux systems :  # yum install sshpass
+    For MAC systems   :  # brew install hudochenkov/sshpass/sshpass
+   
+1.4 Directory structure as given bellow should be available on remote server
+    example- directory: sub_directory_1   sub_directory_2 ....
+      data           : Canny_Images  Centroid_Images  CSV  MC5  Raw_Images
+    ./Canny_Images   : Pass1  Pass2  Pass3
+    ./Centroid_Images: Pass1  Pass2  Pass3
+    ./CSV            : gerber  Pass0  Pass1  Pass2  Pass3
+    ./MC5            : Pass1  Pass2  Pass3
+    ./Raw_Images     :  
+
+1.5 Clone the repository https://github.com/mintutifr/HGCAL-App.git
 
 How to run:
 
