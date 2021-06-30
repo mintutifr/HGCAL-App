@@ -20,7 +20,8 @@ for fille in csvfiles:
     csv_file_wo_ext=fille.split(".")[0]
     print(''+Dir+','+csv_file_wo_ext+'')
     try:
-        R.analyse_data_v07(Dir,csv_file_wo_ext,slopanderror)
+        #R.analyse_data_v07(Dir,csv_file_wo_ext,slopanderror)
+        pass
     except Exception as e:
         print(e)
         print("code crash")

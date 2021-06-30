@@ -80,10 +80,10 @@ int analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/
   cout<<"-----------------------------begin-----"<<endl;
   cout<<filedir<<","<<csvfile<<endl;
   cout<<"-----------------------------endl-----"<<endl;
-  cout<<csvfile.substr(csvfile.find("_",4)+1)<<endl;
+  cout<<csvfile.substr(csvfile.find("_",8)+1)<<endl;
 
-  int imageNo = stoi(csvfile.substr(csvfile.find("_",4)+1)); 
-  //int imageNo = int(csvfile.substr(csvfile.find("_",4)+1));
+  int imageNo = stoi(csvfile.substr(csvfile.find("_",8)+1)); 
+  //int imageNo = int(csvfile.substr(csvfile.find("_",8)+1));
   int holeNo = int(imageNo/5)+1;
   cout <<"ImageNo is "<< imageNo << '\n';
   cout <<"HoleNo is "<< holeNo << '\n';
@@ -113,7 +113,7 @@ int analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/
   TH1F *histL2Y[80], *histL3X[80], *histL3Y[80];
   cout << "hist defined"<<endl;
   TCanvas *c1;
-  c1 =new TCanvas("c1","Plots",0,0,400,300);
+  c1 =new TCanvas("c1","Plots",0,0,400,320);
   
   FILE *fptr;
   strcpy(in_dirpath, filedir.c_str()); 
@@ -220,7 +220,7 @@ int analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/
     }
     nrec=0; nL1pt=0; nL2pt=0; nL3pt=0;
     cout<<idxx<<endl;
-    sprintf(fi1_name, "Hexaboard_%d.csv", idxx);
+    sprintf(fi1_name, "csv_Hexaboard_%d.csv", idxx);
     cout<<fi1_name<<endl;
     sprintf(inpF, "%s%s", in_dirpath,  fi1_name);
     cout << inpF << endl;

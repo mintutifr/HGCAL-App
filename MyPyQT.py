@@ -7,6 +7,7 @@ import os, cv2, sys
 import numpy as np
 import pandas as pd
 import ROOT as R
+import glob
 R.gInterpreter.ProcessLine('#include "analyse_data_v07.C"')
 
 class My_main_Window(QDialog):
@@ -260,9 +261,6 @@ class My_main_Window(QDialog):
             cv2.imwrite(os.path.dirname(self.fileList[self.currentImg])+"/canny/canny_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".jpeg",self.tight)
             print(os.path.dirname(self.fileList[self.currentImg])+"/canny/canny_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".jpeg")
             #print(  self.fileList[self.currentImg].split(".")[0].split("/")[-1] )
-            slopanderror = np.zeros(13)
-            print pwd
-            R.analyse_data_v07(os.path.dirname(self.fileList[self.currentImg])+"/canny/","canny_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1], slopanderror)
 
 
         except:
@@ -296,9 +294,27 @@ class My_main_Window(QDialog):
             print( "csv file ",(self.fileList[self.currentImg])+"/CSV/csv_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".csv" ,"exported")
             #pd.DataFrame(self.coordinates).to_csv((self.fileList[self.currentImg].split("."))[0]+".csv", index=False,header=['y_coord', 'x_coord'])
             pd.DataFrame(self.coordinates).to_csv(os.path.dirname(self.fileList[self.currentImg])+"/CSV/csv_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".csv", index=False,header=['y_coord', 'x_coord'])
-        except:
-            print("Please select the image first")
-            pass
+
+            if not os.path.isdir(os.path.dirname(self.fileList[self.currentImg])+ "/Centroid/"):
+                os.mkdir(os.path.dirname(self.fileList[self.currentImg]) + "/Centroid")
+
+            slopanderror = np.zeros(13)
+            R.analyse_data_v07(os.path.dirname(self.fileList[self.currentImg])+"/CSV/","csv_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1], slopanderror)
+            folder_path = os.path.dirname(self.fileList[self.currentImg])+"/Centroid/"
+            file_type = '*png'
+            files = glob.glob(folder_path + file_type)
+            max_file = max(files, key=os.path.getctime)
+            print (max_file)
+            if max_file:
+                pixmap = QtGui.QPixmap(max_file).scaled(self.labelcent.size(),
+                                                        QtCore.Qt.KeepAspectRatio)
+                if pixmap.isNull():
+                    return
+                self.labelcent.setPixmap(pixmap)
+                self.labelImgname.setText(max_file.split("/")[-1])
+        except Exception as e:
+            print(e)
+            print("Please select the first image first something wrong in Export csv fun ")
 
     def RunForAll(self):
         try:
