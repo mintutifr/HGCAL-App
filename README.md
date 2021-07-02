@@ -10,6 +10,7 @@ Files:
 
 Dependencies:
 Python v3.8+ 
+
 1.1 ROOT has to compatible with the python version 
     
 1.2 Install python 3.8 using: sudo apt-get install python3.8-venv
