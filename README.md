@@ -1,19 +1,20 @@
-Canny Edge Detector Appliction
+Canny Edge Detector Appliction and centroid finder algorithm 
 
 Introduction:
-This application can be used to plot the edges in a given image and also export them.
+This application can be used to plot the edges in a given image and also export them. Using the CSV file centroid of the stapped hole and be find with finder algorithm. 
 
 Files:
-'pcb.py': This is the main application file
+'MyPyQT.py': This is the main application file
 'requirements.txt':Contains names of all required packages
 
 
 Dependencies:
-Python v3.8+
+Python v3.8+ 
+1.1 ROOT has to compatible with the python version 
+    
+1.2 Install python 3.8 using: sudo apt-get install python3.8-venv
 
-1.1 Install python 3.8 using: sudo apt-get install python3.8-venv
-
-1.2 Install host certificate for the remote server required for the files transfer.
+1.3 Install host certificate for the remote server required for the files transfer.
 
     # ssh user@server
 
@@ -25,7 +26,7 @@ example-
     ECDSA key fingerprint is SHA256:i9AHPM/u9ZfIqsUOda58UYKV6lgIH38pDRj9/RDohx6dA.
     Are you sure you want to continue connecting (yes/no)? yes
     
-1.3 Install "sshpass" utility this is used to provid user password for rsync command
+1.4 Install "sshpass" utility this is used to provid user password for rsync command
 
     For Ubuntu systems:  # sudo apt install sshpass
     
@@ -34,7 +35,7 @@ example-
     For MAC systems   :  # brew install hudochenkov/sshpass/sshpass
     
    
-1.4 Directory structure as given bellow should be available on remote server
+1.5 Directory structure as given bellow should be available on remote server
 
 example- directory: sub_directory_1   sub_directory_2 ....
     
