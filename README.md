@@ -66,39 +66,29 @@ example- directory: sub_directory_1   sub_directory_2 ....
 
 How to run:
 
-2. Setup a vitrual environment with Python and Activate
-
-      1. Open terminal
-
-      2. Select or create a folder where you want to create the environment (let say you want to create one inside the cloned repository)
-
-      3. Enter 
+2. To setup a vitrual environment with Python and Activate type following in the teminal:
 
         cd HGCAL-App
-
-      4. Enter 
-
         python3.8 -m venv pcb-ENV
-
-      5. Enter 
-
         source pcb-ENV/bin/activate
 
-      6. Your terminal will be directed to use the activated environment. (Eg (pcb-ENV) $username:)
+3. Your terminal will be directed to use the activated environment. (Eg (pcb-ENV) $username:
 
-      7. To deactivate the inviroment again type "deactivate"
+4. To deactivate the inviroment again type one can use the following commond:
 
-4.  After activation of the invironment one can install the required pakages with the following command
+        deactivate
+
+5.  After activation of the invironment one can install the required pakages with the following command
 
         pip install -r requirements.txt
 
-5. Run the app by typing 
+6. Run the app by typing 
 
         python3.8  MyPyQT.py
 
-6. if you get core dump while runing MyPyQT.py after suceesful installment of all pakages with the following error massage :
+     if you get core dump while runing MyPyQT.py after suceesful installment of all pakages with the following error massage :
 
-   "qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+    "qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
     This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem."
 
     then use the following command to get rid of this error:
@@ -110,8 +100,8 @@ How to run:
 
 7. In the app click on the "import image" button and choose the images focused folder. This will display the image preview all required path are stored in the script automatically.
 
-9. To view the corresponding edges detected, click on 'Process' button. The result is displayed in the GUI.
+8. To view the corresponding edges detected, click on 'Process' button. The result is displayed in the GUI.
 
-11. one may go through the set of images in the folder by clicking 'Next' or 'Previous'.
+9. one may go through the set of images in the folder by clicking 'Next' or 'Previous'.
 
-12. one can also export the corresponding .csv file containing the coordinates of the edges for each image by clicking on "export csv" button. csv file will be stored in a sub directory name "CSV" where image exist and have the same name as the image with csv extension. And with that this button also run the centroid finder algoritham (uses root) using these exported csv fils . It is espected the code will cash if python version is not comatible root.
+10. one can also export the corresponding .csv file containing the coordinates of the edges for each image by clicking on "export csv" button. csv file will be stored in a sub directory name "CSV" where image exist and have the same name as the image with csv extension. And with that this button also run the centroid finder algoritham (uses root) using these exported csv fils . It is espected the code will cash if python version is not comatible root.
