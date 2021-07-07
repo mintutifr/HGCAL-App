@@ -773,7 +773,10 @@ int analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/
         slopanderror[11]=  fL3B->GetParError(1);
 
 	slopanderror[12]=  0.21*sqrt((frm_center_x-centroid_x)*(frm_center_x-centroid_x) + (frm_center_y-centroid_y)*(frm_center_y-centroid_y));
-
+    slopanderror[13]= imageNo;
+    slopanderror[14]= 0.21*(frm_center_x-centroid_x);
+    slopanderror[15]= 0.21*(frm_center_y-centroid_y);
+    slopanderror[16]=double(holeNo);
     }
 //for(int i = 0;i<sizeof(slopanderror);i++){
 //	   cout<<slopanderror[i]<<endl;

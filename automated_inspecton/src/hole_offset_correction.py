@@ -10,7 +10,7 @@ dir_path = head_tail[0]
 
 
 def csv_reader(file):
-    x, y, z = array('d'), array('d'), array('d')
+    x, y, z, hole = array('d'), array('d'), array('d'), []
     with open(file) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = 0
@@ -21,29 +21,30 @@ def csv_reader(file):
                 x.append(float(row[0]))
                 y.append(float(row[1]))
                 z.append(float(row[2]))
-    return x, y, z
+                hole.append(row[3])
+    return x, y, z, hole
 
 
-def csv_writer(file, x, y, z):
+def csv_writer(file, x, y, z,hole_off):
     with open(file, mode='w') as cordinate_file:
         cordinate_writer = csv.writer(cordinate_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        cordinate_writer.writerow(["X", "Y","Z"])
-        cordinate_writer.writerow(["150.0", "0.0","0.0"])
+        cordinate_writer.writerow(["X", "Y","Z","hole"])
+        cordinate_writer.writerow(["150.0", "0.0","0.0","0.0"])
         for i in range(0, len(x)):
-            cordinate = [x[i], y[i], z[i]]
+            cordinate = [x[i], y[i], z[i],hole_off[i]]
             # print(cordinate)
             cordinate_writer.writerow(cordinate)
 
 
 def propagate_offset(x_corc, y_corc, z_corc,import_csv_file,exported_csv_file):
-    x, y, z = csv_reader(import_csv_file)
+    x, y, z,hole_off = csv_reader(import_csv_file)
     x_new, y_new, z_new = array('d'), array('d'), array('d')
     for i in range(0, len(x)):
         x_new.append(round(x[i] + x_corc,3))
         y_new.append(round(-y[i] + y_corc,3))
         z_new.append(round(z[i] - z_corc,3))
         #print(y_new, x_new, z_new)
-    csv_writer(exported_csv_file, x_new, y_new, z_new)
+    csv_writer(exported_csv_file, x_new, y_new, z_new,hole_off)
 
 
 def offsect_cal(x_pcb,y_pcb,x_measured,y_measured):
@@ -55,9 +56,11 @@ def offsect_cal(x_pcb,y_pcb,x_measured,y_measured):
 
 
 def propagate_offset_weighted(x_measured, y_measured,  z_measured, x_offset,y_offset,import_csv_file,exported_csv_file):
-    x, y, z = csv_reader(import_csv_file)
+    x, y, z, hole = csv_reader(import_csv_file)
     x_cor, y_cor, z_cor = array('d'), array('d'), array('d')
-
+    #print(hole)
+    #
+    print(x_cor)
     #loop over all hole of pcb
     for i in range(0,len(x)):
         #define array for the distance calculation
@@ -79,7 +82,7 @@ def propagate_offset_weighted(x_measured, y_measured,  z_measured, x_offset,y_of
         x_cor.append(round((x_cor_temp / norm),3))
         y_cor.append(round((y_cor_temp / norm),3))
         z_cor.append(round((z_cor_temp / norm),3))
-        csv_writer(exported_csv_file, x_cor, y_cor, z_cor)
+        csv_writer(exported_csv_file, x_cor, y_cor, z_cor, hole)
         #print("---------------------------------------------")
         
 def offCorrection(fileName_75_pcb, parsed_csv , pathPass1CSV):
@@ -87,7 +90,7 @@ def offCorrection(fileName_75_pcb, parsed_csv , pathPass1CSV):
     global dir_path
     # read 7 hole values from gerber file
     fileName_7_pcb = dir_path + "/data/CSV/gerber/seven_hole_pcb.csv"
-    x_pcb,y_pcb,z_pcb = csv_reader(fileName_7_pcb)
+    x_pcb,y_pcb,z_pcb,hole_7 = csv_reader(fileName_7_pcb)
 
     # read 7 holes Measured Values
     #x_measured,y_measured,z_measured = csv_reader(fileName_7_measured)
@@ -106,7 +109,7 @@ def offCorrection(fileName_75_pcb, parsed_csv , pathPass1CSV):
         print ('measured values are zero')
         fileName_7_measured = dir_path + "/data/CSV/Pass0/hole_measure.csv"
         print("FILE NAME 7 MEASURED : " + fileName_7_measured)
-        x_measured,y_measured,z_measured = csv_reader(fileName_7_measured)
+        x_measured,y_measured,z_measured,hole_meas = csv_reader(fileName_7_measured)
     #print("slected holes = S01,S07,S73,S47,S43,S74,S69")
     date = datetime.datetime.now()
     #print("x_pcb = ", x_pcb)

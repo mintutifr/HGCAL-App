@@ -12,7 +12,7 @@ if not os.path.dirname(Dir+"centroid"):
     os.mkdir(Dir+"centroid")
 #os.mkdir(Dir+"centroid")    
 csvfiles = os.listdir(Dir)
-slopanderror = np.zeros(13)
+slopanderror = np.zeros(14)
 print(csvfiles)
 
 Rootfile = R.TFile("slopsAndOffset.root", 'recreate')
@@ -34,6 +34,7 @@ slop_L3B = array('d',[0])
 slopError_L3B = array('d',[0])
 
 offset = array('d',[0])
+image = array('d',[0])
 
 tree.Branch("slop_L1A",  slop_L1A,  'slop_L1A/D')
 tree.Branch("slopError_L1A", slopError_L1A, 'slopError_L1A/D')
@@ -51,7 +52,7 @@ tree.Branch("slop_L3B",  slop_L3B,  'slop_L3B/D')
 tree.Branch("slopError_L3B", slopError_L3B, 'slopError_L3B/D')
 
 tree.Branch("offset", offset, 'offset/D')
-
+tree.Branch("image", image, 'image/D')
 for fille in csvfiles:
     csv_file_wo_ext=fille.split(".")[0]
     print(''+Dir+','+csv_file_wo_ext+'')
@@ -71,9 +72,10 @@ for fille in csvfiles:
         slop_L3A[0]  = slopanderror[8]
         slopError_L3A[0]= slopanderror[9]
         slop_L3B[0]  = slopanderror[10]
-        slopError_L3B[0]= slopanderror[10]
+        slopError_L3B[0]= slopanderror[11]
 
         offset[0]=slopanderror[12]
+        image[0] = slopanderror[13]
         tree.Fill()
     except Exception as e:
         print(e)
