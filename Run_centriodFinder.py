@@ -16,7 +16,7 @@ if not os.path.isdir(Dir+"../Centroid/"):
 csvfiles = os.listdir(Dir)
 slopanderror = np.zeros(18)
 print(csvfiles)
-title = ['x_offset','y_offset','z_offset','name','image']
+title = ['x_offset','y_offset','z_offset','hole','image']
 entries = []
 for fille in csvfiles:
     csv_file_wo_ext=fille.split(".")[0]
