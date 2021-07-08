@@ -99,7 +99,7 @@ def offCorrection(fileName_75_pcb, parsed_csv , pathPass1CSV):
     z_measured = []
 
     print(parsed_csv)
-    sr_no_1, hole_no_1, x_measured, y_measured, z_measured = map(list, zip(*parsed_csv))
+    sr_no_1, x_measured, y_measured, z_measured, hole_no_1 = map(list, zip(*parsed_csv))
     x_measured = [float(item) for item in x_measured]
     y_measured = [float(item) for item in y_measured]
     z_measured = [float(item) for item in z_measured]

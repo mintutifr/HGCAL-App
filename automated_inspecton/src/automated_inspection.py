@@ -301,7 +301,7 @@ def pass0(self):
 
     with open(pathPass0CSV, 'w', newline='') as pass0_file:
         writer = csv.DictWriter(pass0_file, fieldnames = [('Board Type:',btype), ('Board No:',bno), ('Date:', dateStr)])
-        writer = csv.DictWriter(pass0_file, fieldnames = ["Sr. no", "Hole no.", "X", "Y", "Z"])
+        writer = csv.DictWriter(pass0_file, fieldnames = ["Sr. no", "X", "Y", "Z", "Hole no."])
                 
         writer.writeheader()
         writer = csv.writer(pass0_file)
@@ -310,9 +310,14 @@ def pass0(self):
         ncols = self.tableWidget_7_coordinates.columnCount()
         for row in range(0,nrows):
             item_text = []
-            for col in range(0, ncols):
+            cell = self.tableWidget_7_coordinates.item(row, 0)
+            item_text.append(cell.text())
+            #for col in range(0, ncols):
+            for col in range(2, ncols):
                 cell = self.tableWidget_7_coordinates.item(row, col)
                 item_text.append(cell.text())
+            cell = self.tableWidget_7_coordinates.item(row, 1)
+            item_text.append(cell.text())
             item.append(item_text)
             writer.writerow(item[row])
         
@@ -380,7 +385,7 @@ def pass1(self):
     self.lineEdit_server.setFocus()
 
     # Enter Default values in the mesured table if values entered are zero
-    sr_no_1, hole_no_1, x_measured, y_measured, z_measured = map(list, zip(*item))
+    sr_no_1, x_measured, y_measured, z_measured, hole_no_1 = map(list, zip(*item))
     x_measured = [float(item) for item in x_measured]
     y_measured = [float(item) for item in y_measured]
     z_measured = [float(item) for item in z_measured]
