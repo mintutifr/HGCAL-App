@@ -47,9 +47,9 @@ def CorrectionPass2(fileName_offset, fileName_75_gerber , pathPass2CSV):
     z_cor = []
     hole_cor = []
     
-    for i in range(len(hole_off)): 
-        if hole_off[i] in hole :
-            index = hole.index(hole_off[i])
+    for i in range(len(hole)): 
+        if hole[i] in hole_off :
+            index = hole.index(hole[i])
             x_cor.append(x_pcb[index])
             y_cor.append(y_pcb[index])
             z_cor.append(z_pcb[index])
