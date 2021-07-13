@@ -14,7 +14,7 @@ if not os.path.isdir(Dir+"../Centroid/"):
     os.mkdir(Dir+"../Centroid")
 #os.mkdir(Dir+"../Centroid")    
 csvfiles = os.listdir(Dir)
-slopanderror = np.zeros(18)
+slopanderror = np.zeros(24)
 print(csvfiles)
 title = ['x_offset','y_offset','z_offset','hole','image']
 entries = []

@@ -118,7 +118,7 @@ int analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/
   FILE *fptr;
   strcpy(in_dirpath, filedir.c_str()); 
   //sprintf(in_dirpath,   filedir.c_str());
-  sprintf(out_dirpath1, "%s../Centroid/",filedir.c_str());
+  sprintf(out_dirpath1, "%s../../Centroid/Pass1/",filedir.c_str());
   sprintf(out_dirpath2, "check/dirpath2/");
   int iboard=5, ipass=1;
   cout<<"iboard = "<<iboard<<" "<<"ipass = "<<ipass<<endl;
@@ -757,26 +757,35 @@ int analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/
   //hfile->Write();
   hfile->Close();
    if(slopanderror != NULL){
-	slopanderror[0]=  fL1A->GetParameter(1); 
+        slopanderror[0]=  fL1A->GetParameter(1);
         slopanderror[1]=  fL1A->GetParError(1);
-	slopanderror[2]=  fL1B->GetParameter(1);
+	    slopanderror[2]=  fL1B->GetParameter(1);
         slopanderror[3]=  fL1B->GetParError(1);
 
-	slopanderror[4]=  fL2A->GetParameter(1);
+	    slopanderror[4]=  fL2A->GetParameter(1);
         slopanderror[5]=  fL2A->GetParError(1);
         slopanderror[6]=  fL2B->GetParameter(1);
         slopanderror[7]=  fL2B->GetParError(1);
 
-	slopanderror[8]=  fL3A->GetParameter(1);
+	    slopanderror[8]=  fL3A->GetParameter(1);
         slopanderror[9]=  fL3A->GetParError(1);
         slopanderror[10]=  fL3B->GetParameter(1);
         slopanderror[11]=  fL3B->GetParError(1);
 
-	slopanderror[12]=  0.21*sqrt((frm_center_x-centroid_x)*(frm_center_x-centroid_x) + (frm_center_y-centroid_y)*(frm_center_y-centroid_y));
-    slopanderror[13]= imageNo;
-    slopanderror[14]= 0.21*(frm_center_x-centroid_x);
-    slopanderror[15]= 0.21*(frm_center_y-centroid_y);
-    slopanderror[16]=double(holeNo);
+	    slopanderror[12]=  0.21*sqrt((frm_center_x-centroid_x)*(frm_center_x-centroid_x) + (frm_center_y-centroid_y)*(frm_center_y-centroid_y));
+        slopanderror[13]= imageNo;
+        slopanderror[14]= 0.21*(frm_center_x-centroid_x);
+        slopanderror[15]= 0.21*(frm_center_y-centroid_y);
+        slopanderror[16]=double(holeNo);
+
+        slopanderror[17] = int_xL1;
+        slopanderror[18] = int_xL2;
+        slopanderror[19] = int_xL3;
+        slopanderror[20] = int_yL1;
+        slopanderror[21] = int_yL2;
+        slopanderror[22] = int_yL3;
+
+        //cout<<slopanderror[14]<<","<<slopanderror[15]<<endl;
     }
 //for(int i = 0;i<sizeof(slopanderror);i++){
 //	   cout<<slopanderror[i]<<endl;

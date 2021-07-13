@@ -162,6 +162,7 @@ class My_main_Window(QDialog):
             self, 'Select Image', '', 'Image Files (*.png *.jpg)')
         self.labelImg.setText("Image Type:" + filename)
         #print(filename)
+        self.pwd=os.getcwd()
         if filename:
             pixmap = QtGui.QPixmap(filename).scaled(self.labelImg.size(),
                                                     QtCore.Qt.KeepAspectRatio)
@@ -169,16 +170,31 @@ class My_main_Window(QDialog):
                 return
             self.labelImg.setPixmap(pixmap)
             self.labelImgname.setText(filename.split("/")[-1])
+            if not os.path.exists(self.pwd+"/data"): os.mkdir(self.pwd+"/data")
+            if not os.path.exists(self.pwd+"/data/CSV"): os.mkdir(self.pwd+"/data/CSV")
+            if not os.path.exists(self.pwd + "/data/CSV/Pass0"): os.mkdir(self.pwd + "/data/CSV/Pass0")
+            if not os.path.exists(self.pwd + "/data/CSV/Pass1"): os.mkdir(self.pwd + "/data/CSV/Pass1")
+            if not os.path.exists(self.pwd + "/data/CSV/Pass2"): os.mkdir(self.pwd + "/data/CSV/Pass2")
+            if not os.path.exists(self.pwd+"/data/canny"): os.mkdir(self.pwd+"/data/canny")
+            if not os.path.exists(self.pwd + "/data/canny/Pass0"): os.mkdir(self.pwd + "/data/canny/Pass0")
+            if not os.path.exists(self.pwd + "/data/canny/Pass1"): os.mkdir(self.pwd + "/data/canny/Pass1")
+            if not os.path.exists(self.pwd + "/data/canny/Pass2"): os.mkdir(self.pwd + "/data/canny/Pass2")
+            if not os.path.exists(self.pwd+"/data/Centroid"): os.mkdir(self.pwd+"/data/Centroid")
+            if not os.path.exists(self.pwd + "/data/Centroid/Pass0"): os.mkdir(self.pwd + "/data/Centroid/Pass0")
+            if not os.path.exists(self.pwd + "/data/Centroid/Pass1"): os.mkdir(self.pwd + "/data/Centroid/Pass1")
+            if not os.path.exists(self.pwd + "/data/Centroid/Pass2"): os.mkdir(self.pwd + "/data/Centroid/Pass2")
+
             dirpath = os.path.dirname(filename)
-            if not os.path.exists(dirpath+"/CSV"):
-                os.mkdir(dirpath+"/CSV")
+            #if not os.path.exists(dirpath+"/CSV"):
+                #os.mkdir(dirpath+"/CSV")
                 #os.mkdir(dirpath+"/CSV/csv_Focused")  # Swich this on when working in python in windoes
-            if not os.path.exists(dirpath+"/canny"):
-                os.mkdir(dirpath + "/canny")
+           # if not os.path.exists(dirpath+"/canny"):
+               # os.mkdir(dirpath + "/canny")
                 #os.mkdir(dirpath + "/canny/canny_Focused") # Swich this on when working in python in windoes
-            if not os.path.isdir(dirpath+"/Centroid/"):
-                os.mkdir(dirpath+"/Centroid")
-            print(dirpath)
+            #if not os.path.isdir(dirpath+"/Centroid/"):
+                #os.mkdir(dirpath+"/Centroid")
+            #print(dirpath)
+            print(self.pwd)
             self.fileList = []
             for f in os.listdir(dirpath):
                 fpath = os.path.join(dirpath, f)
@@ -260,8 +276,12 @@ class My_main_Window(QDialog):
             self.y, self.x = zip(*self.coordinates)
             self.Draw_Image(self.tight)
 
-            cv2.imwrite(os.path.dirname(self.fileList[self.currentImg])+"/canny/canny_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".jpeg",self.tight)
-            print(os.path.dirname(self.fileList[self.currentImg])+"/canny/canny_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".jpeg")
+            #cv2.imwrite(os.path.dirname(self.fileList[self.currentImg])+"/canny/canny_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".jpeg",self.tight)
+            cv2.imwrite(self.pwd + "/data/canny/Pass1/canny_" +
+                        self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".jpeg", self.tight)
+            #print(os.path.dirname(self.fileList[self.currentImg])+"/canny/canny_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".jpeg")
+            print(self.pwd + "/data/canny/Pass1/canny_" +
+                  self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".jpeg saved")
             #print(  self.fileList[self.currentImg].split(".")[0].split("/")[-1] )
 
 
@@ -294,11 +314,17 @@ class My_main_Window(QDialog):
     def Exportcsv(self):
         try:
             self.Docanny()
-            print( "csv file ",(self.fileList[self.currentImg])+"/CSV/csv_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".csv" ,"exported")
+            #print( "csv file ",(self.fileList[self.currentImg])+"/CSV/csv_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".csv" ,"exported")
+            print("csv file ", self.pwd + "/data/CSV/Pass1/csv_" +
+                  self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".csv", "exported")
             #pd.DataFrame(self.coordinates).to_csv((self.fileList[self.currentImg].split("."))[0]+".csv", index=False,header=['y_coord', 'x_coord'])
-            pd.DataFrame(self.coordinates).to_csv(os.path.dirname(self.fileList[self.currentImg])+"/CSV/csv_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".csv", index=False,header=['y_coord', 'x_coord'])
+            #pd.DataFrame(self.coordinates).to_csv(os.path.dirname(self.fileList[self.currentImg])+"/CSV/csv_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".csv", index=False,header=['y_coord', 'x_coord'])
+            pd.DataFrame(self.coordinates).to_csv(self.pwd + "/data/CSV/Pass1/csv_" +
+                                                  self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".csv",
+                                                  index=False, header=['y_coord', 'x_coord'])
 
-            self.RunCentriodFinder(os.path.dirname(self.fileList[self.currentImg])+"/CSV/","csv_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1])
+            #self.RunCentriodFinder(os.path.dirname(self.fileList[self.currentImg])+"/CSV/","csv_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1])
+            self.RunCentriodFinder(self.pwd + "/data/CSV/Pass1/","csv_" + self.fileList[self.currentImg].split(".")[0].split("/")[-1])
             #slopanderror = np.zeros(13)
             #R.analyse_data_v07(os.path.dirname(self.fileList[self.currentImg])+"/CSV/","csv_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1], slopanderror)
             #folder_path = os.path.dirname(self.fileList[self.currentImg])+"/Centroid/"
@@ -319,9 +345,9 @@ class My_main_Window(QDialog):
 
     def RunCentriodFinder(self,dir,imagename):
         try:
-            slopanderror = np.zeros(13)
+            slopanderror = np.zeros(24)
             R.analyse_data_v07(dir,imagename, slopanderror)
-            folder_path = dir + "../Centroid/"
+            folder_path =self.pwd + "/data/Centroid/Pass1/"
             file_type = '*png'
             files = glob.glob(folder_path + file_type)
             max_file = max(files, key=os.path.getctime)

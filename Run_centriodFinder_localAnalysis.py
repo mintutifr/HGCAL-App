@@ -12,7 +12,7 @@ if not os.path.dirname(Dir+"centroid"):
     os.mkdir(Dir+"centroid")
 #os.mkdir(Dir+"centroid")    
 csvfiles = os.listdir(Dir)
-slopanderror = np.zeros(14)
+slopanderror = np.zeros(24)
 print(csvfiles)
 
 Rootfile = R.TFile("slopsAndOffset.root", 'recreate')
@@ -35,6 +35,17 @@ slopError_L3B = array('d',[0])
 
 offset = array('d',[0])
 image = array('d',[0])
+x_offset = array('d',[0])
+y_offset = array('d',[0])
+
+hole = array('d',[0])
+
+int_xL1 = array('d',[0])
+int_xL2 = array('d',[0])
+int_xL3 = array('d',[0])
+int_yL1 = array('d',[0])
+int_yL2 = array('d',[0])
+int_yL3 = array('d',[0])
 
 tree.Branch("slop_L1A",  slop_L1A,  'slop_L1A/D')
 tree.Branch("slopError_L1A", slopError_L1A, 'slopError_L1A/D')
@@ -53,9 +64,24 @@ tree.Branch("slopError_L3B", slopError_L3B, 'slopError_L3B/D')
 
 tree.Branch("offset", offset, 'offset/D')
 tree.Branch("image", image, 'image/D')
+
+tree.Branch("x_offset", x_offset, 'x_offset/D')
+tree.Branch("y_offset", y_offset, 'y_offset/D')
+
+tree.Branch("hole", hole, 'hole/D')
+
+tree.Branch("int_xL1", int_xL1, 'int_xL1/D')
+tree.Branch("int_xL2", int_xL2, 'int_xL2/D')
+tree.Branch("int_xL3", int_xL3, 'int_xL3/D')
+
+tree.Branch("int_yL1", int_yL1, 'int_yL1/D')
+tree.Branch("int_yL2", int_yL2, 'int_yL2/D')
+tree.Branch("int_yL3", int_yL3, 'int_yL3/D')
+
 for fille in csvfiles:
     csv_file_wo_ext=fille.split(".")[0]
     print(''+Dir+','+csv_file_wo_ext+'')
+
     try:
         R.analyse_data_v07(Dir,csv_file_wo_ext,slopanderror)
         print(slopanderror)
@@ -76,6 +102,18 @@ for fille in csvfiles:
 
         offset[0]=slopanderror[12]
         image[0] = slopanderror[13]
+        x_offset[0] = slopanderror[14]
+        y_offset[0] = slopanderror[15]
+
+        hole[0] = slopanderror[16]
+
+        int_xL1[0] = slopanderror[17]
+        int_xL2[0] = slopanderror[18]
+        int_xL3[0] = slopanderror[19]
+
+        int_yL1[0] = slopanderror[20]
+        int_yL2[0] = slopanderror[21]
+        int_yL3[0] = slopanderror[22]
         tree.Fill()
     except Exception as e:
         print(e)
