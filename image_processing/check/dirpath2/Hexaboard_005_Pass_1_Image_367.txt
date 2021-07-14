@@ -1,0 +1,13 @@
+check/dirpath2/Hexaboard_005_Pass_1_Image_367.txt
+L1: 1:Hole#,  2:FileIDX, # of points on 3:L1A, 4:L1B,   5:L2A, 6:L2B,  7:L3A, 8:L3B
+L2: 1:Hole#,  2:FileIDX, 3-6: Intercept and Slope for L1A and L1B
+L3: 1:Hole#,  2:FileIDX, 3-6: Intercept and Slope for L2A and L2B
+L4: 1:Hole#,  2:FileIDX, 3-6: Intercept and Slope for L3A and L3B
+L5: 1:Hole#,  2:FileIDX, 3-6: (X,Y) coordinate of Frame_Center and Centroid
+
+L1:  74  367   59  205   78  166  191  204 
+L2:  74  367   1600.7  -8.999   213.5  -0.631 
+L3:  74  367  -5291.2  14.183  -145.3   0.644 
+L4:  74  367    437.4  -0.529   156.8   0.499 
+L5:  74  367    255.5   191.5   272.9   167.1 
+ 

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f7f57e3c-076b-491d-83cb-f32c430b4850" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Histogram_Ploter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyPyQT.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Run_centriodFinder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Run_centriodFinder_localAnalysis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analyse_data.C" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analyse_data_v07.C" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apply_correction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/change_prifix.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/correction_Pass2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CSV/gerber/pcb_cordinate_75.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CSV/gerber/seven_hole_pcb.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/export_csv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/folder_icon.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_icon.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loop.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next_Img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/offset_from_centroidFinder.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/privous_Img.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/processing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slopsAndOffset.root" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1uehQZD91EMhDoAXGyuzLH7aImf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f7f57e3c-076b-491d-83cb-f32c430b4850" name="Default Changelist" comment="" />
+      <created>1625031951804</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625031951804</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/automated_inspecton/src/hole_offset_correction.py</url>
+          <line>92</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

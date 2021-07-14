@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+
+<project name="" date="2021/01/18 16:43:49" file_version="1.1.0">
+  <config_data>
+    <auto_programing>
+      <channel start_ch="100" end_ch="101"/>
+      <out_ch enable="1" start_bit="26"/>
+      <SS_Mode enable="0" Out_bit="7"/>
+      <abs abs_line="1"/>
+      <interpolation_speed v="0"/>
+      <r_size r="2000"/>
+      <timer t="500"/>
+    </auto_programing>
+    <coordinate>
+      <direction x="1" y="1" z="1" w="1"/>
+      <origin x="0" y="0" z="0" w="0"/>
+      <minimum x="0" y="0" z="0"/>
+      <maximum x="300000" y="300000" z="100000"/>
+    </coordinate>
+    <grid_snap>
+      <grid x="10000" y="10000"/>
+      <snap x="500" y="500"/>
+      <auxiliary grid_over="1" subline_over="1" drafter_on="1"/>
+    </grid_snap>
+    <display>
+      <user_color index="0" color="0"/>
+      <user_color index="1" color="0"/>
+      <user_color index="2" color="0"/>
+      <user_color index="3" color="0"/>
+      <user_color index="4" color="0"/>
+      <user_color index="5" color="0"/>
+      <user_color index="6" color="0"/>
+      <user_color index="7" color="0"/>
+      <user_color index="8" color="0"/>
+      <user_color index="9" color="0"/>
+      <user_color index="10" color="0"/>
+      <user_color index="11" color="0"/>
+      <user_color index="12" color="0"/>
+      <user_color index="13" color="0"/>
+      <user_color index="14" color="0"/>
+      <user_color index="15" color="0"/>
+      <line index="0" size="2" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="1" size="2" style="0" color="2105376" paint_size="10000" paint_color="65280"/>
+      <line index="2" size="2" style="0" color="4210752" paint_size="10000" paint_color="65280"/>
+      <line index="3" size="2" style="0" color="8421504" paint_size="10000" paint_color="65280"/>
+      <line index="4" size="2" style="0" color="12632256" paint_size="10000" paint_color="65280"/>
+      <line index="5" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="6" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="7" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="8" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="9" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="10" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="11" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="12" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="13" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="14" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="15" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="16" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="17" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="18" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="19" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="20" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="21" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="22" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="23" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="24" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="25" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="26" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="27" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="28" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="29" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="30" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="31" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="32" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="33" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="34" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="35" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="36" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="37" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="38" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="39" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="40" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="41" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="42" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="43" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="44" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="45" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="46" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="47" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="48" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="49" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="50" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="51" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="52" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="53" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="54" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="55" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="56" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="57" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="58" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="59" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="60" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="61" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="62" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="63" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="64" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="65" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="66" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="67" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="68" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="69" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="70" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="71" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="72" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="73" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="74" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="75" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="76" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="77" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="78" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="79" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="80" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="81" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="82" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="83" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="84" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="85" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="86" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="87" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="88" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="89" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="90" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="91" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="92" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="93" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="94" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="95" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="96" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="97" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="98" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="99" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="100" size="1" style="2" color="8421504" paint_size="10000" paint_color="65280"/>
+      <line index="101" size="1" style="0" color="16711935" paint_size="10000" paint_color="65280"/>
+      <line index="102" size="1" style="2" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="103" size="2" style="0" color="16711680" paint_size="10000" paint_color="65280"/>
+      <line index="104" size="2" style="0" color="16711935" paint_size="10000" paint_color="65280"/>
+      <line index="105" size="2" style="0" color="16711680" paint_size="10000" paint_color="65280"/>
+      <line index="106" size="1" style="3" color="16744576" paint_size="10000" paint_color="65280"/>
+      <line index="107" size="1" style="3" color="16744576" paint_size="10000" paint_color="65280"/>
+      <line index="108" size="0" style="0" color="16711680" paint_size="10000" paint_color="65280"/>
+      <line index="109" size="1" style="0" color="255" paint_size="10000" paint_color="65280"/>
+      <line index="110" size="2" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="111" size="5" style="0" color="1052688" paint_size="10000" paint_color="65280"/>
+      <line index="112" size="5" style="0" color="2105376" paint_size="10000" paint_color="65280"/>
+      <line index="113" size="5" style="0" color="4210752" paint_size="10000" paint_color="65280"/>
+      <line index="114" size="5" style="0" color="6316128" paint_size="10000" paint_color="65280"/>
+      <line index="115" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="116" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="117" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="118" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="119" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="120" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="121" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="122" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="123" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="124" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="125" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="126" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="127" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="128" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="129" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="130" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="131" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="132" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="133" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="134" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="135" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="136" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="137" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="138" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="139" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="140" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="141" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="142" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="143" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="144" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="145" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="146" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="147" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="148" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="149" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="150" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="151" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="152" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="153" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="154" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="155" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="156" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="157" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="158" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="159" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="160" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="161" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="162" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="163" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="164" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="165" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="166" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="167" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="168" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="169" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="170" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="171" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="172" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="173" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="174" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="175" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="176" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="177" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="178" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="179" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="180" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="181" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="182" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="183" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="184" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="185" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="186" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="187" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="188" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="189" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="190" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="191" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="192" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="193" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="194" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="195" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="196" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="197" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="198" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="199" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="200" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="201" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="202" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="203" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="204" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="205" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="206" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="207" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="208" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="209" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="210" size="1" style="2" color="8421504" paint_size="10000" paint_color="65280"/>
+      <line index="211" size="1" style="0" color="16711935" paint_size="10000" paint_color="65280"/>
+      <line index="212" size="1" style="2" color="12895428" paint_size="10000" paint_color="65280"/>
+      <line index="213" size="2" style="0" color="16711680" paint_size="10000" paint_color="65280"/>
+      <line index="214" size="2" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="215" size="2" style="0" color="16711680" paint_size="10000" paint_color="65280"/>
+      <line index="216" size="1" style="3" color="16744576" paint_size="10000" paint_color="65280"/>
+      <line index="217" size="2" style="3" color="16744576" paint_size="10000" paint_color="65280"/>
+      <line index="218" size="0" style="0" color="16711680" paint_size="10000" paint_color="65280"/>
+      <line index="219" size="1" style="0" color="255" paint_size="10000" paint_color="65280"/>
+      <paint_width mode="0"/>
+      <overlap layer="2" index="0" color="13158655"/>
+      <overlap layer="2" index="1" color="13158655"/>
+      <overlap layer="3" index="0" color="6579455"/>
+      <overlap layer="3" index="1" color="6579455"/>
+      <overlap layer="4" index="0" color="255"/>
+      <overlap layer="4" index="1" color="255"/>
+      <bitmap max_size="100"/>
+      <bitmap save_folder="C:\Users\HGCAL\Pictures\mucad5\"/>
+      <bitmap default_trancemittance="50"/>
+      <bitmap distortion_coef="0.000000"/>
+      <color_coding ch_call="1" loop="1"/>
+      <draw index="0" font_name="MS UI Gothic" font_size="160" gs_size="3" gl_size="5" bg_color="16777215"/>
+      <draw index="1" font_name="MS UI Gothic" font_size="110" gs_size="30" gl_size="50" bg_color="16777215"/>
+      <marking call="255" out="16711935" timer="16711680" split="16711680" r="65280" offset="16711935"/>
+    </display>
+    <out>
+      <name index="0" out=""/>
+      <name index="1" out=""/>
+      <name index="2" out=""/>
+      <name index="3" out=""/>
+      <name index="4" out=""/>
+      <name index="5" out=""/>
+      <name index="6" out=""/>
+      <name index="7" out="SS Mode"/>
+      <name index="8" out=""/>
+      <name index="9" out=""/>
+      <name index="10" out=""/>
+      <name index="11" out=""/>
+      <name index="12" out=""/>
+      <name index="13" out=""/>
+      <name index="14" out=""/>
+      <name index="15" out=""/>
+      <name index="16" out=""/>
+      <name index="17" out=""/>
+      <name index="18" out=""/>
+      <name index="19" out=""/>
+      <name index="20" out=""/>
+      <name index="21" out=""/>
+      <name index="22" out=""/>
+      <name index="23" out=""/>
+      <name index="24" out=""/>
+      <name index="25" out=""/>
+      <name index="26" out="Under dispensing"/>
+      <name index="27" out=""/>
+      <name index="28" out=""/>
+    </out>
+    <in>
+      <name index="0" in=""/>
+      <name index="1" in=""/>
+      <name index="2" in=""/>
+      <name index="3" in=""/>
+      <name index="4" in=""/>
+      <name index="5" in=""/>
+      <name index="6" in=""/>
+      <name index="7" in=""/>
+      <name index="8" in=""/>
+      <name index="9" in=""/>
+      <name index="10" in=""/>
+      <name index="11" in=""/>
+      <name index="12" in=""/>
+      <name index="13" in=""/>
+      <name index="14" in=""/>
+      <name index="15" in=""/>
+      <name index="16" in=""/>
+      <name index="17" in=""/>
+      <name index="18" in=""/>
+      <name index="19" in=""/>
+      <name index="20" in=""/>
+      <name index="21" in=""/>
+      <name index="22" in=""/>
+      <name index="23" in=""/>
+      <name index="24" in=""/>
+      <name index="25" in=""/>
+      <name index="26" in=""/>
+      <name index="27" in=""/>
+      <name index="28" in=""/>
+      <name index="29" in=""/>
+      <name index="30" in=""/>
+      <name index="31" in=""/>
+      <name index="32" in=""/>
+      <name index="33" in=""/>
+      <name index="34" in=""/>
+      <name index="35" in=""/>
+      <name index="36" in=""/>
+      <name index="37" in=""/>
+      <name index="38" in=""/>
+      <name index="39" in=""/>
+    </in>
+    <communication>
+      <comm port="1" baud_rate="38400" time_out="3"/>
+    </communication>
+    <base_size>
+      <XY_range originx="0" originy="0" sizex="300000" sizey="300000"/>
+      <work_line index="0" color="255" size="2"/>
+      <work_line index="1" color="255" size="20"/>
+      <move minz="-3000" maxz="60000"/>
+    </base_size>
+    <other>
+      <loop max="10000"/>
+      <ch_update enable="1"/>
+      <spin_delta length_fast="1.000000" length_slow="0.100000" angle_fast="5.000000" angle_slow="0.100000"/>
+      <free_hand_rate_line free_hand_rate_line="0.250000"/>
+      <free_hand_rate_circle free_hand_rate_circle="0.250000"/>
+      <free_hand_rate_simple free_hand_rate_simple="0.250000"/>
+      <free_hand_use_simple_setting free_hand_use_simple_setting="1"/>
+      <theta_offset theta_offset="0.000000"/>
+    </other>
+    <speed>
+      <ptp index="0" speed="50" time="300"/>
+      <ptp index="1" speed="50" time="300"/>
+      <ptp index="2" speed="10" time="300"/>
+      <ptp index="3" speed="3000" time="300"/>
+      <cp index="0" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="1" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="2" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="3" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="4" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="5" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="6" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="7" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="8" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="9" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="10" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="11" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="12" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="13" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="14" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="15" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="16" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="17" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="18" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="19" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="20" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="21" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="22" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="23" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="24" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="25" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="26" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="27" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="28" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="29" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="30" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="31" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="32" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="33" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="34" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="35" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="36" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="37" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="38" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="39" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="40" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="41" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="42" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="43" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="44" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="45" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="46" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="47" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="48" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="49" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="50" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="51" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="52" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="53" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="54" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="55" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="56" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="57" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="58" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="59" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="60" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="61" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="62" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="63" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="64" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="65" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="66" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="67" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="68" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="69" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="70" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="71" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="72" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="73" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="74" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="75" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="76" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="77" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="78" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="79" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="80" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="81" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="82" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="83" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="84" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="85" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="86" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="87" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="88" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="89" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="90" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="91" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="92" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="93" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="94" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="95" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="96" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="97" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="98" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="99" speed="100" acceleration="300" deceleration="300"/>
+      <jog_org index="0" jog_ls="30" jog_hs="500" org_speed1="0" org_speed2="0" is_alpha="0"/>
+      <jog_org index="1" jog_ls="30" jog_hs="500" org_speed1="0" org_speed2="0" is_alpha="0"/>
+      <jog_org index="2" jog_ls="30" jog_hs="500" org_speed1="0" org_speed2="0" is_alpha="0"/>
+      <jog_org index="3" jog_ls="30" jog_hs="500" org_speed1="0" org_speed2="0" is_alpha="0"/>
+    </speed>
+  </config_data>
+  <channel_list>
+    <channel id="  1" comment="Main_Program" update="0" dispbkimg="1" bkimgpath="" bkimgwidth="0" bkimgheight="0" bkimgtrans="0" bkimgx="0.000000" bkimgy="0.000000" dispcad="1" cadgerber="0" cadmm="0" cadxrev="0" cadyrev="1" cadtype="1" cadfile="" cadofstx="+0000.000" cadofsty="+0000.000" dxfangle="0">
+    </channel>
+    <channel id="101" comment="Sub_Prog_of_CH001" update="0" dispbkimg="1" bkimgpath="" bkimgwidth="0" bkimgheight="0" bkimgtrans="0" bkimgx="0.000000" bkimgy="0.000000" dispcad="1" cadgerber="0" cadmm="0" cadxrev="0" cadyrev="1" cadtype="1" cadfile="" cadofstx="+0000.000" cadofsty="+0000.000" dxfangle="0">
+      <command step="1" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="102"/>
+      </command>
+      <command step="2" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="102"/>
+      </command>
+      <command step="3" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="102"/>
+      </command>
+      <command step="4" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="102"/>
+      </command>
+      <command step="5" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="102"/>
+      </command>
+    </channel>
+    <channel id="102" comment="Sub_Prog_of_CH101" update="0" dispbkimg="1" bkimgpath="" bkimgwidth="0" bkimgheight="0" bkimgtrans="0" bkimgx="0.000000" bkimgy="0.000000" dispcad="1" cadgerber="0" cadmm="0" cadxrev="0" cadyrev="1" cadtype="1" cadfile="" cadofstx="+0000.000" cadofsty="+0000.000" dxfangle="0">
+      <command step="1" cmd_id="13" cmd_name="TIMER OUT" status="0">
+        <parameter out_ch="24" on_off="1" time="+0.01"/>
+      </command>
+      <command step="2" cmd_id="06" cmd_name="TIMER" status="0">
+        <parameter time=" +0.70"/>
+      </command>
+      <command step="3" cmd_id="01" cmd_name="STRAIGHT 1" status="0">
+        <parameter abs_inc="1" v="00"/>
+        <point name="EndPoint" Z="   +0.050"/>
+      </command>
+    </channel>
+    <channel id="103" comment="Sub_Prog_of_CH001" update="0" dispbkimg="1" bkimgpath="" bkimgwidth="0" bkimgheight="0" bkimgtrans="0" bkimgx="0.000000" bkimgy="0.000000" dispcad="1" cadgerber="0" cadmm="0" cadxrev="0" cadyrev="1" cadtype="1" cadfile="" cadofstx="+0000.000" cadofsty="+0000.000" dxfangle="0">
+      <command step="1" cmd_id="01" cmd_name="STRAIGHT 1" status="0">
+        <parameter abs_inc="1" v="00"/>
+        <point name="EndPoint" Z="   -0.100"/>
+      </command>
+    </channel>
+  </channel_list>
+</project>
