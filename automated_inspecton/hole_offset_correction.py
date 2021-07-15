@@ -3,6 +3,8 @@ import csv
 from array import array
 import math
 
+from correction_Pass2 import *
+
 global dir_path
 dir_path = os.path.dirname(os.path.realpath(__file__))
 head_tail = os.path.split(dir_path)
@@ -88,8 +90,30 @@ def propagate_offset_weighted(x_measured, y_measured,  z_measured, x_offset,y_of
 def offCorrection(fileName_75_pcb, parsed_csv , pathPass1CSV):
    
     global dir_path
+    global fileName_7_pcb
+    # Read values for 7 holes as in measured file (parse_csv) and extract 7PCB cordinate values using 
+    # CorrectionPass2(fileName_offset, fileName_75_gerber , pathPass2CSV)
+   
+    # Create filename for the pcb gerber file with hole number as in measured file 
+    # Proto_Board55555_75_Pass1_corr_20210714.csv 
+    #print("CSSSSSVVV : " + parsed_csv)
+    head_tail = os.path.split(parsed_csv)
+    #print (head_tail)
+    dir_path = head_tail[0]
+    fileName_7_pcb = head_tail[1].split('_')
+    fileName_7_pcb[len(fileName_7_pcb)-1] = "corr_" + fileName_7_pcb[len(fileName_7_pcb)-1]
+    fileName_7_pcb = '_'.join(fileName_7_pcb)
+    fileName_7_pcb = head_tail[0] + "/" + fileName_7_pcb
+    #print (fileName_7_pcb)
+
+    # Call function for the gerber file creation using the  measured values
+    CorrectionPass2(parsed_csv, fileName_75_pcb ,fileName_7_pcb)
+
+
     # read 7 hole values from gerber file
-    fileName_7_pcb = dir_path + "/automated_inspecton/gerber/seven_hole_pcb.csv"
+    #fileName_7_pcb = dir_path + "/automated_inspecton/gerber/seven_hole_pcb.csv"
+    
+    #print ("RRRRRRRE 7 PCB:")
     x_pcb,y_pcb,z_pcb,hole_7 = csv_reader(fileName_7_pcb)
 
     # read 7 holes Measured Values
@@ -98,26 +122,29 @@ def offCorrection(fileName_75_pcb, parsed_csv , pathPass1CSV):
     y_measured = []
     z_measured = []
 
-    print(parsed_csv)
-    sr_no_1, x_measured, y_measured, z_measured, hole_no_1 = map(list, zip(*parsed_csv))
-    x_measured = [float(item) for item in x_measured]
-    y_measured = [float(item) for item in y_measured]
-    z_measured = [float(item) for item in z_measured]
+    #print("PARSE CSV : ",  parsed_csv)
+    x_measured,y_measured,z_measured,hole_measured = csv_reader(parsed_csv)
+#    x_measured, y_measured, z_measured, hole_no_1 = map(list, zip(*parsed_csv))
+#    x_measured = [float(item) for item in x_measured]
+#    y_measured = [float(item) for item in y_measured]
+#    z_measured = [float(item) for item in z_measured]
 
     # Incase the values entered in table are zero
     if all([ v == 0 for v in x_measured ]):
-        print ('measured values are zero')
+        print ('measured values are zero:::')
         fileName_7_measured = dir_path + "/automated_inspecton/hole_measure.csv"
 #        fileName_7_measured = dir_path + "/data/CSV/Pass0/hole_measure.csv"
         print("FILE NAME 7 MEASURED : " + fileName_7_measured)
-        x_measured,y_measured,z_measured,hole_meas = csv_reader(fileName_7_measured)
-    #print("slected holes = S01,S07,S73,S47,S43,S74,S69")
+        x_measured,y_measured,z_measured,hole_measured = csv_reader(fileName_7_measured)
+
     date = datetime.datetime.now()
     #print("x_pcb = ", x_pcb)
     #print("y_pcb = ", y_pcb)
-    print("x_measured = ",x_measured)
-    print("y_measured = ", y_measured)
-    print("z_measured = ", z_measured)
+    
+   # print("x_measured = ",x_measured)
+   # print("y_measured = ", y_measured)
+   # print("z_measured = ", z_measured)
+
     ####define offset array#####
     x_offset, y_offset = array('d'), array('d')
     x_offset,y_offset = offsect_cal(x_pcb,y_pcb,x_measured,y_measured)
