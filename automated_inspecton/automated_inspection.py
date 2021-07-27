@@ -7,6 +7,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from datetime import datetime
 from subprocess import call, PIPE, Popen
+from shutil import copyfile
 #from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog
 #from PyQt5.QtWidgets import QTableWidget,QTableWidgetItem, QMessageBox
 #from PyQt5.QtWidgets import QLineEdit
@@ -55,6 +56,37 @@ def signals(self):
 
     # Call action Canny_Edge_Detector
     #self.actionCanny_Edge_Detector.triggered.connect(self.CannyEdgeDetector)
+
+    self.pushButton_get_gerber.clicked.connect(self.gerber_handler)
+    #self.clicked.connect(self.showData)
+
+def gerber_handler(self):
+    print("Accept Gerber File")
+    self.open_gerber_dialog_box() 
+
+def open_gerber_dialog_box(self):
+    global inputGerber75
+    global passNo
+
+    # Action to get the gerber file : curently hard coded
+    #def getGerber75():
+    #global dir_path
+    # open inputGerber75 and get inputGerber7
+    #global inputGerber75
+    #inputGerber75 = dir_path + "/automated_inspecton/gerber/pcb_cordinate_75.csv"
+    #return inputGerber75
+    
+    #### Error Handling file need to select not selection is not option::::
+
+    filename = QFileDialog.getOpenFileName()
+    inputGerber75 = filename[0]
+    if inputGerber75 == "":
+        inputGerber75 = dir_path + "/automated_inspecton/gerber/pcb_cordinate_75.csv"
+    self.label_input_gerber_75_pass1.setText(inputGerber75)
+    passNo = -1 
+    getButtonStatus(self)
+
+
 
 # For acception numeric table values
 class NumericDelegate(QStyledItemDelegate):
@@ -262,10 +294,10 @@ def validate_board(self):
         self.lineEdit_board_no.setText(bno)
         #self.lineEdit_board_no.setReadOnly(True)
         # Generate file name Proto_BoardXXXXX_Pass0_07.csv
-        pathPass0CSV= pathPass0CSV + btype + "_Board" + bno +"_Pass0_07_"+dateStr +".csv"
+        pathPass0CSV = pathPass0CSV + btype + "_Board" + bno +"_Pass0_07_"+dateStr +".csv"
         self.label_output_CSV_pass0.setText(pathPass0CSV)
         
-        passNo = -1
+        #passNo = -1
         getButtonStatus(self)
         
         self.tableWidget_7_coordinates.setFocus()
@@ -279,6 +311,7 @@ def resetPass0(self):
     self.lineEdit_board_no.setReadOnly(False)
     self.label_Finish_Pass.setStyleSheet("color: rgb(5, 0, 1);")  # Black
     self.label_Finish_Pass.setText("")
+    self.label_input_gerber_75_pass1.setText("Select Gerber File")
 
 
     self.lineEdit_board_no.setText('')
@@ -305,6 +338,7 @@ def resetPass0(self):
 # Action to accept the values for mesured 7 holes and write to csv file
 def pass0(self):
     global pathPath0CSV
+    global inputGerber75
     global passNo
     global btype
     global bno
@@ -314,7 +348,7 @@ def pass0(self):
 
     with open(pathPass0CSV, 'w', newline='') as pass0_file:
         writer = csv.DictWriter(pass0_file, fieldnames = [('Board Type:',btype), ('Board No:',bno), ('Date:', dateStr)])
-        writer = csv.DictWriter(pass0_file, fieldnames = ["Sr. no", "X", "Y", "Z", "Hole no."])
+        writer = csv.DictWriter(pass0_file, fieldnames = ["x","y","z","name"])
                 
         writer.writeheader()
         writer = csv.writer(pass0_file)
@@ -323,8 +357,8 @@ def pass0(self):
         ncols = self.tableWidget_7_coordinates.columnCount()
         for row in range(0,nrows):
             item_text = []
-            cell = self.tableWidget_7_coordinates.item(row, 0)
-            item_text.append(cell.text())
+            #cell = self.tableWidget_7_coordinates.item(row, 0)
+            #item_text.append(cell.text())
             #for col in range(0, ncols):
             for col in range(2, ncols):
                 cell = self.tableWidget_7_coordinates.item(row, col)
@@ -333,9 +367,12 @@ def pass0(self):
             item_text.append(cell.text())
             item.append(item_text)
             writer.writerow(item[row])
-        
+
+        # Close opened file
+        pass0_file.close()
+
         # Get Ready for Pass1
-        self.label_input_gerber_75_pass1.setText(getGerber75())
+        self.label_input_gerber_75_pass1.setText(inputGerber75)
 
         self.label_Finish_Pass.setStyleSheet("color: rgb(28, 43, 255);")  # Blue
         self.label_Finish_Pass.setText("PASS0 COMPLETED : MANUAL COORDINATES ACCEPTED")
@@ -345,24 +382,34 @@ def pass0(self):
         # Call action for generation Offset file and MC5 file
         pass1(self)
 
-# Action to get the gerber file : curently hard coded
-def getGerber75():
-
-    global dir_path
-    # open inputGerber75 and get inputGerber7
-    global inputGerber75
-    inputGerber75 = dir_path + "/automated_inspecton/gerber/pcb_cordinate_75.csv"
-    return inputGerber75
-
 # Action for generation the Offset and MC5 file
 def pass1(self):
+    global pathPass0CSV
     global pathPass1CSV
     global pathPass1MC5
     global inputGerber75
     global inputGerber7
-    global pathPath0CSV
     global item
     global dir_path
+
+    # Enter Default values in the mesured table if values entered are zero
+    x_measured, y_measured, z_measured, hole_no_1 = map(list, zip(*item))
+    x_measured = [float(item) for item in x_measured]
+    y_measured = [float(item) for item in y_measured]
+    z_measured = [float(item) for item in z_measured]
+    if all([ v == 0 for v in x_measured ]): # Incase the values entered in table are zero
+        print ('Measured values are zero: Displaying default measured values')
+        mhole_path = dir_path + "/automated_inspecton/hole_measure.csv"
+        copyfile(mhole_path, pathPass0CSV)
+        with open(mhole_path, 'r') as file:
+            reader = csv.reader(file)
+            headers = next(reader)
+            row =0
+            for frow in reader:
+                self.tableWidget_7_coordinates.setItem(row, 2, QTableWidgetItem(frow[0]))
+                self.tableWidget_7_coordinates.setItem(row, 3, QTableWidgetItem(frow[1]))
+                self.tableWidget_7_coordinates.setItem(row, 4, QTableWidgetItem(frow[2]))
+                row = row +1
 
     # Find path to store the CSV file generated in pass1  
     pathPass1CSV = dir_path + '/data/CSV/Pass1/'
@@ -379,7 +426,8 @@ def pass1(self):
     self.label_output_MC5_pass1.setText(pathPass1MC5)
     
     # Call Mintus code for offset correction(CSV/Pass1/)
-    hole_offset_correction.offCorrection(inputGerber75, item, pathPass1CSV) 
+    #hole_offset_correction.offCorrection(inputGerber75, item, pathPass1CSV) 
+    hole_offset_correction.offCorrection(inputGerber75, pathPass0CSV, pathPass1CSV) 
     
     # Call Mintus code for MC5 generation(MC5/Pass1)
     mc5file_genrater_final_with_XYZ.calculateMC5(pathPass1CSV, pathPass1MC5)
@@ -397,23 +445,6 @@ def pass1(self):
     self.lineEdit_destinationPath.setPlaceholderText("~/automated_inspection/data/")
     self.lineEdit_server.setFocus()
 
-    # Enter Default values in the mesured table if values entered are zero
-    sr_no_1, x_measured, y_measured, z_measured, hole_no_1 = map(list, zip(*item))
-    x_measured = [float(item) for item in x_measured]
-    y_measured = [float(item) for item in y_measured]
-    z_measured = [float(item) for item in z_measured]
-    if all([ v == 0 for v in x_measured ]): # Incase the values entered in table are zero
-        print ('Measured values are zero: Displaying default measured values')
-        mhole_path = dir_path + "/automated_inspecton/hole_measure.csv"
-        with open(mhole_path, 'r') as file:
-            reader = csv.reader(file)
-            headers = next(reader)
-            row =0
-            for frow in reader:
-                self.tableWidget_7_coordinates.setItem(row, 2, QTableWidgetItem(frow[0]))
-                self.tableWidget_7_coordinates.setItem(row, 3, QTableWidgetItem(frow[1]))
-                self.tableWidget_7_coordinates.setItem(row, 4, QTableWidgetItem(frow[2]))
-                row = row +1
     self.lineEdit_password.setFocus()
 
 # Set the Date and time for the values to be entered
@@ -480,4 +511,6 @@ if __name__ == "__main__":
     Ui_MainWindow_MiniGrantry.resetPass0 = resetPass0
     Ui_MainWindow_MiniGrantry.transfer = transfer
     Ui_MainWindow_MiniGrantry.validate_board=validate_board
+    Ui_MainWindow_MiniGrantry.gerber_handler=gerber_handler
+    Ui_MainWindow_MiniGrantry.open_gerber_dialog_box=open_gerber_dialog_box
     main()
