@@ -384,7 +384,7 @@ class My_main_Window(QDialog):
             try:
                 apply_offset_correction(self.pwd + "/offset_from_centroidFinder.csv",
                                         self.pwd + "/../data/CSV/Pass1/Proto_Board55555_75_Pass1_20210714.csv",
-                                        self.pwd + "/../data/CSV/Pass1/Proto_Board55555_75_Pass1_corr_20210714.csv")
+                                        self.pwd + "/../data/CSV/Pass2/Proto_Board55555_75_Pass2_20210714.csv") # this file name is hard code because board numaber is not in the iamge name 
             except Exception as e:
                 print(e)
                 print("offset corrected file has not been created check the inputs of apply_offset_correction")

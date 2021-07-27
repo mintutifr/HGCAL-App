@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7f57e3c-076b-491d-83cb-f32c430b4850" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Histogram_Ploter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyPyQT.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Run_centriodFinder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Run_centriodFinder_localAnalysis.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analyse_data.C" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analyse_data_v07.C" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apply_correction.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/change_prifix.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/correction_Pass2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CSV/gerber/pcb_cordinate_75.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CSV/gerber/seven_hole_pcb.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/export_csv.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/folder_icon.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_icon.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loop.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next_Img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/offset_from_centroidFinder.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/privous_Img.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/slopsAndOffset.root" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_processing/Histogram_Ploter.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_processing/Histogram_Ploter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
