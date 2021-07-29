@@ -129,7 +129,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_cannyEdge">
+           <widget class="QPushButton" name="pushButton_imageProcesing">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
               <horstretch>0</horstretch>
@@ -140,12 +140,12 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This application can be used to plot the edges in a given image and also export them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>Canny Edge Detector</string>
+             <string>Image Procesing</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_OffsetCorrection">
+           <widget class="QPushButton" name="pushButton_correctedInspection">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
               <horstretch>0</horstretch>
@@ -153,7 +153,7 @@
              </sizepolicy>
             </property>
             <property name="text">
-             <string>Correction</string>
+             <string>Corrected Inspection</string>
             </property>
            </widget>
           </item>
@@ -201,7 +201,8 @@
      <string>Action</string>
     </property>
     <addaction name="actionAutoInspection"/>
-    <addaction name="actionCannyEdge"/>
+    <addaction name="actionImageProcesing"/>
+    <addaction name="actionCorrected_Inspection"/>
     <addaction name="actionQuit"/>
    </widget>
    <addaction name="menuAction"/>
@@ -210,15 +211,32 @@
    <property name="text">
     <string>Automated Inspection</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
   </action>
-  <action name="actionCannyEdge">
+  <action name="actionImageProcesing">
    <property name="text">
-    <string>Canny Edge Detector</string>
+    <string>Image Procesing</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
    </property>
   </action>
   <action name="actionQuit">
    <property name="text">
     <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionCorrected_Inspection">
+   <property name="text">
+    <string>Corrected Inspection</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
    </property>
   </action>
  </widget>
