@@ -1,0 +1,572 @@
+
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@pshingade
+mintutifr /
+HGCAL-App
+
+1
+0
+
+    0
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+
+    Insights
+
+HGCAL-App/image_processing/MC_2016_submission_Minitree2J1T0mu_result.txt
+@mintutifr
+mintutifr add the csv file from certriad in pass2
+Latest commit d2951a5 6 days ago
+History
+1 contributor
+525 lines (414 sloc) 42.2 KB
+[mikumar@lxplus769 MiniTree_2016_2J1T_mu]$ python check_crab_status.py 2016
+Dataset size =  30  RequestName size =  30
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_Tchannel_Minitree_2J1T0_mu_2016
+Task name:			210721_164800:mikumar_crab_Tchannel_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_164800%3Amikumar_crab_Tchannel_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_164800%3Amikumar_crab_Tchannel_Minitree_2J1T0_mu_2016&from=1626882480000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (62/62)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+
+Summary of run jobs:
+ * Memory: 2MB min, 347MB max, 37MB ave
+ * Runtime: 0:01:03 min, 0:06:11 max, 0:03:11 ave
+ * CPU eff: 4% min, 74% max, 39% ave
+ * Waste: 3:35:01 (52% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_Tchannel_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/Tchannel/ST_t-channel_top_4f_InclusiveDecays_TuneCP5_PSweights_13TeV-powheg-pythia8/MiniTree_21_Jul21_MC2016_Tchannel_2J1T0/210721_164800/0000/tree_1.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_Tbarchannel_Minitree_2J1T0_mu_2016
+Task name:			210721_171840:mikumar_crab_Tbarchannel_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0137.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_171840%3Amikumar_crab_Tbarchannel_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_171840%3Amikumar_crab_Tbarchannel_Minitree_2J1T0_mu_2016&from=1626884320000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (33/33)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+
+Summary of run jobs:
+ * Memory: 2MB min, 347MB max, 43MB ave
+ * Runtime: 0:01:29 min, 0:06:28 max, 0:03:19 ave
+ * CPU eff: 5% min, 72% max, 38% ave
+ * Waste: 1:45:30 (49% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_Tbarchannel_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/Tbarchannel/ST_t-channel_antitop_4f_InclusiveDecays_TuneCP5_PSweights_13TeV-powheg-pythia8/MiniTree_21_Jul21_MC2016_Tbarchannel_2J1T0/210721_171840/0000/tree_10.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_Schannel_Minitree_2J1T0_mu_2016
+Task name:			210721_171915:mikumar_crab_Schannel_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0121.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_171915%3Amikumar_crab_Schannel_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_171915%3Amikumar_crab_Schannel_Minitree_2J1T0_mu_2016&from=1626884355000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (10/10)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Summary of run jobs:
+ * Memory: 346MB min, 350MB max, 348MB ave
+ * Runtime: 0:05:45 min, 0:08:54 max, 0:07:10 ave
+ * CPU eff: 56% min, 73% max, 63% ave
+ * Waste: 0:17:52 (20% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_Schannel_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/Schannel/ST_s-channel_4f_leptonDecays_TuneCP5_PSweights_13TeV-amcatnlo-pythia8/MiniTree_21_Jul21_MC2016_Schannel_2J1T0/210721_171915/0000/tree_1.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_tw_top_Minitree_2J1T0_mu_2016
+Task name:			210721_171951:mikumar_crab_tw_top_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0199.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_171951%3Amikumar_crab_tw_top_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_171951%3Amikumar_crab_tw_top_Minitree_2J1T0_mu_2016&from=1626884391000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (21/21)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+
+Summary of run jobs:
+ * Memory: 31MB min, 346MB max, 65MB ave
+ * Runtime: 0:03:59 min, 0:06:17 max, 0:04:32 ave
+ * CPU eff: 4% min, 66% max, 25% ave
+ * Waste: 2:04:56 (57% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_tw_top_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/tw_top/ST_tW_top_5f_inclusiveDecays_TuneCP5_PSweights_13TeV-powheg-pythia8/MiniTree_21_Jul21_MC2016_tw_top_2J1T0/210721_171951/0000/tree_1.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_tw_antitop_Minitree_2J1T0_mu_2016
+Task name:			210721_172025:mikumar_crab_tw_antitop_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0121.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_172025%3Amikumar_crab_tw_antitop_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_172025%3Amikumar_crab_tw_antitop_Minitree_2J1T0_mu_2016&from=1626884426000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (21/21)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+
+Summary of run jobs:
+ * Memory: 49MB min, 349MB max, 61MB ave
+ * Runtime: 0:01:03 min, 0:07:12 max, 0:03:46 ave
+ * CPU eff: 1% min, 62% max, 29% ave
+ * Waste: 1:40:38 (56% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_tw_antitop_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/tw_antitop/ST_tW_antitop_5f_inclusiveDecays_TuneCP5_PSweights_13TeV-powheg-pythia8/MiniTree_21_Jul21_MC2016_tw_antitop_2J1T0/210721_172025/0000/tree_1.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_ttbar_SemiLeptonic_Minitree_2J1T0_mu_2016
+Task name:			210721_172101:mikumar_crab_ttbar_SemiLeptonic_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_172101%3Amikumar_crab_ttbar_SemiLeptonic_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_172101%3Amikumar_crab_ttbar_SemiLeptonic_Minitree_2J1T0_mu_2016&from=1626884461000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (178/178)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Summary of run jobs:
+ * Memory: 2MB min, 428MB max, 230MB ave
+ * Runtime: 0:01:11 min, 0:14:09 max, 0:06:26 ave
+ * CPU eff: 8% min, 79% max, 63% ave
+ * Waste: 5:28:33 (22% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_ttbar_SemiLeptonic_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/ttbar_SemiLeptonic/TTToSemiLeptonic_TuneCP5_PSweights_13TeV-powheg-pythia8/MiniTree_21_Jul21_MC2016_ttbar_SemiLeptonic_2J1T0/210721_172101/0000/tree_1.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_ttbar_FullyLeptonic_Minitree_2J1T0_mu_2016
+Task name:			210721_172137:mikumar_crab_ttbar_FullyLeptonic_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0121.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_172137%3Amikumar_crab_ttbar_FullyLeptonic_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_172137%3Amikumar_crab_ttbar_FullyLeptonic_Minitree_2J1T0_mu_2016&from=1626884497000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (119/119)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Summary of run jobs:
+ * Memory: 40MB min, 427MB max, 217MB ave
+ * Runtime: 0:01:14 min, 0:18:14 max, 0:07:36 ave
+ * CPU eff: 5% min, 78% max, 66% ave
+ * Waste: 5:32:33 (27% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_ttbar_FullyLeptonic_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/ttbar_FullyLeptonic/TTTo2L2Nu_TuneCP5_PSweights_13TeV-powheg-pythia8/MiniTree_21_Jul21_MC2016_ttbar_FullyLeptonic_2J1T0/210721_172137/0000/tree_1.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WToLNu_0J_Minitree_2J1T0_mu_2016
+Task name:			210721_172224:mikumar_crab_WToLNu_0J_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0121.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_172224%3Amikumar_crab_WToLNu_0J_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_172224%3Amikumar_crab_WToLNu_0J_Minitree_2J1T0_mu_2016&from=1626884544000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (41/41)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+
+Summary of run jobs:
+ * Memory: 2MB min, 59MB max, 22MB ave
+ * Runtime: 0:01:03 min, 0:01:38 max, 0:01:14 ave
+ * CPU eff: 0% min, 22% max, 11% ave
+ * Waste: 1:03:20 (56% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WToLNu_0J_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/WToLNu_0J/WToLNu_0J_13TeV-amcatnloFXFX-pythia8/MiniTree_21_Jul21_MC2016_WToLNu_0J_2J1T0/210721_172224/0000/tree_1.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WToLNu_0J_backup_Minitree_2J1T0_mu_2016
+Task name:			210721_172301:mikumar_crab_WToLNu_0J_backup_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0106.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_172301%3Amikumar_crab_WToLNu_0J_backup_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_172301%3Amikumar_crab_WToLNu_0J_backup_Minitree_2J1T0_mu_2016&from=1626884582000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (36/36)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+
+Summary of run jobs:
+ * Memory: 2MB min, 53MB max, 27MB ave
+ * Runtime: 0:01:06 min, 0:04:36 max, 0:02:18 ave
+ * CPU eff: 0% min, 21% max, 6% ave
+ * Waste: 1:59:51 (59% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WToLNu_0J_backup_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/WToLNu_0J_backup/WToLNu_0J_13TeV-amcatnloFXFX-pythia8/MiniTree_21_Jul21_MC2016_WToLNu_0J_backup_2J1T0/210721_172301/0000/tree_13.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WToLNu_1J_backup_Minitree_2J1T0_mu_2016
+Task name:			210721_172348:mikumar_crab_WToLNu_1J_backup_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0137.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_172348%3Amikumar_crab_WToLNu_1J_backup_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_172348%3Amikumar_crab_WToLNu_1J_backup_Minitree_2J1T0_mu_2016&from=1626884628000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (44/44)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+
+Summary of run jobs:
+ * Memory: 2MB min, 55MB max, 27MB ave
+ * Runtime: 0:02:05 min, 0:04:39 max, 0:03:47 ave
+ * CPU eff: 0% min, 13% max, 5% ave
+ * Waste: 3:45:43 (58% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WToLNu_1J_backup_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/WToLNu_1J_backup/WToLNu_1J_13TeV-amcatnloFXFX-pythia8/MiniTree_21_Jul21_MC2016_WToLNu_1J_backup_2J1T0/210721_172348/0000/tree_1.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WToLNu_2J_Minitree_2J1T0_mu_2016
+Task name:			210721_172422:mikumar_crab_WToLNu_2J_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0194.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_172422%3Amikumar_crab_WToLNu_2J_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_172422%3Amikumar_crab_WToLNu_2J_Minitree_2J1T0_mu_2016&from=1626884662000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (33/33)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+
+Summary of run jobs:
+ * Memory: 31MB min, 49MB max, 22MB ave
+ * Runtime: 0:01:29 min, 0:03:30 max, 0:02:33 ave
+ * CPU eff: 25% min, 58% max, 47% ave
+ * Waste: 0:14:13 (14% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WToLNu_2J_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/WToLNu_2J/WToLNu_2J_13TeV-amcatnloFXFX-pythia8/MiniTree_21_Jul21_MC2016_WToLNu_2J_2J1T0/210721_172422/0000/tree_11.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WToLNu_2J_ext_Minitree_2J1T0_mu_2016
+Task name:			210721_172458:mikumar_crab_WToLNu_2J_ext_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0197.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_172458%3Amikumar_crab_WToLNu_2J_ext_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_172458%3Amikumar_crab_WToLNu_2J_ext_Minitree_2J1T0_mu_2016&from=1626884698000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (221/221)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+
+Summary of run jobs:
+ * Memory: 29MB min, 62MB max, 27MB ave
+ * Runtime: 0:01:32 min, 0:04:15 max, 0:02:35 ave
+ * CPU eff: 3% min, 57% max, 29% ave
+ * Waste: 9:03:15 (49% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WToLNu_2J_ext_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/WToLNu_2J_ext/WToLNu_2J_13TeV-amcatnloFXFX-pythia8/MiniTree_21_Jul21_MC2016_WToLNu_2J_ext_2J1T0/210721_172458/0000/tree_10.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_DYJetsToLL_Minitree_2J1T0_mu_2016
+Task name:			210721_172533:mikumar_crab_DYJetsToLL_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_172533%3Amikumar_crab_DYJetsToLL_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_172533%3Amikumar_crab_DYJetsToLL_Minitree_2J1T0_mu_2016&from=1626884733000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (2/2)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+
+Summary of run jobs:
+ * Memory: 2MB min, 2MB max, 3MB ave
+ * Runtime: 0:04:23 min, 0:04:29 max, 0:04:26 ave
+ * CPU eff: 4% min, 6% max, 5% ave
+ * Waste: 0:11:45 (57% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_DYJetsToLL_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/DYJetsToLL/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/MiniTree_21_Jul21_MC2016_DYJetsToLL_2J1T0/210721_172533/0000/tree_1.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WWTo1L1Nu2Q_Minitree_2J1T0_mu_2016
+Task name:			210721_172609:mikumar_crab_WWTo1L1Nu2Q_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0119.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_172609%3Amikumar_crab_WWTo1L1Nu2Q_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_172609%3Amikumar_crab_WWTo1L1Nu2Q_Minitree_2J1T0_mu_2016&from=1626884769000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (6/6)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+
+Summary of run jobs:
+ * Memory: 52MB min, 52MB max, 32MB ave
+ * Runtime: 0:02:16 min, 0:02:30 max, 0:02:23 ave
+ * CPU eff: 12% min, 57% max, 33% ave
+ * Waste: 0:20:37 (59% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WWTo1L1Nu2Q_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/WWTo1L1Nu2Q/WWTo1L1Nu2Q_13TeV_amcatnloFXFX_madspin_pythia8/MiniTree_21_Jul21_MC2016_WWTo1L1Nu2Q_2J1T0/210721_172609/0000/tree_1.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WWTo2L2Nu_Minitree_2J1T0_mu_2016
+Task name:			210721_172644:mikumar_crab_WWTo2L2Nu_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0199.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_172644%3Amikumar_crab_WWTo2L2Nu_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_172644%3Amikumar_crab_WWTo2L2Nu_Minitree_2J1T0_mu_2016&from=1626884804000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (5/5)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+
+Summary of run jobs:
+ * Memory: 2MB min, 52MB max, 30MB ave
+ * Runtime: 0:02:59 min, 0:03:30 max, 0:03:18 ave
+ * CPU eff: 5% min, 14% max, 8% ave
+ * Waste: 0:25:26 (61% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WWTo2L2Nu_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/WWTo2L2Nu/WWTo2L2Nu_13TeV-powheg/MiniTree_21_Jul21_MC2016_WWTo2L2Nu_2J1T0/210721_172644/0000/tree_5.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WZTo1L1Nu2Q_Minitree_2J1T0_mu_2016
+Task name:			210721_172719:mikumar_crab_WZTo1L1Nu2Q_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0107.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_172719%3Amikumar_crab_WZTo1L1Nu2Q_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_172719%3Amikumar_crab_WZTo1L1Nu2Q_Minitree_2J1T0_mu_2016&from=1626884839000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (20/20)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Summary of run jobs:
+ * Memory: 31MB min, 408MB max, 140MB ave
+ * Runtime: 0:01:59 min, 0:08:01 max, 0:04:43 ave
+ * CPU eff: 42% min, 75% max, 57% ave
+ * Waste: 0:31:08 (25% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WZTo1L1Nu2Q_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/WZTo1L1Nu2Q/WZTo1L1Nu2Q_13TeV_amcatnloFXFX_madspin_pythia8/MiniTree_21_Jul21_MC2016_WZTo1L1Nu2Q_2J1T0/210721_172719/0000/tree_10.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WZTo2L2Q_Minitree_2J1T0_mu_2016
+Task name:			210721_172754:mikumar_crab_WZTo2L2Q_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0198.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_172754%3Amikumar_crab_WZTo2L2Q_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_172754%3Amikumar_crab_WZTo2L2Q_Minitree_2J1T0_mu_2016&from=1626884874000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (21/21)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+
+Summary of run jobs:
+ * Memory: 30MB min, 50MB max, 25MB ave
+ * Runtime: 0:04:00 min, 0:04:24 max, 0:04:06 ave
+ * CPU eff: 3% min, 26% max, 16% ave
+ * Waste: 2:12:13 (60% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_WZTo2L2Q_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/WZTo2L2Q/WZTo2L2Q_13TeV_amcatnloFXFX_madspin_pythia8/MiniTree_21_Jul21_MC2016_WZTo2L2Q_2J1T0/210721_172754/0000/tree_10.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_ZZTo2L2Q_Minitree_2J1T0_mu_2016
+Task name:			210721_172830:mikumar_crab_ZZTo2L2Q_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0137.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_172830%3Amikumar_crab_ZZTo2L2Q_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_172830%3Amikumar_crab_ZZTo2L2Q_Minitree_2J1T0_mu_2016&from=1626884910000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (11/11)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+
+Summary of run jobs:
+ * Memory: 2MB min, 50MB max, 25MB ave
+ * Runtime: 0:03:29 min, 0:04:44 max, 0:04:09 ave
+ * CPU eff: 22% min, 59% max, 40% ave
+ * Waste: 1:17:36 (63% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_ZZTo2L2Q_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/ZZTo2L2Q/ZZTo2L2Q_13TeV_amcatnloFXFX_madspin_pythia8/MiniTree_21_Jul21_MC2016_ZZTo2L2Q_2J1T0/210721_172830/0000/tree_1.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+resubmit job status yes/no(1/0) = NO
+DONE -------------------------------------------------------------------------------------------------
+CRAB project directory:		/afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_QCD_Pt-20toInf_MuEnriched_Minitree_2J1T0_mu_2016
+Task name:			210721_172904:mikumar_crab_QCD_Pt-20toInf_MuEnriched_Minitree_2J1T0_mu_2016
+Grid scheduler - Task Worker:	crab3@vocms0119.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/210721_172904%3Amikumar_crab_QCD_Pt-20toInf_MuEnriched_Minitree_2J1T0_mu_2016
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mikumar&var-task=210721_172904%3Amikumar_crab_QCD_Pt-20toInf_MuEnriched_Minitree_2J1T0_mu_2016&from=1626884944000&to=now
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (27/27)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+
+Summary of run jobs:
+ * Memory: 2MB min, 53MB max, 23MB ave
+ * Runtime: 0:04:27 min, 0:04:50 max, 0:04:41 ave
+ * CPU eff: 4% min, 26% max, 17% ave
+ * Waste: 3:01:24 (59% of total)
+
+Log file is /afs/cern.ch/work/m/mikumar/private/NanoAOD/CMSSW_10_6_0/src/PhysicsTools/NanoAODTools/crab/MiniTree_2016_2J1T_mu/crab_QCD_Pt-20toInf_MuEnriched_Minitree_2J1T0_mu_2016/crab.log
+DONE ---------------------------crab status---------------------------------------------------------------------
+root://cms-xrd-global.cern.ch//store/user/mikumar/RUN2/MiniTree_crab/SIXTEEN/MC/dR_len_with_Jet/2J1T0_mu/QCD_Pt-20toInf_MuEnriched/QCD_Pt-20toInf_MuEnrichedPt15_TuneCUETP8M1_13TeV_pythia8/MiniTree_21_Jul21_MC2016_QCD_Pt-20toInf_MuEnriched_2J1T0/210721_172904/0000/tree_1.root
+DONE ---------------------------crab report---------------------------------------------------------------------
+
+    © 2021 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
+

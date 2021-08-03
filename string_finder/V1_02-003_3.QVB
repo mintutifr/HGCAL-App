@@ -1,0 +1,2026 @@
+Declare Sub QVBlock_150
+Declare Sub QVBlock_149
+Declare Sub QVBlock_148
+Declare Sub QVBlock_147
+Declare Sub QVBlock_146
+Declare Sub QVBlock_145
+Declare Sub QVBlock_144
+Declare Sub QVBlock_143
+Declare Sub QVBlock_142
+Declare Sub QVBlock_141
+Declare Sub QVBlock_140
+Declare Sub QVBlock_139
+Declare Sub QVBlock_138
+Declare Sub QVBlock_137
+Declare Sub QVBlock_136
+Declare Sub QVBlock_135
+Declare Sub QVBlock_134
+Declare Sub QVBlock_133
+Declare Sub QVBlock_132
+Declare Sub QVBlock_131
+Declare Sub QVBlock_130
+Declare Sub QVBlock_129
+Declare Sub QVBlock_128
+Declare Sub QVBlock_127
+Declare Sub QVBlock_126
+Declare Sub QVBlock_125
+Declare Sub QVBlock_124
+Declare Sub QVBlock_123
+Declare Sub QVBlock_122
+Declare Sub QVBlock_121
+Declare Sub QVBlock_120
+Declare Sub QVBlock_119
+Declare Sub QVBlock_118
+Declare Sub QVBlock_117
+Declare Sub QVBlock_116
+Declare Sub QVBlock_115
+Declare Sub QVBlock_114
+Declare Sub QVBlock_113
+Declare Sub QVBlock_112
+Declare Sub QVBlock_111
+Declare Sub QVBlock_110
+Declare Sub QVBlock_109
+Declare Sub QVBlock_108
+Declare Sub QVBlock_107
+Declare Sub QVBlock_106
+Declare Sub QVBlock_105
+Declare Sub QVBlock_104
+Declare Sub QVBlock_103
+Declare Sub QVBlock_102
+Declare Sub QVBlock_101
+Declare Sub QVBlock_100
+Declare Sub QVBlock_99
+Declare Sub QVBlock_98
+Declare Sub QVBlock_97
+Declare Sub QVBlock_96
+Declare Sub QVBlock_95
+Declare Sub QVBlock_94
+Declare Sub QVBlock_93
+Declare Sub QVBlock_92
+Declare Sub QVBlock_91
+Declare Sub QVBlock_90
+Declare Sub QVBlock_89
+Declare Sub QVBlock_88
+Declare Sub QVBlock_87
+Declare Sub QVBlock_86
+Declare Sub QVBlock_85
+Declare Sub QVBlock_84
+Declare Sub QVBlock_83
+Declare Sub QVBlock_82
+Declare Sub QVBlock_81
+Declare Sub QVBlock_80
+Declare Sub QVBlock_79
+Declare Sub QVBlock_78
+Declare Sub QVBlock_77
+Declare Sub QVBlock_76
+Declare Sub QVBlock_75
+Declare Sub QVBlock_74
+Declare Sub QVBlock_73
+Declare Sub QVBlock_72
+Declare Sub QVBlock_71
+Declare Sub QVBlock_70
+Declare Sub QVBlock_69
+Declare Sub QVBlock_68
+Declare Sub QVBlock_67
+Declare Sub QVBlock_66
+Declare Sub QVBlock_65
+Declare Sub QVBlock_64
+Declare Sub QVBlock_63
+Declare Sub QVBlock_62
+Declare Sub QVBlock_61
+Declare Sub QVBlock_60
+Declare Sub QVBlock_59
+Declare Sub QVBlock_58
+Declare Sub QVBlock_57
+Declare Sub QVBlock_56
+Declare Sub QVBlock_55
+Declare Sub QVBlock_54
+Declare Sub QVBlock_53
+Declare Sub QVBlock_52
+Declare Sub QVBlock_51
+Declare Sub QVBlock_50
+Declare Sub QVBlock_49
+Declare Sub QVBlock_48
+Declare Sub QVBlock_47
+Declare Sub QVBlock_46
+Declare Sub QVBlock_45
+Declare Sub QVBlock_44
+Declare Sub QVBlock_43
+Declare Sub QVBlock_42
+Declare Sub QVBlock_41
+Declare Sub QVBlock_40
+Declare Sub QVBlock_39
+Declare Sub QVBlock_38
+Declare Sub QVBlock_37
+Declare Sub QVBlock_36
+Declare Sub QVBlock_35
+Declare Sub QVBlock_34
+Declare Sub QVBlock_33
+Declare Sub QVBlock_32
+Declare Sub QVBlock_31
+Declare Sub QVBlock_30
+Declare Sub QVBlock_29
+Declare Sub QVBlock_28
+Declare Sub QVBlock_27
+Declare Sub QVBlock_26
+Declare Sub QVBlock_25
+Declare Sub QVBlock_24
+Declare Sub QVBlock_23
+Declare Sub QVBlock_22
+Declare Sub QVBlock_21
+Declare Sub QVBlock_20
+Declare Sub QVBlock_19
+Declare Sub QVBlock_18
+Declare Sub QVBlock_17
+Declare Sub QVBlock_16
+Declare Sub QVBlock_15
+Declare Sub QVBlock_14
+Declare Sub QVBlock_13
+Declare Sub QVBlock_12
+Declare Sub QVBlock_11
+Declare Sub QVBlock_10
+Declare Sub QVBlock_9
+Declare Sub QVBlock_8
+Declare Sub QVBlock_7
+Declare Sub QVBlock_6
+Declare Sub QVBlock_5
+Declare Sub QVBlock_4
+Declare Sub QVBlock_3
+Declare Sub QVBlock_2
+Declare Sub QVBlock_1
+Option Explicit
+
+sub startup
+
+'  *** Display Format ***
+DistanceUnits = MM
+CoordinateMode = CART
+ResolutionMode = DECIMALS_4
+AngleRange = MINUS180_TO_PLUS180
+AngleUnits = DECIMAL_DEGREES_4
+
+'  *** Measuring Device ***
+MeasuringDevice = QV_VIDEO
+
+'  *** Lens in Use ***
+Lens.Select Label:="1.5X (Z-objective)"
+
+'  *** Results Formatting ***
+Results.ShowFeatureTypeInHdr = TRUE
+Results.ShowFeatureLabelInHdr = TRUE
+Results.ShowFeatureIDInHdr = TRUE
+Results.ShowNumOfPointsInHdr = TRUE
+Results.ShowColumnLabels = TRUE
+Results.FormatColumns ELEMENT, ACTUAL, NOMINAL, DEVIATION, UPTOL, LOWTOL, PASSFAIL
+
+'  *** Results Messages ***
+Results.ShowAlignmentMsg = TRUE
+Results.ShowUnitsChangeMsg = TRUE
+Results.ShowConstructionMsg = TRUE
+Results.ShowErrorMsg = TRUE
+
+'  *** Results Data Reporting ***
+Results.ReportLevel = ALLDATA
+
+'  *** Results Logging ***
+Results.LogFileName = ""
+Results.LogToFile = FALSE
+Results.LogToCOM1 = FALSE
+Results.LogToCOM2 = FALSE
+
+'  *** Part Program Options ***
+BreakOnErrors = TRUE
+ShowImageTools = TRUE
+ShowTravelLimitWarnings = TRUE
+AutoRunSmartRecovery = FALSE
+
+'  *** Smart Recovery Options ***
+Video.SmartRecovery.Focus = TRUE
+Video.SmartRecovery.FocusRange = 1
+Video.SmartRecovery.Lighting = TRUE
+Video.SmartRecovery.LightingRange = 1
+Video.SmartRecovery.ToolPosition = TRUE
+Video.SmartRecovery.ToolPositionRange = 1
+Video.SmartRecovery.ToolAngle = TRUE
+Video.SmartRecovery.ToolAngleRange = 1
+Video.SmartRecovery.EdgeStrength = TRUE
+Video.SmartRecovery.EdgeStrengthRange = 1
+
+'  *** Restore MCS ***
+PCS.RestoreMCS
+
+'  *** Reference Plane ***
+ReferencePlane = XY_PLANE
+
+end sub   'startup
+
+sub Main    'start of main subroutine
+
+call startup
+
+
+Call   QVBlock_1
+Call   QVBlock_2
+Call   QVBlock_3
+Call   QVBlock_4
+Call   QVBlock_5
+Call   QVBlock_6
+Call   QVBlock_7
+Call   QVBlock_8
+Call   QVBlock_9
+Call   QVBlock_10
+Call   QVBlock_11
+Call   QVBlock_12
+Call   QVBlock_13
+Call   QVBlock_14
+Call   QVBlock_15
+Call   QVBlock_16
+Call   QVBlock_17
+Call   QVBlock_18
+Call   QVBlock_19
+Call   QVBlock_20
+Call   QVBlock_21
+Call   QVBlock_22
+Call   QVBlock_23
+Call   QVBlock_24
+Call   QVBlock_25
+Call   QVBlock_26
+Call   QVBlock_27
+Call   QVBlock_28
+Call   QVBlock_29
+Call   QVBlock_30
+Call   QVBlock_31
+Call   QVBlock_32
+Call   QVBlock_33
+Call   QVBlock_34
+Call   QVBlock_35
+Call   QVBlock_36
+Call   QVBlock_37
+Call   QVBlock_38
+Call   QVBlock_39
+Call   QVBlock_40
+Call   QVBlock_41
+Call   QVBlock_42
+Call   QVBlock_43
+Call   QVBlock_44
+Call   QVBlock_45
+Call   QVBlock_46
+Call   QVBlock_47
+Call   QVBlock_48
+Call   QVBlock_49
+Call   QVBlock_50
+Call   QVBlock_51
+Call   QVBlock_52
+Call   QVBlock_53
+Call   QVBlock_54
+Call   QVBlock_55
+Call   QVBlock_56
+Call   QVBlock_57
+Call   QVBlock_58
+Call   QVBlock_59
+Call   QVBlock_60
+Call   QVBlock_61
+Call   QVBlock_62
+Call   QVBlock_63
+Call   QVBlock_64
+Call   QVBlock_65
+Call   QVBlock_66
+Call   QVBlock_67
+Call   QVBlock_68
+Call   QVBlock_69
+Call   QVBlock_70
+Call   QVBlock_71
+Call   QVBlock_72
+Call   QVBlock_73
+Call   QVBlock_74
+Call   QVBlock_75
+Call   QVBlock_76
+Call   QVBlock_77
+Call   QVBlock_78
+Call   QVBlock_79
+Call   QVBlock_80
+Call   QVBlock_81
+Call   QVBlock_82
+Call   QVBlock_83
+Call   QVBlock_84
+Call   QVBlock_85
+Call   QVBlock_86
+Call   QVBlock_87
+Call   QVBlock_88
+Call   QVBlock_89
+Call   QVBlock_90
+Call   QVBlock_91
+Call   QVBlock_92
+Call   QVBlock_93
+Call   QVBlock_94
+Call   QVBlock_95
+Call   QVBlock_96
+Call   QVBlock_97
+Call   QVBlock_98
+Call   QVBlock_99
+Call   QVBlock_100
+Call   QVBlock_101
+Call   QVBlock_102
+Call   QVBlock_103
+Call   QVBlock_104
+Call   QVBlock_105
+Call   QVBlock_106
+Call   QVBlock_107
+Call   QVBlock_108
+Call   QVBlock_109
+Call   QVBlock_110
+Call   QVBlock_111
+Call   QVBlock_112
+Call   QVBlock_113
+Call   QVBlock_114
+Call   QVBlock_115
+Call   QVBlock_116
+Call   QVBlock_117
+Call   QVBlock_118
+Call   QVBlock_119
+Call   QVBlock_120
+Call   QVBlock_121
+Call   QVBlock_122
+Call   QVBlock_123
+Call   QVBlock_124
+Call   QVBlock_125
+Call   QVBlock_126
+Call   QVBlock_127
+Call   QVBlock_128
+Call   QVBlock_129
+Call   QVBlock_130
+Call   QVBlock_131
+Call   QVBlock_132
+Call   QVBlock_133
+Call   QVBlock_134
+Call   QVBlock_135
+Call   QVBlock_136
+Call   QVBlock_137
+Call   QVBlock_138
+Call   QVBlock_139
+Call   QVBlock_140
+Call   QVBlock_141
+Call   QVBlock_142
+Call   QVBlock_143
+Call   QVBlock_144
+Call   QVBlock_145
+Call   QVBlock_146
+Call   QVBlock_147
+Call   QVBlock_148
+Call   QVBlock_149
+Call   QVBlock_150
+
+
+end sub   'Main
+
+
+Private Sub QVBlock_1
+
+Measure.Point Label:="Point-1", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=40.006847483, Y:=138.176474440, Z:=31.780418770, Coax:=0.24, Stage:=0.00, Back:=0.00, Front:=0.21, Right:=0.00, Left:=0.00, Angle:=0.00, Color:= qvWhite, NomMag:=0.975000
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=39.110206881, Y:=139.246721077, Z:=31.161418770, W:=1.150020200, H:=0.903030402, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-1"
+Video.Export"s01-s.bmp",FileType:=1
+End Sub   'QVBlock_1
+
+Private Sub QVBlock_2
+
+Measure.Point Label:="Point-2", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=40.023217339, Y:=135.950527347, Z:=31.771118770, W:=1.213271311, H:=0.586682172, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-2"
+Video.Export"s01-p.bmp",FileType:=1
+End Sub   'QVBlock_2
+
+Private Sub QVBlock_3
+
+Measure.Point Label:="Point-3", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=36.488147483, Y:=120.090074440, Z:=31.780118770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=35.689200109, Y:=120.993485020, Z:=31.116318770, W:=1.017767877, H:=0.972051834, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-3"
+Video.Export"s02-s.bmp",FileType:=1
+End Sub   'QVBlock_3
+
+Private Sub QVBlock_4
+
+Measure.Point Label:="Point-4", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=36.458612500, Y:=117.852639904, Z:=31.738818770, W:=1.725030300, H:=0.724725036, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-4"
+Video.Export"s02-p.bmp",FileType:=1
+End Sub   'QVBlock_4
+
+Private Sub QVBlock_5
+
+Measure.Point Label:="Point-5", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=39.849347483, Y:=101.936074440, Z:=31.747618770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=39.050385992, Y:=102.799122520, Z:=31.103518770, W:=1.098269291, H:=0.983555406, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-5"
+Video.Export"s03-s.bmp",FileType:=1
+End Sub   'QVBlock_5
+
+Private Sub QVBlock_6
+
+Measure.Point Label:="Point-6", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=39.894469858, Y:=99.715869052, Z:=31.769418770, W:=1.276522422, H:=0.741980394, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-6"
+Video.Export"s03-p.bmp",FileType:=1
+End Sub   'QVBlock_6
+
+Private Sub QVBlock_7
+
+Measure.Point Label:="Point-7", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=43.359147483, Y:=95.934374440, Z:=31.778218770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=42.514187204, Y:=96.803190434, Z:=31.097918770, W:=1.150020200, H:=1.173364344, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-7"
+Video.Export"s04-s.bmp",FileType:=1
+End Sub   'QVBlock_7
+
+Private Sub QVBlock_8
+
+Measure.Point Label:="Point-8", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=43.329590317, Y:=93.633770262, Z:=31.729718770, W:=1.403024644, H:=0.741980394, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-8"
+Video.Export"s04-p.bmp",FileType:=1
+End Sub   'QVBlock_8
+
+Private Sub QVBlock_9
+
+Measure.Point Label:="Point-9", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=36.266647483, Y:=83.793774440, Z:=31.738718770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=35.467726325, Y:=84.771858233, Z:=31.107918770, W:=0.954516766, H:=0.972051834, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-9"
+Video.Export"s05-s.bmp",FileType:=1
+End Sub   'QVBlock_9
+
+Private Sub QVBlock_10
+
+Measure.Point Label:="Point-10", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=36.231398699, Y:=81.659974062, Z:=31.726618770, W:=1.339773533, H:=0.638448246, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-10"
+Video.Export"s05-p.bmp",FileType:=1
+End Sub   'QVBlock_10
+
+Private Sub QVBlock_11
+
+Measure.Point Label:="Point-11", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=39.757847483, Y:=65.594274440, Z:=31.735718770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=38.924525721, Y:=66.572370330, Z:=31.121318770, W:=0.971767069, H:=0.954796476, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-11"
+Video.Export"s06-s.bmp",FileType:=1
+End Sub   'QVBlock_11
+
+Private Sub QVBlock_12
+
+Measure.Point Label:="Point-12", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=39.676493861, Y:=63.448886619, Z:=31.780918770, W:=1.403024644, H:=0.575178600, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-12"
+Video.Export"s06-p.bmp",FileType:=1
+End Sub   'QVBlock_12
+
+Private Sub QVBlock_13
+
+Measure.Point Label:="Point-13", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=39.757847483, Y:=53.628374440, Z:=31.789718770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=38.832393861, Y:=54.520225802, Z:=31.150718770, W:=1.161520402, H:=0.995058978, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-13"
+Video.Export"s07-s.bmp",FileType:=1
+End Sub   'QVBlock_13
+
+Private Sub QVBlock_14
+
+Measure.Point Label:="Point-14", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=39.647798991, Y:=51.356457415, Z:=31.769418770, W:=1.489276159, H:=0.598185744, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-14"
+Video.Export"s07-p.bmp",FileType:=1
+End Sub   'QVBlock_14
+
+Private Sub QVBlock_15
+
+Measure.Point Label:="Point-15", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=57.045747483, Y:=47.556174440, Z:=31.778518770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=56.258245860, Y:=48.304082775, Z:=31.110118770, W:=0.954516766, H:=1.018066122, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-15"
+Video.Export"s08-s.bmp",FileType:=1
+End Sub   'QVBlock_15
+
+Private Sub QVBlock_16
+
+Measure.Point Label:="Point-16", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=57.090941625, Y:=45.255344053, Z:=31.742218770, W:=1.673279391, H:=0.891526830, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-16"
+Video.Export"s08-p.bmp",FileType:=1
+End Sub   'QVBlock_16
+
+Private Sub QVBlock_17
+
+Measure.Point Label:="Point-17", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=60.681547483, Y:=65.585274440, Z:=31.751218770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=59.796348599, Y:=66.488615261, Z:=31.073618770, W:=1.046518382, H:=1.023817908, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-17"
+Video.Export"s09-s.bmp",FileType:=1
+End Sub   'QVBlock_17
+
+Private Sub QVBlock_18
+
+Measure.Point Label:="Point-18", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=60.623261997, Y:=63.347849984, Z:=31.720818770, W:=1.265022220, H:=0.701717892, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-18"
+Video.Export"s09-p.bmp",FileType:=1
+End Sub   'QVBlock_18
+
+Private Sub QVBlock_19
+
+Measure.Point Label:="Point-19", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=57.312347483, Y:=83.764874440, Z:=31.729618770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=56.524878127, Y:=84.604911346, Z:=31.115818770, W:=1.247771917, H:=0.931789332, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-19"
+Video.Export"s10-s.bmp",FileType:=1
+End Sub   'QVBlock_19
+
+Private Sub QVBlock_20
+
+Measure.Point Label:="Point-20", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=57.230945461, Y:=81.481443763, Z:=31.729818770, W:=1.201771109, H:=0.661455390, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-20"
+Video.Export"s10-p.bmp",FileType:=1
+End Sub   'QVBlock_20
+
+Private Sub QVBlock_21
+
+Measure.Point Label:="Point-21", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=60.855347483, Y:=101.970874440, Z:=31.738818770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=60.033369456, Y:=102.787916299, Z:=31.102518770, W:=1.006267675, H:=1.006562550, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-21"
+Video.Export"s11-s.bmp",FileType:=1
+End Sub   'QVBlock_21
+
+Private Sub QVBlock_22
+
+Measure.Point Label:="Point-22", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=60.883169140, Y:=99.606880459, Z:=31.770918770, W:=1.546777169, H:=0.701717892, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-22"
+Video.Export"s11-p.bmp",FileType:=1
+End Sub   'QVBlock_22
+
+Private Sub QVBlock_23
+
+Measure.Point Label:="Point-23", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=57.492947483, Y:=120.062274440, Z:=31.779718770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=56.630718752, Y:=120.879330412, Z:=31.101218770, W:=0.943016564, H:=0.983555406, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-23"
+Video.Export"s12-s.bmp",FileType:=1
+End Sub   'QVBlock_23
+
+Private Sub QVBlock_24
+
+Measure.Point Label:="Point-24", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=57.434539814, Y:=117.761580342, Z:=31.748318770, W:=1.247771917, H:=0.638448246, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-24"
+Video.Export"s12-p.bmp",FileType:=1
+End Sub   'QVBlock_24
+
+Private Sub QVBlock_25
+
+Measure.Point Label:="Point-25", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=61.089047483, Y:=138.154074440, Z:=31.757018770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=60.175179946, Y:=139.005659270, Z:=31.112018770, W:=0.994767473, H:=0.868519686, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-25"
+Video.Export"s13-s.bmp",FileType:=1
+End Sub   'QVBlock_25
+
+Private Sub QVBlock_26
+
+Measure.Point Label:="Point-26", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=60.978992941, Y:=135.864902058, Z:=31.795418770, W:=1.592777977, H:=0.995058978, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-26"
+Video.Export"s13-p.bmp",FileType:=1
+End Sub   'QVBlock_26
+
+Private Sub QVBlock_27
+
+Measure.Point Label:="Point-27", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=61.089047483, Y:=150.252874440, Z:=31.804418770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=60.215326617, Y:=151.092941587, Z:=31.103218770, W:=0.971767069, H:=0.845512542, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-27"
+Video.Export"s14-s.bmp",FileType:=1
+End Sub   'QVBlock_27
+
+Private Sub QVBlock_28
+
+Measure.Point Label:="Point-28", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=61.042244048, Y:=147.963679881, Z:=31.744418770, W:=1.316773129, H:=0.638448246, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-28"
+Video.Export"s14-p.bmp",FileType:=1
+End Sub   'QVBlock_28
+
+Private Sub QVBlock_29
+
+Measure.Point Label:="Point-29", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=78.610847483, Y:=156.267774440, Z:=31.753218770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=77.777387405, Y:=157.136586402, Z:=31.109418770, W:=0.983267271, H:=1.006562550, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-29"
+Video.Export"s15-s.bmp",FileType:=1
+End Sub   'QVBlock_29
+
+Private Sub QVBlock_30
+
+Measure.Point Label:="Point-30", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=78.529521261, Y:=153.915322336, Z:=31.739218770, W:=1.374274139, H:=0.638448246, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-30"
+Video.Export"s15-p.bmp",FileType:=1
+End Sub   'QVBlock_30
+
+Private Sub QVBlock_31
+
+Measure.Point Label:="Point-31", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=81.926947483, Y:=138.076574440, Z:=31.748018770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=81.104963406, Y:=138.876360942, Z:=31.099018770, W:=0.902765857, H:=0.903030402, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-31"
+Video.Export"s16-s.bmp",FileType:=1
+End Sub   'QVBlock_31
+
+Private Sub QVBlock_32
+
+Measure.Point Label:="Point-32", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=81.931796971, Y:=135.793113522, Z:=31.749018770, W:=1.086769089, H:=0.534916098, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-32"
+Video.Export"s16-p.bmp",FileType:=1
+End Sub   'QVBlock_32
+
+Private Sub QVBlock_33
+
+Measure.Point Label:="Point-33", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=85.438047483, Y:=132.016474440, Z:=31.757818770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=84.604585388, Y:=132.879534617, Z:=31.097118770, W:=0.983267271, H:=0.983555406, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-33"
+Video.Export"s17-s.bmp",FileType:=1
+End Sub   'QVBlock_33
+
+Private Sub QVBlock_34
+
+Measure.Point Label:="Point-34", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=85.339493142, Y:=129.727298026, Z:=31.755318770, W:=1.265022220, H:=0.724725036, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-34"
+Video.Export"s17-p.bmp",FileType:=1
+End Sub   'QVBlock_34
+
+Private Sub QVBlock_35
+
+Measure.Point Label:="Point-35", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=78.385247483, Y:=119.932374440, Z:=31.764018770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=77.574781758, Y:=120.783922981, Z:=31.098718770, W:=0.828014544, H:=0.891526830, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-35"
+Video.Export"s18-s.bmp",FileType:=1
+End Sub   'QVBlock_35
+
+Private Sub QVBlock_36
+
+Measure.Point Label:="Point-36", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=78.367100601, Y:=117.660425158, Z:=31.749818770, W:=1.247771917, H:=0.557923242, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-36"
+Video.Export"s18-p.bmp",FileType:=1
+End Sub   'QVBlock_36
+
+Private Sub QVBlock_37
+
+Measure.Point Label:="Point-37", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=81.824147483, Y:=101.780174440, Z:=31.758818770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=80.950436700, Y:=102.649100515, Z:=31.110518770, W:=1.086769089, H:=0.908782188, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-37"
+Video.Export"s19-s.bmp",FileType:=1
+End Sub   'QVBlock_37
+
+Private Sub QVBlock_38
+
+Measure.Point Label:="Point-38", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=81.737099394, Y:=99.508249351, Z:=31.741918770, W:=1.196021008, H:=0.563675028, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-38"
+Video.Export"s19-p.bmp",FileType:=1
+End Sub   'QVBlock_38
+
+Private Sub QVBlock_39
+
+Measure.Point Label:="Point-39", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=78.193347483, Y:=83.769974440, Z:=31.750718770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=77.359851105, Y:=84.535254261, Z:=31.145918770, W:=0.879765453, H:=0.793746468, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-39"
+Video.Export"s20-s.bmp",FileType:=1
+End Sub   'QVBlock_39
+
+Private Sub QVBlock_40
+
+Measure.Point Label:="Point-40", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=78.209668939, Y:=81.405984491, Z:=31.763318770, W:=1.247771917, H:=0.563675028, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-40"
+Video.Export"s20-p.bmp",FileType:=1
+End Sub   'QVBlock_40
+
+Private Sub QVBlock_41
+
+Measure.Point Label:="Point-41", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=81.566047483, Y:=65.499574440, Z:=31.772318770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=80.807346780, Y:=66.391367336, Z:=31.095518770, W:=0.920016160, H:=0.931789332, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-41"
+Video.Export"s21-s.bmp",FileType:=1
+End Sub   'QVBlock_41
+
+Private Sub QVBlock_42
+
+Measure.Point Label:="Point-42", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=81.611263808, Y:=63.262113695, Z:=31.743318770, W:=1.351273735, H:=0.753483966, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-42"
+Video.Export"s21-p.bmp",FileType:=1
+End Sub   'QVBlock_42
+
+Private Sub QVBlock_43
+
+Measure.Point Label:="Point-43", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=78.044647483, Y:=47.501074440, Z:=31.752118770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=77.262883861, Y:=48.214570045, Z:=31.104618770, W:=0.966016968, H:=1.069832196, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-43"
+Video.Export"s22-s.bmp",FileType:=1
+End Sub   'QVBlock_43
+
+Private Sub QVBlock_44
+
+Measure.Point Label:="Point-44", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=78.026568335, Y:=45.137196587, Z:=31.732518770, W:=1.224771513, H:=0.626944674, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-44"
+Video.Export"s22-p.bmp",FileType:=1
+End Sub   'QVBlock_44
+
+Private Sub QVBlock_45
+
+Measure.Point Label:="Point-45", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=71.057747483, Y:=35.316474440, Z:=31.741518770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=70.161012098, Y:=36.116287151, Z:=31.142118770, W:=1.109769493, H:=0.931789332, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-45"
+Video.Export"s23-s.bmp",FileType:=1
+End Sub   'QVBlock_45
+
+Private Sub QVBlock_46
+
+Measure.Point Label:="Point-46", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=70.970711494, Y:=33.079060065, Z:=31.744518770, W:=1.173020604, H:=0.563675028, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-46"
+Video.Export"s23-p.bmp",FileType:=1
+End Sub   'QVBlock_46
+
+Private Sub QVBlock_47
+
+Measure.Point Label:="Point-47", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=81.502747483, Y:=29.306574440, Z:=31.753318770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=80.606004031, Y:=30.083380009, Z:=31.118118770, W:=1.109769493, H:=0.943292904, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-47"
+Video.Export"s24-s.bmp",FileType:=1
+End Sub   'QVBlock_47
+
+Private Sub QVBlock_48
+
+Measure.Point Label:="Point-48", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=81.444427714, Y:=26.971269628, Z:=31.765618770, W:=1.161520402, H:=0.534916098, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-48"
+Video.Export"s24-p.bmp",FileType:=1
+End Sub   'QVBlock_48
+
+Private Sub QVBlock_49
+
+Measure.Point Label:="Point-49", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=102.407247483, Y:=17.095074440, Z:=31.774518770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=101.637010279, Y:=17.883239227, Z:=31.126418770, W:=1.150020200, H:=0.891526830, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-49"
+Video.Export"s25-s.bmp",FileType:=1
+End Sub   'QVBlock_49
+
+Private Sub QVBlock_50
+
+Measure.Point Label:="Point-50", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=102.320095360, Y:=14.811645779, Z:=31.768818770, W:=1.236271715, H:=0.609689316, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-50"
+Video.Export"s25-p.bmp",FileType:=1
+End Sub   'QVBlock_50
+
+Private Sub QVBlock_51
+
+Measure.Point Label:="Point-51", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=102.475147483, Y:=29.238074440, Z:=31.777718770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=101.664629324, Y:=29.940076554, Z:=31.113118770, W:=1.098269291, H:=1.035321480, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-51"
+Video.Export"s26-s.bmp",FileType:=1
+End Sub   'QVBlock_51
+
+Private Sub QVBlock_52
+
+Measure.Point Label:="Point-52", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=102.393721261, Y:=26.885622336, Z:=31.736718770, W:=1.276522422, H:=0.546419670, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-52"
+Video.Export"s26-p.bmp",FileType:=1
+End Sub   'QVBlock_52
+
+Private Sub QVBlock_53
+
+Measure.Point Label:="Point-53", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=99.024547483, Y:=47.345074440, Z:=31.745518770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=98.225545659, Y:=48.092986807, Z:=31.121318770, W:=1.150020200, H:=0.943292904, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-53"
+Video.Export"s27-s.bmp",FileType:=1
+End Sub   'QVBlock_53
+
+Private Sub QVBlock_54
+
+Measure.Point Label:="Point-54", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=98.977744048, Y:=45.055879881, Z:=31.753118770, W:=1.196021008, H:=0.598185744, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-54"
+Video.Export"s27-p.bmp",FileType:=1
+End Sub   'QVBlock_54
+
+Private Sub QVBlock_55
+
+Measure.Point Label:="Point-55", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=95.566447483, Y:=53.461274440, Z:=31.762018770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=94.692694351, Y:=54.209313016, Z:=31.110718770, W:=0.931516362, H:=0.954796476, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-55"
+Video.Export"s28-s.bmp",FileType:=1
+End Sub   'QVBlock_55
+
+Private Sub QVBlock_56
+
+Measure.Point Label:="Point-56", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=95.496625496, Y:=51.120321875, Z:=31.722618770, W:=1.201771109, H:=0.471646452, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-56"
+Video.Export"s28-p.bmp",FileType:=1
+End Sub   'QVBlock_56
+
+Private Sub QVBlock_57
+
+Measure.Point Label:="Point-57", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=102.605247483, Y:=65.541074440, Z:=31.731318770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=101.731504434, Y:=66.317871944, Z:=31.089418770, W:=0.816514342, H:=0.868519686, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-57"
+Video.Export"s29-s.bmp",FileType:=1
+End Sub   'QVBlock_57
+
+Private Sub QVBlock_58
+
+Measure.Point Label:="Point-58", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=102.535413396, Y:=63.165611161, Z:=31.732118770, W:=1.253522018, H:=0.500405382, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-58"
+Video.Export"s29-p.bmp",FileType:=1
+End Sub   'QVBlock_58
+
+Private Sub QVBlock_59
+
+Measure.Point Label:="Point-59", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=99.232047483, Y:=83.666174440, Z:=31.740918770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=98.272048891, Y:=84.431498614, Z:=31.107418770, W:=1.173020604, H:=0.891526830, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-59"
+Video.Export"s30-s.bmp",FileType:=1
+End Sub   'QVBlock_59
+
+Private Sub QVBlock_60
+
+Measure.Point Label:="Point-60", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=99.098870355, Y:=81.313740480, Z:=31.734818770, W:=1.213271311, H:=0.500405382, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-60"
+Video.Export"s30-p.bmp",FileType:=1
+End Sub   'QVBlock_60
+
+Private Sub QVBlock_61
+
+Measure.Point Label:="Point-61", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=102.765547483, Y:=101.679174440, Z:=31.743818770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=101.966588009, Y:=102.547974306, Z:=31.097018770, W:=0.868265251, H:=0.908782188, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-61"
+Video.Export"s31-s.bmp",FileType:=1
+End Sub   'QVBlock_61
+
+Private Sub QVBlock_62
+
+Measure.Point Label:="Point-62", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=102.707257963, Y:=99.430246413, Z:=31.735718770, W:=1.138519998, H:=0.448639308, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-62"
+Video.Export"s31-p.bmp",FileType:=1
+End Sub   'QVBlock_62
+
+Private Sub QVBlock_63
+
+Measure.Point Label:="Point-63", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=99.412047483, Y:=119.942074440, Z:=31.744518770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=98.515295965, Y:=120.695872866, Z:=31.111818770, W:=0.954516766, H:=1.035321480, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-63"
+Video.Export"s32-s.bmp",FileType:=1
+End Sub   'QVBlock_63
+
+Private Sub QVBlock_64
+
+Measure.Point Label:="Point-64", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=99.353613597, Y:=117.566607129, Z:=31.721118770, W:=1.311023028, H:=0.419880378, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-64"
+Video.Export"s32-p.bmp",FileType:=1
+End Sub   'QVBlock_64
+
+Private Sub QVBlock_65
+
+Measure.Point Label:="Point-65", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=102.965047483, Y:=138.039274440, Z:=31.730018770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=102.079778016, Y:=138.741302763, Z:=31.098518770, W:=0.868265251, H:=0.857016114, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-65"
+Video.Export"s33-s.bmp",FileType:=1
+End Sub   'QVBlock_65
+
+Private Sub QVBlock_66
+
+Measure.Point Label:="Point-66", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=102.854874791, Y:=135.698335987, Z:=31.727218770, W:=1.265022220, H:=0.546419670, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-66"
+Video.Export"s33-p.bmp",FileType:=1
+End Sub   'QVBlock_66
+
+Private Sub QVBlock_67
+
+Measure.Point Label:="Point-67", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=99.553247483, Y:=156.168974440, Z:=31.736018770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=98.731167440, Y:=156.980264514, Z:=31.112318770, W:=1.023517978, H:=1.023817908, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-67"
+Video.Export"s34-s.bmp",FileType:=1
+End Sub   'QVBlock_67
+
+Private Sub QVBlock_68
+
+Measure.Point Label:="Point-68", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=99.471925294, Y:=153.828025907, Z:=31.746118770, W:=1.380024240, H:=0.638448246, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-68"
+Video.Export"s34-p.bmp",FileType:=1
+End Sub   'QVBlock_68
+
+Private Sub QVBlock_69
+
+Measure.Point Label:="Point-69", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=92.632647483, Y:=168.275074440, Z:=31.755018770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=91.799181355, Y:=169.126631045, Z:=31.106718770, W:=1.201771109, H:=1.035321480, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-69"
+Video.Export"s35-s.bmp",FileType:=1
+End Sub   'QVBlock_69
+
+Private Sub QVBlock_70
+
+Measure.Point Label:="Point-70", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=92.551327311, Y:=165.939877692, Z:=31.737218770, W:=1.311023028, H:=0.609689316, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-70"
+Video.Export"s35-p.bmp",FileType:=1
+End Sub   'QVBlock_70
+
+Private Sub QVBlock_71
+
+Measure.Point Label:="Point-71", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=103.152247483, Y:=174.304974440, Z:=31.745918770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=102.290026818, Y:=175.145037554, Z:=31.098218770, W:=0.966016968, H:=0.857016114, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-71"
+Video.Export"s36-s.bmp",FileType:=1
+End Sub   'QVBlock_71
+
+Private Sub QVBlock_72
+
+Measure.Point Label:="Point-72", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=103.030666523, Y:=171.941032877, Z:=31.732018770, W:=1.299522826, H:=0.448639308, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-72"
+Video.Export"s36-p.bmp",FileType:=1
+End Sub   'QVBlock_72
+
+Private Sub QVBlock_73
+
+Measure.Point Label:="Point-73", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=120.633847483, Y:=180.076974440, Z:=31.740918770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=119.771685301, Y:=181.083839338, Z:=31.086918770, W:=0.983267271, H:=0.857016114, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-73"
+Video.Export"s37-s.bmp",FileType:=1
+End Sub   'QVBlock_73
+
+Private Sub QVBlock_74
+
+Measure.Point Label:="Point-74", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=120.523735291, Y:=177.908589557, Z:=31.742118770, W:=1.173020604, H:=0.379617876, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-74"
+Video.Export"s37-p.bmp",FileType:=1
+End Sub   'QVBlock_74
+
+Private Sub QVBlock_75
+
+Measure.Point Label:="Point-75", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=131.022647483, Y:=174.164974440, Z:=31.750918770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=130.200647273, Y:=174.918746657, Z:=31.086918770, W:=1.006267675, H:=0.880023258, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-75"
+Video.Export"s38-s.bmp",FileType:=1
+End Sub   'QVBlock_75
+
+Private Sub QVBlock_76
+
+Measure.Point Label:="Point-76", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=130.975817832, Y:=171.801006668, Z:=31.729218770, W:=1.276522422, H:=0.483150024, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-76"
+Video.Export"s38-p.bmp",FileType:=1
+End Sub   'QVBlock_76
+
+Private Sub QVBlock_77
+
+Measure.Point Label:="Point-77", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=120.444947483, Y:=156.031574440, Z:=31.737918770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=119.622995673, Y:=156.923389513, Z:=31.095018770, W:=1.017767877, H:=1.006562550, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-77"
+Video.Export"s39-s.bmp",FileType:=1
+End Sub   'QVBlock_77
+
+Private Sub QVBlock_78
+
+Measure.Point Label:="Point-78", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=120.415394350, Y:=153.742373833, Z:=31.714718770, W:=1.069518786, H:=0.460142880, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-78"
+Video.Export"s39-p.bmp",FileType:=1
+End Sub   'QVBlock_78
+
+Private Sub QVBlock_79
+
+Measure.Point Label:="Point-79", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=123.848747483, Y:=137.829874440, Z:=31.723518770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=123.061292243, Y:=138.710173845, Z:=31.113818770, W:=1.058018584, H:=0.828257184, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-79"
+Video.Export"s40-s.bmp",FileType:=1
+End Sub   'QVBlock_79
+
+Private Sub QVBlock_80
+
+Measure.Point Label:="Point-80", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=123.801866231, Y:=135.604049523, Z:=31.749218770, W:=1.058018584, H:=0.534916098, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-80"
+Video.Export"s40-p.bmp",FileType:=1
+End Sub   'QVBlock_80
+
+Private Sub QVBlock_81
+
+Measure.Point Label:="Point-81", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=120.307847483, Y:=119.794674440, Z:=31.758018770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=119.508847676, Y:=120.548438593, Z:=31.086818770, W:=0.971767069, H:=0.880023258, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-81"
+Video.Export"s41-s.bmp",FileType:=1
+End Sub   'QVBlock_81
+
+Private Sub QVBlock_82
+
+Measure.Point Label:="Point-82", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=120.238035579, Y:=117.482480803, Z:=31.740018770, W:=1.391524442, H:=0.408376806, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-82"
+Video.Export"s41-p.bmp",FileType:=1
+End Sub   'QVBlock_82
+
+Private Sub QVBlock_83
+
+Measure.Point Label:="Point-83", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=123.699547483, Y:=101.608974440, Z:=31.748918770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=122.866063205, Y:=102.408764975, Z:=31.097018770, W:=1.046518382, H:=0.891526830, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-83"
+Video.Export"s42-s.bmp",FileType:=1
+End Sub   'QVBlock_83
+
+Private Sub QVBlock_84
+
+Measure.Point Label:="Point-84", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=123.652740015, Y:=99.308276310, Z:=31.735118770, W:=1.374274139, H:=0.661455390, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-84"
+Video.Export"s42-p.bmp",FileType:=1
+End Sub   'QVBlock_84
+
+Private Sub QVBlock_85
+
+Measure.Point Label:="Point-85", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=120.138047483, Y:=83.505874440, Z:=31.744018770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=119.390814715, Y:=84.305634734, Z:=31.086718770, W:=1.069518786, H:=0.995058978, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-85"
+Video.Export"s43-s.bmp",FileType:=1
+End Sub   'QVBlock_85
+
+Private Sub QVBlock_86
+
+Measure.Point Label:="Point-86", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=120.091240015, Y:=81.205176310, Z:=31.731718770, W:=1.391524442, H:=0.563675028, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-86"
+Video.Export"s43-p.bmp",FileType:=1
+End Sub   'QVBlock_86
+
+Private Sub QVBlock_87
+
+Measure.Point Label:="Point-87", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=123.526047483, Y:=65.336874440, Z:=31.740718770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=122.778724798, Y:=66.165393662, Z:=31.119418770, W:=0.966016968, H:=0.972051834, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-87"
+Video.Export"s44-s.bmp",FileType:=1
+End Sub   'QVBlock_87
+
+Private Sub QVBlock_88
+
+Measure.Point Label:="Point-88", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=123.530996971, Y:=63.053413522, Z:=31.742218770, W:=1.201771109, H:=0.672958962, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-88"
+Video.Export"s44-p.bmp",FileType:=1
+End Sub   'QVBlock_88
+
+Private Sub QVBlock_89
+
+Measure.Point Label:="Point-89", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=119.886247483, Y:=47.409374440, Z:=31.751218770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=119.213709557, Y:=48.048058527, Z:=31.110318770, W:=1.035018180, H:=0.966300048, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-89"
+Video.Export"s45-s.bmp",FileType:=1
+End Sub   'QVBlock_89
+
+Private Sub QVBlock_90
+
+Measure.Point Label:="Point-90", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=119.942893427, Y:=44.970597165, Z:=31.751318770, W:=1.161520402, H:=0.460142880, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-90"
+Video.Export"s45-p.bmp",FileType:=1
+End Sub   'QVBlock_90
+
+Private Sub QVBlock_91
+
+Measure.Point Label:="Point-91", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=123.339447483, Y:=29.058474440, Z:=31.760118770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=122.643883770, Y:=29.909982660, Z:=31.118018770, W:=0.902765857, H:=1.018066122, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-91"
+Video.Export"s46-s.bmp",FileType:=1
+End Sub   'QVBlock_91
+
+Private Sub QVBlock_92
+
+Measure.Point Label:="Point-92", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=123.367309473, Y:=26.809516172, Z:=31.745118770, W:=1.426025048, H:=0.563675028, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-92"
+Video.Export"s46-p.bmp",FileType:=1
+End Sub   'QVBlock_92
+
+Private Sub QVBlock_93
+
+Measure.Point Label:="Point-93", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=119.776447483, Y:=10.911874440, Z:=31.754018770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=118.988964010, Y:=11.711548846, Z:=31.160918770, W:=1.173020604, H:=0.983555406, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-93"
+Video.Export"s47-s.bmp",FileType:=1
+End Sub   'QVBlock_93
+
+Private Sub QVBlock_94
+
+Measure.Point Label:="Point-94", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=119.758416735, Y:=8.685839443, Z:=31.766918770, W:=1.362773937, H:=0.609689316, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-94"
+Video.Export"s47-p.bmp",FileType:=1
+End Sub   'QVBlock_94
+
+Private Sub QVBlock_95
+
+Measure.Point Label:="Point-95", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=133.857547483, Y:=23.077774440, Z:=31.775718770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=132.931953528, Y:=23.854690089, Z:=31.162218770, W:=1.224771513, H:=0.943292904, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-95"
+Video.Export"s48-s.bmp",FileType:=1
+End Sub   'QVBlock_95
+
+Private Sub QVBlock_96
+
+Measure.Point Label:="Point-96", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=133.747466724, Y:=20.713928845, Z:=31.771118770, W:=1.316773129, H:=0.557923242, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-96"
+Video.Export"s48-p.bmp",FileType:=1
+End Sub   'QVBlock_96
+
+Private Sub QVBlock_97
+
+Measure.Point Label:="Point-97", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=144.293747483, Y:=29.087174440, Z:=31.779918770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=143.557988699, Y:=29.812157488, Z:=31.134618770, W:=0.994767473, H:=0.995058978, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-97"
+Video.Export"s49-s.bmp",FileType:=1
+End Sub   'QVBlock_97
+
+Private Sub QVBlock_98
+
+Measure.Point Label:="Point-98", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=144.287064503, Y:=26.711688984, Z:=31.772518770, W:=1.288022624, H:=0.534916098, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-98"
+Video.Export"s49-p.bmp",FileType:=1
+End Sub   'QVBlock_98
+
+Private Sub QVBlock_99
+
+Measure.Point Label:="Point-99", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=147.809947483, Y:=35.185974440, Z:=31.781518770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=146.987910973, Y:=35.836214516, Z:=31.130218770, W:=1.184520806, H:=0.787994682, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-99"
+Video.Export"s50-s.bmp",FileType:=1
+End Sub   'QVBlock_99
+
+Private Sub QVBlock_100
+
+Measure.Point Label:="Point-100", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=147.791750185, Y:=32.770230517, Z:=31.742018770, W:=1.236271715, H:=0.408376806, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-100"
+Video.Export"s50-p.bmp",FileType:=1
+End Sub   'QVBlock_100
+
+Private Sub QVBlock_101
+
+Measure.Point Label:="Point-101", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=140.873447483, Y:=47.121574440, Z:=31.750918770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=139.947865628, Y:=47.932900803, Z:=31.136218770, W:=0.943016564, H:=0.891526830, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-101"
+Video.Export"s51-s.bmp",FileType:=1
+End Sub   'QVBlock_101
+
+Private Sub QVBlock_102
+
+Measure.Point Label:="Point-102", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=140.907155540, Y:=44.861110585, Z:=31.732218770, W:=1.311023028, H:=0.609689316, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-102"
+Video.Export"s51-p.bmp",FileType:=1
+End Sub   'QVBlock_102
+
+Private Sub QVBlock_103
+
+Measure.Point Label:="Point-103", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=144.450947483, Y:=65.261774440, Z:=31.741018770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=143.669110078, Y:=66.050043259, Z:=31.097118770, W:=0.994767473, H:=1.087087554, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-103"
+Video.Export"s52-s.bmp",FileType:=1
+End Sub   'QVBlock_103
+
+Private Sub QVBlock_104
+
+Measure.Point Label:="Point-104", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=144.444394753, Y:=62.972565769, Z:=31.734018770, W:=1.196021008, H:=0.586682172, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-104"
+Video.Export"s52-p.bmp",FileType:=1
+End Sub   'QVBlock_104
+
+Private Sub QVBlock_105
+
+Measure.Point Label:="Point-105", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=141.038947483, Y:=83.498674440, Z:=31.743118770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=140.280088297, Y:=84.223765552, Z:=31.087718770, W:=1.098269291, H:=0.845512542, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-105"
+Video.Export"s53-s.bmp",FileType:=1
+End Sub   'QVBlock_105
+
+Private Sub QVBlock_106
+
+Measure.Point Label:="Point-106", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=141.072511174, Y:=81.111771300, Z:=31.716918770, W:=1.339773533, H:=0.419880378, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-106"
+Video.Export"s53-p.bmp",FileType:=1
+End Sub   'QVBlock_106
+
+Private Sub QVBlock_107
+
+Measure.Point Label:="Point-107", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=144.645147483, Y:=101.554474440, Z:=31.725818770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=143.782900602, Y:=102.319764341, Z:=31.097518770, W:=1.196021008, H:=0.805250040, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-107"
+Video.Export"s54-s.bmp",FileType:=1
+End Sub   'QVBlock_107
+
+Private Sub QVBlock_108
+
+Measure.Point Label:="Point-108", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=144.609840216, Y:=99.253772278, Z:=31.735218770, W:=1.328273331, H:=0.586682172, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-108"
+Video.Export"s54-p.bmp",FileType:=1
+End Sub   'QVBlock_108
+
+Private Sub QVBlock_109
+
+Measure.Point Label:="Point-109", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=141.194047483, Y:=119.749074440, Z:=31.743918770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=140.498461587, Y:=120.537313018, Z:=31.089518770, W:=1.017767877, H:=0.678710748, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-109"
+Video.Export"s55-s.bmp",FileType:=1
+End Sub   'QVBlock_109
+
+Private Sub QVBlock_110
+
+Measure.Point Label:="Point-110", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=141.198868737, Y:=117.385188523, Z:=31.741918770, W:=1.224771513, H:=0.546419670, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-110"
+Video.Export"s55-p.bmp",FileType:=1
+End Sub   'QVBlock_110
+
+Private Sub QVBlock_111
+
+Measure.Point Label:="Point-111", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=144.777247483, Y:=137.838174440, Z:=31.750818770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=143.966659574, Y:=138.626453339, Z:=31.108818770, W:=0.920016160, H:=0.857016114, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-111"
+Video.Export"s56-s.bmp",FileType:=1
+End Sub   'QVBlock_111
+
+Private Sub QVBlock_112
+
+Measure.Point Label:="Point-112", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=144.747676200, Y:=135.497207762, Z:=31.732818770, W:=1.351273735, H:=0.598185744, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-112"
+Video.Export"s56-p.bmp",FileType:=1
+End Sub   'QVBlock_112
+
+Private Sub QVBlock_113
+
+Measure.Point Label:="Point-113", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=141.382947483, Y:=155.963474440, Z:=31.741718770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=140.480453931, Y:=156.740282025, Z:=31.080018770, W:=1.138519998, H:=0.805250040, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-113"
+Video.Export"s57-s.bmp",FileType:=1
+End Sub   'QVBlock_113
+
+Private Sub QVBlock_114
+
+Measure.Point Label:="Point-114", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=141.353278217, Y:=153.628259548, Z:=31.733118770, W:=1.276522422, H:=0.396873234, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-114"
+Video.Export"s57-p.bmp",FileType:=1
+End Sub   'QVBlock_114
+
+Private Sub QVBlock_115
+
+Measure.Point Label:="Point-115", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=148.330547483, Y:=155.901074440, Z:=31.742018770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=147.548728227, Y:=156.741109330, Z:=31.084918770, W:=1.150020200, H:=0.828257184, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-115"
+Video.Export"s58-s.bmp",FileType:=1
+End Sub   'QVBlock_115
+
+Private Sub QVBlock_116
+
+Measure.Point Label:="Point-116", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=148.312496568, Y:=153.617621587, Z:=31.701818770, W:=1.265022220, H:=0.494653596, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-116"
+Video.Export"s58-p.bmp",FileType:=1
+End Sub   'QVBlock_116
+
+Private Sub QVBlock_117
+
+Measure.Point Label:="Point-117", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=141.473447483, Y:=168.075174440, Z:=31.710818770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=140.685878127, Y:=168.915211346, Z:=31.117318770, W:=1.081018988, H:=0.690214320, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-117"
+Video.Export"s59-s.bmp",FileType:=1
+End Sub   'QVBlock_117
+
+Private Sub QVBlock_118
+
+Measure.Point Label:="Point-118", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=141.426625898, Y:=165.734213810, Z:=31.756018770, W:=1.213271311, H:=0.511908954, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-118"
+Video.Export"s59-p.bmp",FileType:=1
+End Sub   'QVBlock_118
+
+Private Sub QVBlock_119
+
+Measure.Point Label:="Point-119", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=162.398847483, Y:=155.935974440, Z:=31.764818770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=161.599747676, Y:=156.689738593, Z:=31.085818770, W:=0.908515958, H:=0.764987538, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-119"
+Video.Export"s60-s.bmp",FileType:=1
+End Sub   'QVBlock_119
+
+Private Sub QVBlock_120
+
+Measure.Point Label:="Point-120", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=162.288762691, Y:=153.560525273, Z:=31.710218770, W:=1.489276159, H:=0.471646452, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-120"
+Video.Export"s60-p.bmp",FileType:=1
+End Sub   'QVBlock_120
+
+Private Sub QVBlock_121
+
+Measure.Point Label:="Point-121", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=165.744447483, Y:=137.697874440, Z:=31.719118770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=164.985724597, Y:=138.526397694, Z:=31.085618770, W:=1.017767877, H:=0.880023258, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-121"
+Video.Export"s61-s.bmp",FileType:=1
+End Sub   'QVBlock_121
+
+Private Sub QVBlock_122
+
+Measure.Point Label:="Point-122", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=165.697535982, Y:=135.385672739, Z:=31.716318770, W:=1.253522018, H:=0.483150024, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-122"
+Video.Export"s61-p.bmp",FileType:=1
+End Sub   'QVBlock_122
+
+Private Sub QVBlock_123
+
+Measure.Point Label:="Point-123", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=162.103147483, Y:=119.554874440, Z:=31.725118770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=161.373169050, Y:=120.366132257, Z:=31.087418770, W:=1.086769089, H:=0.828257184, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-123"
+Video.Export"s62-s.bmp",FileType:=1
+End Sub   'QVBlock_123
+
+Private Sub QVBlock_124
+
+Measure.Point Label:="Point-124", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=162.119597172, Y:=117.271409490, Z:=31.714118770, W:=1.311023028, H:=0.557923242, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-124"
+Video.Export"s62-p.bmp",FileType:=1
+End Sub   'QVBlock_124
+
+Private Sub QVBlock_125
+
+Measure.Point Label:="Point-125", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=158.590447483, Y:=101.481174440, Z:=31.722918770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=157.802968043, Y:=102.292452417, Z:=31.086418770, W:=1.098269291, H:=0.845512542, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-125"
+Video.Export"s63-s.bmp",FileType:=1
+End Sub   'QVBlock_125
+
+Private Sub QVBlock_126
+
+Measure.Point Label:="Point-126", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=158.560794350, Y:=99.191973833, Z:=31.719718770, W:=1.489276159, H:=0.563675028, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-126"
+Video.Export"s63-p.bmp",FileType:=1
+End Sub   'QVBlock_126
+
+Private Sub QVBlock_127
+
+Measure.Point Label:="Point-127", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=165.537047483, Y:=101.481174440, Z:=31.728618770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=164.789796565, Y:=102.229068663, Z:=31.089918770, W:=1.132769897, H:=0.828257184, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-127"
+Video.Export"s64-s.bmp",FileType:=1
+End Sub   'QVBlock_127
+
+Private Sub QVBlock_128
+
+Measure.Point Label:="Point-128", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=165.541976804, Y:=99.140195666, Z:=31.721318770, W:=1.224771513, H:=0.408376806, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-128"
+Video.Export"s64-p.bmp",FileType:=1
+End Sub   'QVBlock_128
+
+Private Sub QVBlock_129
+
+Measure.Point Label:="Point-129", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=161.966047483, Y:=83.393874440, Z:=31.730118770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=161.184283861, Y:=84.107370045, Z:=31.099618770, W:=1.086769089, H:=0.920285760, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-129"
+Video.Export"s65-s.bmp",FileType:=1
+End Sub   'QVBlock_129
+
+Private Sub QVBlock_130
+
+Measure.Point Label:="Point-130", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=162.034215811, Y:=81.018362775, Z:=31.729918770, W:=1.316773129, H:=0.563675028, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-130"
+Video.Export"s65-p.bmp",FileType:=1
+End Sub   'QVBlock_130
+
+Private Sub QVBlock_131
+
+Measure.Point Label:="Point-131", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=165.329447483, Y:=65.131674440, Z:=31.738618770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=164.559120362, Y:=65.948698155, Z:=31.115018770, W:=1.058018584, H:=0.891526830, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-131"
+Video.Export"s66-s.bmp",FileType:=1
+End Sub   'QVBlock_131
+
+Private Sub QVBlock_132
+
+Measure.Point Label:="Point-132", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=165.374551708, Y:=62.859702981, Z:=31.720718770, W:=1.247771917, H:=0.598185744, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-132"
+Video.Export"s66-p.bmp",FileType:=1
+End Sub   'QVBlock_132
+
+Private Sub QVBlock_133
+
+Measure.Point Label:="Point-133", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=161.800147483, Y:=46.924174440, Z:=31.729618770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=161.104728137, Y:=47.902221944, Z:=31.106418770, W:=0.764763433, H:=0.995058978, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-133"
+Video.Export"s67-s.bmp",FileType:=1
+End Sub   'QVBlock_133
+
+Private Sub QVBlock_134
+
+Measure.Point Label:="Point-134", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=161.816537505, Y:=44.755745203, Z:=31.734318770, W:=1.213271311, H:=0.563675028, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-134"
+Video.Export"s67-p.bmp",FileType:=1
+End Sub   'QVBlock_134
+
+Private Sub QVBlock_135
+
+Measure.Point Label:="Point-135", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=161.870747483, Y:=34.852074440, Z:=31.743118770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=160.997044767, Y:=35.743907657, Z:=31.140218770, W:=1.069518786, H:=0.753483966, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-135"
+Video.Export"s68-s.bmp",FileType:=1
+End Sub   'QVBlock_135
+
+Private Sub QVBlock_136
+
+Measure.Point Label:="Point-136", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=161.720378536, Y:=32.666448312, Z:=31.809918770, W:=1.288022624, H:=0.557923242, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-136"
+Video.Export"s68-p.bmp",FileType:=1
+End Sub   'QVBlock_136
+
+Private Sub QVBlock_137
+
+Measure.Point Label:="Point-137", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=182.726347483, Y:=46.900074440, Z:=31.818618770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=181.996260983, Y:=47.688225114, Z:=31.125218770, W:=1.161520402, H:=0.787994682, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-137"
+Video.Export"s69-s.bmp",FileType:=1
+End Sub   'QVBlock_137
+
+Private Sub QVBlock_138
+
+Measure.Point Label:="Point-138", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=182.754213506, Y:=44.662619743, Z:=31.769718770, W:=1.299522826, H:=0.615441102, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-138"
+Video.Export"s69-p.bmp",FileType:=1
+End Sub   'QVBlock_138
+
+Private Sub QVBlock_139
+
+Measure.Point Label:="Point-139", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=186.299647483, Y:=65.104774440, Z:=31.778518770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=185.552362282, Y:=65.754988307, Z:=31.089618770, W:=1.023517978, H:=0.678710748, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-139"
+Video.Export"s70-s.bmp",FileType:=1
+End Sub   'QVBlock_139
+
+Private Sub QVBlock_140
+
+Measure.Point Label:="Point-140", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=186.293086686, Y:=62.792558626, Z:=31.731518770, W:=1.196021008, H:=0.437135736, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-140"
+Video.Export"s70-p.bmp",FileType:=1
+End Sub   'QVBlock_140
+
+Private Sub QVBlock_141
+
+Measure.Point Label:="Point-141", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=182.964347483, Y:=83.250174440, Z:=31.740418770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=182.217020765, Y:=84.067190091, Z:=31.080918770, W:=1.132769897, H:=0.805250040, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-141"
+Video.Export"s71-s.bmp",FileType:=1
+End Sub   'QVBlock_141
+
+Private Sub QVBlock_142
+
+Measure.Point Label:="Point-142", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=182.906039814, Y:=80.949480342, Z:=31.726018770, W:=1.247771917, H:=0.408376806, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-142"
+Video.Export"s71-p.bmp",FileType:=1
+End Sub   'QVBlock_142
+
+Private Sub QVBlock_143
+
+Measure.Point Label:="Point-143", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=186.565647483, Y:=101.311674440, Z:=31.734818770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=185.714818953, Y:=102.128726380, Z:=31.078318770, W:=0.856765049, H:=0.857016114, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-143"
+Video.Export"s72-s.bmp",FileType:=1
+End Sub   'QVBlock_143
+
+Private Sub QVBlock_144
+
+Measure.Point Label:="Point-144", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=186.467095159, Y:=99.028249811, Z:=31.763318770, W:=1.224771513, H:=0.437135736, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-144"
+Video.Export"s72-p.bmp",FileType:=1
+End Sub   'QVBlock_144
+
+Private Sub QVBlock_145
+
+Measure.Point Label:="Point-145", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=183.072147483, Y:=119.523774440, Z:=31.772018770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=182.324902615, Y:=120.289024020, Z:=31.097118770, W:=1.109769493, H:=1.081335768, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-145"
+Video.Export"s73-s.bmp",FileType:=1
+End Sub   'QVBlock_145
+
+Private Sub QVBlock_146
+
+Measure.Point Label:="Point-146", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=183.042478217, Y:=117.188559548, Z:=31.725618770, W:=1.213271311, H:=0.626944674, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-146"
+Video.Export"s73-p.bmp",FileType:=1
+End Sub   'QVBlock_146
+
+Private Sub QVBlock_147
+
+Measure.Point Label:="Point-147", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=186.708647483, Y:=137.708274440, Z:=31.734318770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=185.909629526, Y:=138.410272522, Z:=31.091218770, W:=1.213271311, H:=0.816753612, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-147"
+Video.Export"s74-s.bmp",FileType:=1
+End Sub   'QVBlock_147
+
+Private Sub QVBlock_148
+
+Measure.Point Label:="Point-148", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=186.621563094, Y:=135.332817209, Z:=31.717618770, W:=1.569777573, H:=0.701717892, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-148"
+Video.Export"s74-p.bmp",FileType:=1
+End Sub   'QVBlock_148
+
+Private Sub QVBlock_149
+
+Measure.Point Label:="Point-149", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+
+Video.ChangeToImageContext   X:=176.213647483, Y:=143.803074440, Z:=31.726718770
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=175.426119644, Y:=144.476309562, Z:=31.085318770, W:=1.236271715, H:=0.931789332, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-149"
+Video.Export"s75-s.bmp",FileType:=1
+End Sub   'QVBlock_149
+
+Private Sub QVBlock_150
+
+Measure.Point Label:="Point-150", ProjPlane:=NO_PLANE, PointType:=AVERAGE_POINT
+FocusTool.SetMode   FocusType:=SURFACE_ROTATE, Speed:=MED, Range:=3.462603878
+FocusTool.Run   X:=176.155203514, Y:=141.398848200, Z:=31.712618770, W:=1.224771513, H:=0.511908954, Angle:=0.000000000
+Measure.EndMeas
+Results.ReportFeature   Show:=X_ and Y_ and Z_, Tag:="Point-150"
+Video.Export"s75-p.bmp",FileType:=1
+
+End Sub   'QVBlock_150
