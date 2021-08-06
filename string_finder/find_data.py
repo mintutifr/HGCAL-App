@@ -19,7 +19,7 @@ def search_string_in_file(file_name, string_to_search):
 
 ChangeToImageContext = search_string_in_file(inputfile,"Video.ChangeToImageContext")
 print "size of array = ",len(ChangeToImageContext)
-with open('ChangeToImageContext.txt','w') as f:
+with open('ChangeToImageContext.csv','w') as f:
     f.write("X,Y,Z,Coax,Stage,Back,Frone,Right,Left,Angle,Color,NomMag\n")
     fi=0
     for line in ChangeToImageContext:
@@ -36,7 +36,7 @@ f.close()
 
 FocusToolSetMode = search_string_in_file(inputfile,"FocusTool.SetMode")
 print "size of array = ",len(FocusToolSetMode)
-with open('FocusToolSetMode.txt','w') as f:
+with open('FocusToolSetMode.csv','w') as f:
     #['1FocusTool.SetMode', '2', '3', '4FocusType', '5', 'SURFACE_ROTATE', '7', '8Speed', '9', 'MED', '11', '12Range', '13', '3.462603878', '\n']
     f.write("FocusType,Speed,Range\n")
     for line in FocusToolSetMode:
@@ -46,7 +46,7 @@ f.close()
 
 FocusToolRun = search_string_in_file(inputfile,"FocusTool.Run")
 print "size of array = ",len(FocusToolRun)
-with open('FocusToolRun.txt','w') as f:
+with open('FocusToolRun.csv','w') as f:
     f.write("X,Y,Z,W,H,Angle\n")
     for line in FocusToolRun:
         line = re.split(",| |:|=|\r",line)
