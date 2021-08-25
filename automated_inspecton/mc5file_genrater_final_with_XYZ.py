@@ -51,7 +51,7 @@ def calculateMC5(pathPass1CSV, pathPass1MC5):
                 line_count_csv+=1
                 step = line_count_csv
                 continue
-            elif(len(row)==3):
+            elif(len(row)==4):
                 f.write(PTP_MOTION_CMD(step))
                 f.write(parameter_abs_inc())
                 new_line_sintex = '        <point name="EndPoint" X=" +'+row[0]+'" Y=" +'+row[1]+'" Z="  +'+row[2]+'"/>\n'
@@ -71,7 +71,7 @@ def calculateMC5(pathPass1CSV, pathPass1MC5):
                     f.write(parameter_out_ch101())
                 f.write(end_CMD())
                 step+=1
-            elif(len(row)==2):
+            elif(len(row)==3):
                 f.write(PTP_MOTION_CMD(step))
                 f.write(parameter_abs_inc())
                 new_line_sintex = '        <point name="EndPoint" X=" +'+row[0]+'" Y=" +'+row[1]+'"/>\n'

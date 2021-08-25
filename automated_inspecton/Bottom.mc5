@@ -21,7 +21,7 @@
         <parameter out_ch="24" on_off="1" time="+0.01"/>
       </command>
       <command step="2" cmd_id="06" cmd_name="TIMER" status="0">
-        <parameter time=" +0.70"/>
+        <parameter time=" +0.80"/>
       </command>
       <command step="3" cmd_id="01" cmd_name="STRAIGHT 1" status="0">
         <parameter abs_inc="1" v="00"/>

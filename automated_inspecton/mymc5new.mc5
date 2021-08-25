@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+
+<project name="" date="2021/01/18 16:43:49" file_version="1.1.0">
+  <config_data>
+    <auto_programing>
+      <channel start_ch="100" end_ch="101"/>
+      <out_ch enable="1" start_bit="26"/>
+      <SS_Mode enable="0" Out_bit="7"/>
+      <abs abs_line="1"/>
+      <interpolation_speed v="0"/>
+      <r_size r="2000"/>
+      <timer t="500"/>
+    </auto_programing>
+    <coordinate>
+      <direction x="1" y="1" z="1" w="1"/>
+      <origin x="0" y="0" z="0" w="0"/>
+      <minimum x="0" y="0" z="0"/>
+      <maximum x="300000" y="300000" z="100000"/>
+    </coordinate>
+    <grid_snap>
+      <grid x="10000" y="10000"/>
+      <snap x="500" y="500"/>
+      <auxiliary grid_over="1" subline_over="1" drafter_on="1"/>
+    </grid_snap>
+    <display>
+      <user_color index="0" color="0"/>
+      <user_color index="1" color="0"/>
+      <user_color index="2" color="0"/>
+      <user_color index="3" color="0"/>
+      <user_color index="4" color="0"/>
+      <user_color index="5" color="0"/>
+      <user_color index="6" color="0"/>
+      <user_color index="7" color="0"/>
+      <user_color index="8" color="0"/>
+      <user_color index="9" color="0"/>
+      <user_color index="10" color="0"/>
+      <user_color index="11" color="0"/>
+      <user_color index="12" color="0"/>
+      <user_color index="13" color="0"/>
+      <user_color index="14" color="0"/>
+      <user_color index="15" color="0"/>
+      <line index="0" size="2" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="1" size="2" style="0" color="2105376" paint_size="10000" paint_color="65280"/>
+      <line index="2" size="2" style="0" color="4210752" paint_size="10000" paint_color="65280"/>
+      <line index="3" size="2" style="0" color="8421504" paint_size="10000" paint_color="65280"/>
+      <line index="4" size="2" style="0" color="12632256" paint_size="10000" paint_color="65280"/>
+      <line index="5" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="6" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="7" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="8" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="9" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="10" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="11" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="12" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="13" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="14" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="15" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="16" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="17" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="18" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="19" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="20" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="21" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="22" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="23" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="24" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="25" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="26" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="27" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="28" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="29" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="30" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="31" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="32" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="33" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="34" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="35" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="36" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="37" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="38" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="39" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="40" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="41" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="42" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="43" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="44" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="45" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="46" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="47" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="48" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="49" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="50" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="51" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="52" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="53" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="54" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="55" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="56" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="57" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="58" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="59" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="60" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="61" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="62" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="63" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="64" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="65" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="66" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="67" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="68" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="69" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="70" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="71" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="72" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="73" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="74" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="75" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="76" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="77" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="78" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="79" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="80" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="81" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="82" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="83" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="84" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="85" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="86" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="87" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="88" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="89" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="90" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="91" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="92" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="93" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="94" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="95" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="96" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="97" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="98" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="99" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="100" size="1" style="2" color="8421504" paint_size="10000" paint_color="65280"/>
+      <line index="101" size="1" style="0" color="16711935" paint_size="10000" paint_color="65280"/>
+      <line index="102" size="1" style="2" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="103" size="2" style="0" color="16711680" paint_size="10000" paint_color="65280"/>
+      <line index="104" size="2" style="0" color="16711935" paint_size="10000" paint_color="65280"/>
+      <line index="105" size="2" style="0" color="16711680" paint_size="10000" paint_color="65280"/>
+      <line index="106" size="1" style="3" color="16744576" paint_size="10000" paint_color="65280"/>
+      <line index="107" size="1" style="3" color="16744576" paint_size="10000" paint_color="65280"/>
+      <line index="108" size="0" style="0" color="16711680" paint_size="10000" paint_color="65280"/>
+      <line index="109" size="1" style="0" color="255" paint_size="10000" paint_color="65280"/>
+      <line index="110" size="2" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="111" size="5" style="0" color="1052688" paint_size="10000" paint_color="65280"/>
+      <line index="112" size="5" style="0" color="2105376" paint_size="10000" paint_color="65280"/>
+      <line index="113" size="5" style="0" color="4210752" paint_size="10000" paint_color="65280"/>
+      <line index="114" size="5" style="0" color="6316128" paint_size="10000" paint_color="65280"/>
+      <line index="115" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="116" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="117" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="118" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="119" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="120" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="121" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="122" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="123" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="124" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="125" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="126" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="127" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="128" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="129" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="130" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="131" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="132" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="133" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="134" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="135" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="136" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="137" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="138" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="139" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="140" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="141" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="142" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="143" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="144" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="145" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="146" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="147" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="148" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="149" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="150" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="151" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="152" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="153" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="154" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="155" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="156" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="157" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="158" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="159" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="160" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="161" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="162" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="163" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="164" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="165" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="166" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="167" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="168" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="169" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="170" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="171" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="172" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="173" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="174" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="175" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="176" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="177" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="178" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="179" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="180" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="181" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="182" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="183" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="184" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="185" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="186" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="187" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="188" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="189" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="190" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="191" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="192" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="193" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="194" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="195" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="196" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="197" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="198" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="199" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="200" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="201" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="202" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="203" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="204" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="205" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="206" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="207" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="208" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="209" size="0" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="210" size="1" style="2" color="8421504" paint_size="10000" paint_color="65280"/>
+      <line index="211" size="1" style="0" color="16711935" paint_size="10000" paint_color="65280"/>
+      <line index="212" size="1" style="2" color="12895428" paint_size="10000" paint_color="65280"/>
+      <line index="213" size="2" style="0" color="16711680" paint_size="10000" paint_color="65280"/>
+      <line index="214" size="2" style="0" color="0" paint_size="10000" paint_color="65280"/>
+      <line index="215" size="2" style="0" color="16711680" paint_size="10000" paint_color="65280"/>
+      <line index="216" size="1" style="3" color="16744576" paint_size="10000" paint_color="65280"/>
+      <line index="217" size="2" style="3" color="16744576" paint_size="10000" paint_color="65280"/>
+      <line index="218" size="0" style="0" color="16711680" paint_size="10000" paint_color="65280"/>
+      <line index="219" size="1" style="0" color="255" paint_size="10000" paint_color="65280"/>
+      <paint_width mode="0"/>
+      <overlap layer="2" index="0" color="13158655"/>
+      <overlap layer="2" index="1" color="13158655"/>
+      <overlap layer="3" index="0" color="6579455"/>
+      <overlap layer="3" index="1" color="6579455"/>
+      <overlap layer="4" index="0" color="255"/>
+      <overlap layer="4" index="1" color="255"/>
+      <bitmap max_size="100"/>
+      <bitmap save_folder="C:\Users\HGCAL\Pictures\mucad5\"/>
+      <bitmap default_trancemittance="50"/>
+      <bitmap distortion_coef="0.000000"/>
+      <color_coding ch_call="1" loop="1"/>
+      <draw index="0" font_name="MS UI Gothic" font_size="160" gs_size="3" gl_size="5" bg_color="16777215"/>
+      <draw index="1" font_name="MS UI Gothic" font_size="110" gs_size="30" gl_size="50" bg_color="16777215"/>
+      <marking call="255" out="16711935" timer="16711680" split="16711680" r="65280" offset="16711935"/>
+    </display>
+    <out>
+      <name index="0" out=""/>
+      <name index="1" out=""/>
+      <name index="2" out=""/>
+      <name index="3" out=""/>
+      <name index="4" out=""/>
+      <name index="5" out=""/>
+      <name index="6" out=""/>
+      <name index="7" out="SS Mode"/>
+      <name index="8" out=""/>
+      <name index="9" out=""/>
+      <name index="10" out=""/>
+      <name index="11" out=""/>
+      <name index="12" out=""/>
+      <name index="13" out=""/>
+      <name index="14" out=""/>
+      <name index="15" out=""/>
+      <name index="16" out=""/>
+      <name index="17" out=""/>
+      <name index="18" out=""/>
+      <name index="19" out=""/>
+      <name index="20" out=""/>
+      <name index="21" out=""/>
+      <name index="22" out=""/>
+      <name index="23" out=""/>
+      <name index="24" out=""/>
+      <name index="25" out=""/>
+      <name index="26" out="Under dispensing"/>
+      <name index="27" out=""/>
+      <name index="28" out=""/>
+    </out>
+    <in>
+      <name index="0" in=""/>
+      <name index="1" in=""/>
+      <name index="2" in=""/>
+      <name index="3" in=""/>
+      <name index="4" in=""/>
+      <name index="5" in=""/>
+      <name index="6" in=""/>
+      <name index="7" in=""/>
+      <name index="8" in=""/>
+      <name index="9" in=""/>
+      <name index="10" in=""/>
+      <name index="11" in=""/>
+      <name index="12" in=""/>
+      <name index="13" in=""/>
+      <name index="14" in=""/>
+      <name index="15" in=""/>
+      <name index="16" in=""/>
+      <name index="17" in=""/>
+      <name index="18" in=""/>
+      <name index="19" in=""/>
+      <name index="20" in=""/>
+      <name index="21" in=""/>
+      <name index="22" in=""/>
+      <name index="23" in=""/>
+      <name index="24" in=""/>
+      <name index="25" in=""/>
+      <name index="26" in=""/>
+      <name index="27" in=""/>
+      <name index="28" in=""/>
+      <name index="29" in=""/>
+      <name index="30" in=""/>
+      <name index="31" in=""/>
+      <name index="32" in=""/>
+      <name index="33" in=""/>
+      <name index="34" in=""/>
+      <name index="35" in=""/>
+      <name index="36" in=""/>
+      <name index="37" in=""/>
+      <name index="38" in=""/>
+      <name index="39" in=""/>
+    </in>
+    <communication>
+      <comm port="1" baud_rate="38400" time_out="3"/>
+    </communication>
+    <base_size>
+      <XY_range originx="0" originy="0" sizex="300000" sizey="300000"/>
+      <work_line index="0" color="255" size="2"/>
+      <work_line index="1" color="255" size="20"/>
+      <move minz="-3000" maxz="60000"/>
+    </base_size>
+    <other>
+      <loop max="10000"/>
+      <ch_update enable="1"/>
+      <spin_delta length_fast="1.000000" length_slow="0.100000" angle_fast="5.000000" angle_slow="0.100000"/>
+      <free_hand_rate_line free_hand_rate_line="0.250000"/>
+      <free_hand_rate_circle free_hand_rate_circle="0.250000"/>
+      <free_hand_rate_simple free_hand_rate_simple="0.250000"/>
+      <free_hand_use_simple_setting free_hand_use_simple_setting="1"/>
+      <theta_offset theta_offset="0.000000"/>
+    </other>
+    <speed>
+      <ptp index="0" speed="50" time="300"/>
+      <ptp index="1" speed="50" time="300"/>
+      <ptp index="2" speed="10" time="300"/>
+      <ptp index="3" speed="3000" time="300"/>
+      <cp index="0" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="1" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="2" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="3" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="4" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="5" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="6" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="7" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="8" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="9" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="10" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="11" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="12" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="13" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="14" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="15" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="16" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="17" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="18" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="19" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="20" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="21" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="22" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="23" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="24" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="25" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="26" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="27" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="28" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="29" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="30" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="31" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="32" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="33" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="34" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="35" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="36" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="37" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="38" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="39" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="40" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="41" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="42" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="43" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="44" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="45" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="46" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="47" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="48" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="49" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="50" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="51" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="52" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="53" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="54" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="55" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="56" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="57" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="58" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="59" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="60" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="61" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="62" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="63" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="64" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="65" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="66" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="67" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="68" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="69" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="70" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="71" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="72" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="73" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="74" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="75" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="76" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="77" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="78" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="79" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="80" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="81" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="82" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="83" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="84" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="85" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="86" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="87" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="88" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="89" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="90" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="91" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="92" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="93" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="94" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="95" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="96" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="97" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="98" speed="100" acceleration="300" deceleration="300"/>
+      <cp index="99" speed="100" acceleration="300" deceleration="300"/>
+      <jog_org index="0" jog_ls="30" jog_hs="500" org_speed1="0" org_speed2="0" is_alpha="0"/>
+      <jog_org index="1" jog_ls="30" jog_hs="500" org_speed1="0" org_speed2="0" is_alpha="0"/>
+      <jog_org index="2" jog_ls="30" jog_hs="500" org_speed1="0" org_speed2="0" is_alpha="0"/>
+      <jog_org index="3" jog_ls="30" jog_hs="500" org_speed1="0" org_speed2="0" is_alpha="0"/>
+    </speed>
+  </config_data>
+  <channel_list>
+    <channel id="  1" comment="Main_Program" update="0" dispbkimg="1" bkimgpath="" bkimgwidth="0" bkimgheight="0" bkimgtrans="0" bkimgx="0.000000" bkimgy="0.000000" dispcad="1" cadgerber="0" cadmm="0" cadxrev="0" cadyrev="1" cadtype="1" cadfile="" cadofstx="+0000.000" cadofsty="+0000.000" dxfangle="0">
+      <command step="1" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +150.0" Y=" +0.0" Z="  +0.0"/>
+      </command>
+      <command step="2" cmd_id="06" cmd_name="TIMER" status="0">
+        <parameter time=" +5.00"/>
+      </command>
+      <command step="3" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +114.37" Y=" +144.45" Z="  +25.67"/>
+      </command>
+      <command step="4" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="5" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="6" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +110.916" Y=" +162.557" Z="  +25.678"/>
+      </command>
+      <command step="7" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="8" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="9" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +114.424" Y=" +180.644" Z="  +25.688"/>
+      </command>
+      <command step="10" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="11" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="12" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +117.937" Y=" +186.672" Z="  +25.689"/>
+      </command>
+      <command step="13" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="14" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="15" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +110.936" Y=" +198.674" Z="  +25.677"/>
+      </command>
+      <command step="16" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="17" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="18" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +114.486" Y=" +216.888" Z="  +25.656"/>
+      </command>
+      <command step="19" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="20" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="21" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +114.5" Y=" +228.97" Z="  +25.65"/>
+      </command>
+      <command step="22" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="23" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="24" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +131.942" Y=" +234.998" Z="  +25.666"/>
+      </command>
+      <command step="25" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="26" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="27" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +135.403" Y=" +216.878" Z="  +25.678"/>
+      </command>
+      <command step="28" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="29" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="30" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +131.876" Y=" +174.609" Z="  +25.698"/>
+      </command>
+      <command step="31" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="32" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="33" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +135.104" Y=" +180.841" Z="  +25.704"/>
+      </command>
+      <command step="34" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="35" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="36" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +131.857" Y=" +162.538" Z="  +25.69"/>
+      </command>
+      <command step="37" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="38" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="39" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +135.325" Y=" +144.43" Z="  +25.686"/>
+      </command>
+      <command step="40" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="41" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="42" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +135.335" Y=" +132.342" Z="  +25.689"/>
+      </command>
+      <command step="43" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="44" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="45" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +152.771" Y=" +126.235" Z="  +25.718"/>
+      </command>
+      <command step="46" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="47" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="48" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +156.273" Y=" +144.372" Z="  +25.72"/>
+      </command>
+      <command step="49" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="50" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="51" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +159.771" Y=" +150.394" Z="  +25.726"/>
+      </command>
+      <command step="52" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="53" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="54" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +152.816" Y=" +162.494" Z="  +25.722"/>
+      </command>
+      <command step="55" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="56" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="57" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +156.286" Y=" +180.603" Z="  +25.74"/>
+      </command>
+      <command step="58" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="59" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="60" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +152.826" Y=" +198.728" Z="  +25.733"/>
+      </command>
+      <command step="61" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="62" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="63" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +156.306" Y=" +216.857" Z="  +25.727"/>
+      </command>
+      <command step="64" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="65" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="66" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +152.853" Y=" +234.974" Z="  +25.705"/>
+      </command>
+      <command step="67" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="68" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="69" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +145.87" Y=" +247.07" Z="  +25.692"/>
+      </command>
+      <command step="70" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="71" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="72" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +156.334" Y=" +253.096" Z="  +25.702"/>
+      </command>
+      <command step="73" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="74" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="75" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +177.255" Y=" +265.157" Z="  +25.697"/>
+      </command>
+      <command step="76" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="77" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="78" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +177.257" Y=" +253.08" Z="  +25.706"/>
+      </command>
+      <command step="79" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="80" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="81" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +173.768" Y=" +234.957" Z="  +25.732"/>
+      </command>
+      <command step="82" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="83" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="84" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +170.263" Y=" +228.912" Z="  +25.739"/>
+      </command>
+      <command step="85" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="86" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="87" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +177.201" Y=" +216.846" Z="  +25.776"/>
+      </command>
+      <command step="88" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="89" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="90" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +173.715" Y=" +198.717" Z="  +25.792"/>
+      </command>
+      <command step="91" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="92" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="93" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +177.206" Y=" +180.598" Z="  +25.785"/>
+      </command>
+      <command step="94" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="95" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="96" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +173.757" Y=" +162.464" Z="  +25.754"/>
+      </command>
+      <command step="97" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="98" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="99" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +177.211" Y=" +144.335" Z="  +25.744"/>
+      </command>
+      <command step="100" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="101" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="102" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +173.667" Y=" +126.19" Z="  +25.741"/>
+      </command>
+      <command step="103" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="104" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="105" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +166.665" Y=" +114.113" Z="  +25.739"/>
+      </command>
+      <command step="106" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="107" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="108" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +177.067" Y=" +108.053" Z="  +25.747"/>
+      </command>
+      <command step="109" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="110" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="111" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +194.46" Y=" +101.99" Z="  +25.75"/>
+      </command>
+      <command step="112" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="113" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="114" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +204.954" Y=" +108.048" Z="  +25.75"/>
+      </command>
+      <command step="115" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="116" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="117" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +194.582" Y=" +126.17" Z="  +25.749"/>
+      </command>
+      <command step="118" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="119" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="120" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +198.186" Y=" +144.314" Z="  +25.755"/>
+      </command>
+      <command step="121" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="122" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="123" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +194.716" Y=" +162.447" Z="  +25.771"/>
+      </command>
+      <command step="124" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="125" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="126" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +198.131" Y=" +180.593" Z="  +25.803"/>
+      </command>
+      <command step="127" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="128" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="129" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +194.6" Y=" +198.72" Z="  +25.83"/>
+      </command>
+      <command step="130" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="131" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="132" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +198.129" Y=" +216.843" Z="  +25.795"/>
+      </command>
+      <command step="133" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="134" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="135" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +194.7" Y=" +234.947" Z="  +25.739"/>
+      </command>
+      <command step="136" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="137" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="138" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +198.188" Y=" +253.074" Z="  +25.702"/>
+      </command>
+      <command step="139" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="140" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="141" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +194.7" Y=" +271.2" Z="  +25.69"/>
+      </command>
+      <command step="142" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="143" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="144" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +208.653" Y=" +259.111" Z="  +25.699"/>
+      </command>
+      <command step="145" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="146" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="147" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +219.152" Y=" +253.061" Z="  +25.706"/>
+      </command>
+      <command step="148" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="149" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="150" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +222.659" Y=" +247.002" Z="  +25.708"/>
+      </command>
+      <command step="151" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="152" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="153" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +215.669" Y=" +234.93" Z="  +25.728"/>
+      </command>
+      <command step="154" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="155" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="156" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +219.133" Y=" +216.819" Z="  +25.757"/>
+      </command>
+      <command step="157" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="158" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="159" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +215.618" Y=" +198.712" Z="  +25.793"/>
+      </command>
+      <command step="160" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="161" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="162" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +219.163" Y=" +180.571" Z="  +25.78"/>
+      </command>
+      <command step="163" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="164" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="165" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +215.755" Y=" +162.424" Z="  +25.77"/>
+      </command>
+      <command step="166" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="167" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="168" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +219.28" Y=" +144.289" Z="  +25.763"/>
+      </command>
+      <command step="169" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="170" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="171" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +215.651" Y=" +126.159" Z="  +25.755"/>
+      </command>
+      <command step="172" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="173" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="174" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +222.712" Y=" +126.143" Z="  +25.759"/>
+      </command>
+      <command step="175" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="176" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="177" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +215.551" Y=" +114.081" Z="  +25.752"/>
+      </command>
+      <command step="178" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="179" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="180" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +236.903" Y=" +126.129" Z="  +25.769"/>
+      </command>
+      <command step="181" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="182" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="183" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +240.531" Y=" +144.246" Z="  +25.778"/>
+      </command>
+      <command step="184" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="185" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="186" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +236.918" Y=" +162.385" Z="  +25.771"/>
+      </command>
+      <command step="187" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="188" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="189" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +233.225" Y=" +180.535" Z="  +25.764"/>
+      </command>
+      <command step="190" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="191" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="192" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +240.261" Y=" +180.536" Z="  +25.76"/>
+      </command>
+      <command step="193" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="194" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="195" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +236.68" Y=" +198.676" Z="  +25.745"/>
+      </command>
+      <command step="196" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="197" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="198" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +240.156" Y=" +216.781" Z="  +25.708"/>
+      </command>
+      <command step="199" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="200" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="201" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +236.676" Y=" +234.893" Z="  +25.693"/>
+      </command>
+      <command step="202" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="203" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="204" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +236.677" Y=" +246.987" Z="  +25.693"/>
+      </command>
+      <command step="205" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="206" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="207" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +257.65" Y=" +234.88" Z="  +25.67"/>
+      </command>
+      <command step="208" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="209" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="210" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +261.128" Y=" +216.764" Z="  +25.687"/>
+      </command>
+      <command step="211" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="212" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="213" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +257.673" Y=" +198.645" Z="  +25.724"/>
+      </command>
+      <command step="214" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="215" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="216" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +261.302" Y=" +180.516" Z="  +25.755"/>
+      </command>
+      <command step="217" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="218" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="219" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +258.038" Y=" +162.355" Z="  +25.779"/>
+      </command>
+      <command step="220" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="221" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="222" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +261.65" Y=" +144.21" Z="  +25.79"/>
+      </command>
+      <command step="223" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="224" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+      <command step="225" cmd_id="00" cmd_name="PTP MOTION" status="0">
+        <parameter abs_inc="0"/>
+        <point name="EndPoint" X=" +251.116" Y=" +138.189" Z="  +25.786"/>
+      </command>
+      <command step="226" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="103"/>
+      </command>
+      <command step="227" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="101"/>
+      </command>
+    </channel>
+    <channel id="101" comment="Sub_Prog_of_CH001" update="0" dispbkimg="1" bkimgpath="" bkimgwidth="0" bkimgheight="0" bkimgtrans="0" bkimgx="0.000000" bkimgy="0.000000" dispcad="1" cadgerber="0" cadmm="0" cadxrev="0" cadyrev="1" cadtype="1" cadfile="" cadofstx="+0000.000" cadofsty="+0000.000" dxfangle="0">
+      <command step="1" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="102"/>
+      </command>
+      <command step="2" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="102"/>
+      </command>
+      <command step="3" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="102"/>
+      </command>
+      <command step="4" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="102"/>
+      </command>
+      <command step="5" cmd_id="07" cmd_name="CALL CH." status="0">
+        <parameter out_ch="102"/>
+      </command>
+    </channel>
+    <channel id="102" comment="Sub_Prog_of_CH101" update="0" dispbkimg="1" bkimgpath="" bkimgwidth="0" bkimgheight="0" bkimgtrans="0" bkimgx="0.000000" bkimgy="0.000000" dispcad="1" cadgerber="0" cadmm="0" cadxrev="0" cadyrev="1" cadtype="1" cadfile="" cadofstx="+0000.000" cadofsty="+0000.000" dxfangle="0">
+      <command step="1" cmd_id="13" cmd_name="TIMER OUT" status="0">
+        <parameter out_ch="24" on_off="1" time="+0.01"/>
+      </command>
+      <command step="2" cmd_id="06" cmd_name="TIMER" status="0">
+        <parameter time=" +0.70"/>
+      </command>
+      <command step="3" cmd_id="01" cmd_name="STRAIGHT 1" status="0">
+        <parameter abs_inc="1" v="00"/>
+        <point name="EndPoint" Z="   +0.050"/>
+      </command>
+    </channel>
+    <channel id="103" comment="Sub_Prog_of_CH001" update="0" dispbkimg="1" bkimgpath="" bkimgwidth="0" bkimgheight="0" bkimgtrans="0" bkimgx="0.000000" bkimgy="0.000000" dispcad="1" cadgerber="0" cadmm="0" cadxrev="0" cadyrev="1" cadtype="1" cadfile="" cadofstx="+0000.000" cadofsty="+0000.000" dxfangle="0">
+      <command step="1" cmd_id="01" cmd_name="STRAIGHT 1" status="0">
+        <parameter abs_inc="1" v="00"/>
+        <point name="EndPoint" Z="   -0.100"/>
+      </command>
+    </channel>
+  </channel_list>
+</project>
