@@ -74,13 +74,15 @@ def propagate_offset_weighted(x_measured, y_measured,  z_measured, x_offset,y_of
         for disp in range(0,len(x_measured)):
             Di_invr = (pow(x_measured[disp] - (x_offset[disp] + x[i]), 2)+pow(y_measured[disp] - (y_offset[disp] - y[i]), 2))
             #when we look at the measured point only then displacement will be zero so for that assign weight = 1
-            if(Di_invr<=1e-10): Di_invr=1
-            else:Di_invr=1.0/Di_invr
+            if(Di_invr<=1e-10): Di_invr=10000.0
+            else: Di_invr=1.0/Di_invr
+            #print ("Di_invr : ",Di_invr)
             #print("z: ",z_measured[disp]," Di_inver = ",round(Di_invr,5))
             norm = norm + Di_invr
             x_cor_temp = x_cor_temp + ((x_offset[disp] + x[i]) * Di_invr)
             y_cor_temp = y_cor_temp + ((y_offset[disp] - y[i]) * Di_invr)
             z_cor_temp = z_cor_temp + (z_measured[disp] * Di_invr)
+        #print(round(x_cor_temp/norm,3)," : ",round(y_cor_temp/norm,3)," : ",z_cor_temp/norm)
         x_cor.append(round((x_cor_temp / norm),3))
         y_cor.append(round((y_cor_temp / norm),3))
         z_cor.append(round((z_cor_temp / norm),3))
@@ -163,5 +165,5 @@ if __name__ == "__main__":
     fileName_7_measured = sys.argv[2]
     fileName_7_pcb = sys.argv[3]
 
-    offset_correction(fileName_75_pcb, fileName_7_measured, fileName_7_pcb) 
+    offCorrection(fileName_75_pcb, fileName_7_measured, fileName_7_pcb) 
     
