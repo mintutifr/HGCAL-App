@@ -76,7 +76,7 @@ int Project(int imin, int imax, int xyProj[520], int& nBlk, int nBlkS[10], int n
 }
 
 
-int analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/csv_Focused/",string csvfile = "csv_Hexaboard_216",double *slopanderror = NULL){
+int analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/csv_Focused/",string csvfile = "csv_Hexaboard_2",double *slopanderror = NULL,string pass ="1" ){
   cout<<"-----------------------------begin-----"<<endl;
   cout<<filedir<<","<<csvfile<<endl;
   cout<<"-----------------------------endl-----"<<endl;
@@ -118,7 +118,7 @@ int analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/
   FILE *fptr;
   strcpy(in_dirpath, filedir.c_str()); 
   //sprintf(in_dirpath,   filedir.c_str());
-  sprintf(out_dirpath1, "%s../../Centroid/Pass1/",filedir.c_str());
+  sprintf(out_dirpath1, "%s../../Centroid/Pass%s/",filedir.c_str(),pass.c_str());
   sprintf(out_dirpath2, "check/dirpath2/");
   int iboard=5, ipass=1;
   cout<<"iboard = "<<iboard<<" "<<"ipass = "<<ipass<<endl;
@@ -757,33 +757,33 @@ int analyse_data_v07(string filedir = "offset_corrected_75_07042021/focused/CSV/
   //hfile->Write();
   hfile->Close();
    if(slopanderror != NULL){
-        slopanderror[0]=  fL1A->GetParameter(1);
-        slopanderror[1]=  fL1A->GetParError(1);
-	    slopanderror[2]=  fL1B->GetParameter(1);
-        slopanderror[3]=  fL1B->GetParError(1);
+        slopanderror[0]=  fL1A->GetParameter(1);//slop_L1A
+        slopanderror[1]=  fL1A->GetParError(1);//slopError_L1A
+	slopanderror[2]=  fL1B->GetParameter(1);//slop_L1B
+        slopanderror[3]=  fL1B->GetParError(1);//slopError_L1B
 
-	    slopanderror[4]=  fL2A->GetParameter(1);
-        slopanderror[5]=  fL2A->GetParError(1);
-        slopanderror[6]=  fL2B->GetParameter(1);
-        slopanderror[7]=  fL2B->GetParError(1);
+	slopanderror[4]=  fL2A->GetParameter(1);//slop_L2A
+        slopanderror[5]=  fL2A->GetParError(1);//slopError_L2A
+        slopanderror[6]=  fL2B->GetParameter(1);//slop_L2B
+        slopanderror[7]=  fL2B->GetParError(1);//slopError_L2B
 
-	    slopanderror[8]=  fL3A->GetParameter(1);
-        slopanderror[9]=  fL3A->GetParError(1);
-        slopanderror[10]=  fL3B->GetParameter(1);
-        slopanderror[11]=  fL3B->GetParError(1);
+	slopanderror[8]=  fL3A->GetParameter(1);//slop_L3A
+        slopanderror[9]=  fL3A->GetParError(1);//slopError_L3A
+        slopanderror[10]=  fL3B->GetParameter(1);//slop_L3B
+        slopanderror[11]=  fL3B->GetParError(1);//slopError_L3B
 
-	    slopanderror[12]=  0.21*sqrt((frm_center_x-centroid_x)*(frm_center_x-centroid_x) + (frm_center_y-centroid_y)*(frm_center_y-centroid_y));
-        slopanderror[13]= imageNo;
-        slopanderror[14]= 0.21*(frm_center_x-centroid_x);
-        slopanderror[15]= 0.21*(frm_center_y-centroid_y);
-        slopanderror[16]=double(holeNo);
+	slopanderror[12]=  0.21*sqrt((frm_center_x-centroid_x)*(frm_center_x-centroid_x) + (frm_center_y-centroid_y)*(frm_center_y-centroid_y));//offset
+        slopanderror[13]= imageNo;//image
+        slopanderror[14]= 0.21*(frm_center_x-centroid_x);//x_offset(micro mete)
+        slopanderror[15]= 0.21*(frm_center_y-centroid_y);//y_offset(micro mete)
+        slopanderror[16]=double(holeNo);//hole
 
-        slopanderror[17] = int_xL1;
-        slopanderror[18] = int_xL2;
-        slopanderror[19] = int_xL3;
-        slopanderror[20] = int_yL1;
-        slopanderror[21] = int_yL2;
-        slopanderror[22] = int_yL3;
+        slopanderror[17] = int_xL1;//x corrdinate intersection of L1A and L1B
+        slopanderror[18] = int_xL2;//x corrdinate intersection of L2A and L2B
+        slopanderror[19] = int_xL3;//x corrdinate intersection of L3A and L3B
+        slopanderror[20] = int_yL1;//y corrdinate intersection of L1A and L1B
+        slopanderror[21] = int_yL2;//y corrdinate intersection of L2A and L2B
+        slopanderror[22] = int_yL3;//y corrdinate intersection of L3A and L3B
 
         //cout<<slopanderror[14]<<","<<slopanderror[15]<<endl;
     }

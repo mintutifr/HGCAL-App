@@ -13,7 +13,7 @@ R.gInterpreter.ProcessLine('#include "analyse_data_v07.C"')
 #if not os.path.isdir(Dir+"/../data/Centroid/Pass1"):
     #os.mkdir(Dir+"/../data/Centroid/Pass1")
 #os.mkdir(Dir+"../Centroid")
-def Run_centriodFinder_inloop(inDir_forcsvfiles,outDir_towriteCSVfile):
+def Run_centriodFinder_inloop(inDir_forcsvfiles,outDir_towriteCSVfile,Pass):
     Dir=inDir_forcsvfiles
     csvfiles = os.listdir(Dir)
     slopanderror = np.zeros(24)
@@ -26,11 +26,13 @@ def Run_centriodFinder_inloop(inDir_forcsvfiles,outDir_towriteCSVfile):
         csv_file_wo_ext=file.split(".")[0]
         print(''+Dir+','+csv_file_wo_ext+'')
         try:
-            R.analyse_data_v07(Dir,csv_file_wo_ext,slopanderror)
+            R.analyse_data_v07(Dir,csv_file_wo_ext,slopanderror,Pass)
             #print(slopanderror[14])
-            event= [round(slopanderror[14],3),round(slopanderror[15],3),0.0,'S'+str(int(slopanderror[16])).zfill(2),int(slopanderror[13])]
-            entries.append(event)
-            pass
+            if((slopanderror[21]-slopanderror[20])/(slopanderror[18]-slopanderror[17])<0.02 and (slopanderror[21]-slopanderror[20])/(slopanderror[18]-slopanderror[17])>-0.05 and slopanderror[2]<-0.6 and slopanderror[2]>-0.7 and slopanderror[6]>0.55 and slopanderror[6]<0.7):
+                event= [round(slopanderror[14],3),round(slopanderror[15],3),0.0,'S'+str(int(slopanderror[16])).zfill(2),int(slopanderror[13])]
+                entries.append(event)
+                slopanderror = np.zeros(24)
+                pass
         except Exception as e:
             print(e)
             print("code crash")

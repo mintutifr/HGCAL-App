@@ -19,6 +19,16 @@ def Histogram_creator(file,leaf,bins,cut=""):
         bins[0] = 36
         bins[1] = -2
         bins[2] = 16
+    if(leaf == "slop_L1B"):
+        bins[0] = 20
+        bins[1] = -1.0
+        bins[2] = 0.0
+    if(leaf == "slop_L2B"):
+        bins[0] = 20
+        bins[1] = 0.0
+        bins[2] = 1.0
+
+
     h1 = rt.TH1F("h1","h1",bins[0],bins[1],bins[2])
     h1.SetYTitle("#image")
     h1.SetXTitle("slop")
@@ -26,9 +36,12 @@ def Histogram_creator(file,leaf,bins,cut=""):
     return h1
 if __name__ == "__main__":
     bins = []
-   # h = Histogram_creator("slopsAndOffset.root", "y_offset", bins,
-     #                     "(int_yL2-int_yL1)/(int_xL2-int_xL1)<0.01 && (int_yL2-int_yL1)/(int_xL2-int_xL1)>-0.05 && slop_L1B<-0.6 && slop_L1B>-0.85 && slop_L2B>0.6 && slop_L2B<0.7") #ONE SIGMA
-    h = Histogram_creator("slopsAndOffset.root", "(int_yL2-int_yL1)/(int_xL2-int_xL1)", bins,
-                          "(int_yL2-int_yL1)/(int_xL2-int_xL1)<0.04 && (int_yL2-int_yL1)/(int_xL2-int_xL1)>-0.08 && slop_L1B<-0.6 && slop_L1B>-0.85 && slop_L2B>0.6 && slop_L2B<0.7")  # TWO SIGMA
+    #h = Histogram_creator("slopsAndOffset.root", "y_offset", bins,
+    #                     "(int_yL2-int_yL1)/(int_xL2-int_xL1)<0.01 && (int_yL2-int_yL1)/(int_xL2-int_xL1)>-0.05 && slop_L1B<-0.6 && slop_L1B>-0.85 && slop_L2B>0.6 && slop_L2B<0.7") #ONE SIGMA
+    h = Histogram_creator("slopsAndOffset_Pass3_Image_75_02092021_run1.root", "(int_yL2-int_yL1)/(int_xL2-int_xL1)", bins,"")
+                          #"(int_yL2-int_yL1)/(int_xL2-int_xL1)<0.02 && (int_yL2-int_yL1)/(int_xL2-int_xL1)>-0.05 && slop_L1B<-0.6 && slop_L1B>-0.7 && slop_L2B>0.55 && slop_L2B<0.7")  # TWO SIGMA
+    #if((slopanderror[21]-slopanderror[20])/(slopanderror[18]-slopanderror[17])<0.02 and (slopanderror[21]-slopanderror[20])/(slopanderror[18]-slopanderror[17])>-0.05 and slopanderror[2]<-0.6 and slopanderror[2]>-0.7 and slopanderror[6]>0.55 and slopanderror[6]<0.7):
+    #h = Histogram_creator("slopsAndOffset_Pass3_Image_75_02092021_run1.root", "slop_L2B", bins,"")
+    #h = Histogram_creator("slopsAndOffset_pass2.root", "(int_yL2-int_yL1)/(int_xL2-int_xL1)", bins,"")
     h.Draw()
     input()

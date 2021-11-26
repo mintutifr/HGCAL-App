@@ -57,7 +57,7 @@ def offsect_cal(x_pcb,y_pcb,x_measured,y_measured):
     return x_offset,y_offset
 
 
-def propagate_offset_weighted(x_measured, y_measured,  z_measured, x_offset,y_offset,import_csv_file,exported_csv_file):
+def propagate_offset_weighted(x_measured, y_measured,  z_measured, hole_measured,x_offset, y_offset,import_csv_file,exported_csv_file):
     x, y, z, hole = csv_reader(import_csv_file)
     x_cor, y_cor, z_cor = array('d'), array('d'), array('d')
     #print(hole)
@@ -70,18 +70,19 @@ def propagate_offset_weighted(x_measured, y_measured,  z_measured, x_offset,y_of
         x_cor_temp = 0.0
         y_cor_temp = 0.0
         z_cor_temp = 0.0
+        print( "---------------------     %s    ---------------   %s  ---->"%(i,hole[i]))
         #loop over all measer point info given
         for disp in range(0,len(x_measured)):
             Di_invr = (pow(x_measured[disp] - (x_offset[disp] + x[i]), 2)+pow(y_measured[disp] - (y_offset[disp] - y[i]), 2))
             #when we look at the measured point only then displacement will be zero so for that assign weight = 1
             if(Di_invr<=1e-10): Di_invr=10000.0
             else: Di_invr=1.0/Di_invr
-            #print ("Di_invr : ",Di_invr)
             #print("z: ",z_measured[disp]," Di_inver = ",round(Di_invr,5))
             norm = norm + Di_invr
             x_cor_temp = x_cor_temp + ((x_offset[disp] + x[i]) * Di_invr)
             y_cor_temp = y_cor_temp + ((y_offset[disp] - y[i]) * Di_invr)
             z_cor_temp = z_cor_temp + (z_measured[disp] * Di_invr)
+            print ("Di_invr : %s  \t holeNo : %s \t X : %s \t Y : %s"%(Di_invr,hole_measured[disp],round((x_cor_temp / norm),3),round((y_cor_temp / norm),3)))
         #print(round(x_cor_temp/norm,3)," : ",round(y_cor_temp/norm,3)," : ",z_cor_temp/norm)
         x_cor.append(round((x_cor_temp / norm),3))
         y_cor.append(round((y_cor_temp / norm),3))
@@ -154,7 +155,7 @@ def offCorrection(fileName_75_pcb, parsed_csv , pathPass1CSV):
     #print("y_offset = ", y_offset)
 
     #offsetCorrect = '../data/CSV/offset/check_offset_corrected_75.csv'
-    propagate_offset_weighted(x_measured,y_measured,z_measured,x_offset,y_offset,fileName_75_pcb, pathPass1CSV)
+    propagate_offset_weighted(x_measured,y_measured,z_measured, hole_measured,x_offset,y_offset,fileName_75_pcb, pathPass1CSV)
 
 if __name__ == "__main__":
 

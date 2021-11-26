@@ -40,6 +40,7 @@ def propagate_offset(x_corc, y_corc, z_corc,import_csv_file,exported_csv_file):
     x, y, z,hole_off = csv_reader(import_csv_file)
     x_new, y_new, z_new = array('d'), array('d'), array('d')
     for i in range(0, len(x)):
+        #print(x[i]," + ",x_corc)
         x_new.append(round(x[i] + x_corc,3))
         y_new.append(round(-y[i] + y_corc,3))
         z_new.append(round(z[i] - z_corc,3))
@@ -65,9 +66,9 @@ def apply_offset_correction(fileName_offset_from_centroid_finder,fileName_offset
         for jj in range(0, len(hole_offset)):
             #print(ii, ",", jj)
             if(hole[ii]==hole_offset[jj]):
-                x_new.append(round(x[ii]+x_offset[jj],3))
-                y_new.append(round(y[ii] + y_offset[jj],3))
-                z_new.append(round(x[ii] + z_offset[jj],3))
+                x_new.append(round(x[ii] + 0.001*(x_offset[jj]),3)) #0.1 multiplied to convert micro to mili meter
+                y_new.append(round(y[ii] + 0.001*(y_offset[jj]),3))
+                z_new.append(round(z[ii] + 0.001*(z_offset[jj]),3))
                 hole_new.append(hole[ii])
                 #print(x[ii], ",", x_offset[jj], ",", x[ii]+x_offset[jj], y[ii], ",", y_offset[jj], ",", y[ii]+y_offset[jj],
                 #print(hole[ii],",", hole_offset[jj])

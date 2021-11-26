@@ -112,6 +112,19 @@ class My_main_Window(QDialog):
         RunInLoop_Button.setFont(font)
         RunInLoop_Button.clicked.connect(self.RunForAll)
 
+        importCSV_Button = QPushButton(" Import CSV ", self)
+        importCSV_Button.setGeometry(QtCore.QRect(10, 365, 135, 45))
+        importCSV_Button.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        importCSV_Button.setIcon(QtGui.QIcon("import_csv.png"))
+        importCSV_Button.setIconSize(QtCore.QSize(35, 43))
+        importCSV_Button.setToolTip("<h2> click here to import CSV file to apply the calculated offset<h2>")
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        importCSV_Button.setFont(font)
+        importCSV_Button.clicked.connect(self.loadcsv)
+
     def create_label(self):
         self.labelImgname = QLabel("Image Name")
         self.labelImgname.setMinimumSize(25, 18)
@@ -177,14 +190,20 @@ class My_main_Window(QDialog):
             if not os.path.exists(self.pwd + "/../data/CSV/Pass0"): os.mkdir(self.pwd + "/../data/CSV/Pass0")
             if not os.path.exists(self.pwd + "/../data/CSV/Pass1"): os.mkdir(self.pwd + "/../data/CSV/Pass1")
             if not os.path.exists(self.pwd + "/../data/CSV/Pass2"): os.mkdir(self.pwd + "/../data/CSV/Pass2")
+            if not os.path.exists(self.pwd + "/../data/CSV/Pass3"): os.mkdir(self.pwd + "/../data/CSV/Pass3")
+            if not os.path.exists(self.pwd + "/../data/CSV/Pass4"): os.mkdir(self.pwd + "/../data/CSV/Pass4")
             if not os.path.exists(self.pwd+"/../data/canny"): os.mkdir(self.pwd+"/../data/canny")
             if not os.path.exists(self.pwd + "/../data/canny/Pass0"): os.mkdir(self.pwd + "/../data/canny/Pass0")
             if not os.path.exists(self.pwd + "/../data/canny/Pass1"): os.mkdir(self.pwd + "/../data/canny/Pass1")
             if not os.path.exists(self.pwd + "/../data/canny/Pass2"): os.mkdir(self.pwd + "/../data/canny/Pass2")
+            if not os.path.exists(self.pwd + "/../data/canny/Pass3"): os.mkdir(self.pwd + "/../data/canny/Pass3")
+            if not os.path.exists(self.pwd + "/../data/canny/Pass4"): os.mkdir(self.pwd + "/../data/canny/Pass4")
             if not os.path.exists(self.pwd+"/../data/Centroid"): os.mkdir(self.pwd+"/../data/Centroid")
             if not os.path.exists(self.pwd + "/../data/Centroid/Pass0"): os.mkdir(self.pwd + "/../data/Centroid/Pass0")
             if not os.path.exists(self.pwd + "/../data/Centroid/Pass1"): os.mkdir(self.pwd + "/../data/Centroid/Pass1")
             if not os.path.exists(self.pwd + "/../data/Centroid/Pass2"): os.mkdir(self.pwd + "/../data/Centroid/Pass2")
+            if not os.path.exists(self.pwd + "/../data/Centroid/Pass3"): os.mkdir(self.pwd + "/../data/Centroid/Pass3")
+            if not os.path.exists(self.pwd + "/../data/Centroid/Pass4"): os.mkdir(self.pwd + "/../data/Centroid/Pass4")
             if not os.path.exists(self.pwd +"/check"): os.mkdir(self.pwd +"/check")
             if not os.path.exists(self.pwd +"/check/dirpath2"): os.mkdir(self.pwd +"/check/dirpath2")
             dirpath = os.path.dirname(filename)
@@ -216,6 +235,19 @@ class My_main_Window(QDialog):
                     self.currentImg = i
                     break
 
+    def loadcsv(self):
+        filename_csv, _ = QtWidgets.QFileDialog.getOpenFileName(
+            self, 'Select csv file', '', 'Image Files (*.csv)')
+        self.labelImg.setText("Image Type:" + filename_csv)
+        print(filename_csv)
+        self.Runtype = (filename_csv.split("/")[-1]).split("_")[0]
+        self.BoardNumber = (filename_csv.split("/")[-1]).split("_")[1]
+        self.Pass = ((filename_csv.split("/")[-1]).split("_")[-2]).rsplit("s",2)[-1]
+        self.date = ((filename_csv.split("/")[-1]).split("_")[-1]).split(".")[0]
+        #print("/../data/CSV/Pass"+string(int(self.Pass)+1)+"/"+self.Runtype+"_"+self.BoardNumber+"_Pass"+self.Pass+"_"+self.date+".csv")
+        #print(type(self.Pass)," : ",self.Pass)
+        #print("/../data/CSV/Pass"+string(int(self.Pass))+"/"+self.Runtype+"_"+self.BoardNumber+"_Pass"+self.Pass+"_"+self.date+".csv")
+ 
     def nextImage(self):
         # ensure that the file list has not been cleared due to missing files
         if self.fileList:
@@ -280,10 +312,10 @@ class My_main_Window(QDialog):
             self.Draw_Image(self.tight)
 
             #cv2.imwrite(os.path.dirname(self.fileList[self.currentImg])+"/canny/canny_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".jpeg",self.tight)
-            cv2.imwrite(self.pwd + "/../data/canny/Pass1/canny_" +
+            cv2.imwrite(self.pwd + "/../data/canny/Pass"+self.Pass+"/canny_" +
                         self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".jpeg", self.tight)
             #print(os.path.dirname(self.fileList[self.currentImg])+"/canny/canny_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".jpeg")
-            print(self.pwd + "/../data/canny/Pass1/canny_" +
+            print(self.pwd + "/../data/canny/Pass"+self.Pass+"/canny_" +
                   self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".jpeg saved")
             #print(  self.fileList[self.currentImg].split(".")[0].split("/")[-1] )
 
@@ -318,17 +350,17 @@ class My_main_Window(QDialog):
         try:
             self.Docanny()
             #print( "csv file ",(self.fileList[self.currentImg])+"/CSV/csv_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".csv" ,"exported")
-            print("csv file ", self.pwd + "/../data/CSV/Pass1/csv_" +
+            print("csv file ", self.pwd + "/../data/CSV/Pass"+self.Pass+"/csv_" +
                   self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".csv", "exported")
             #pd.DataFrame(self.coordinates).to_csv((self.fileList[self.currentImg].split("."))[0]+".csv", index=False,header=['y_coord', 'x_coord'])
             #pd.DataFrame(self.coordinates).to_csv(os.path.dirname(self.fileList[self.currentImg])+"/CSV/csv_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".csv", index=False,header=['y_coord', 'x_coord'])
-            pd.DataFrame(self.coordinates).to_csv(self.pwd + "/../data/CSV/Pass1/csv_" +
+            pd.DataFrame(self.coordinates).to_csv(self.pwd + "/../data/CSV/Pass"+self.Pass+"/csv_" +
                                                   self.fileList[self.currentImg].split(".")[0].split("/")[-1] + ".csv",
                                                   index=False, header=['y_coord', 'x_coord'])
 
             #self.RunCentriodFinder(os.path.dirname(self.fileList[self.currentImg])+"/CSV/","csv_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1])
             if(self.RunForAllflag==False):
-                self.RunCentriodFinder(self.pwd + "/../data/CSV/Pass1/","csv_" + self.fileList[self.currentImg].split(".")[0].split("/")[-1])
+                self.RunCentriodFinder(self.pwd + "/../data/CSV/Pass"+self.Pass+"/","csv_" + self.fileList[self.currentImg].split(".")[0].split("/")[-1])
             #slopanderror = np.zeros(13)
             #R.analyse_data_v07(os.path.dirname(self.fileList[self.currentImg])+"/CSV/","csv_"+self.fileList[self.currentImg].split(".")[0].split("/")[-1], slopanderror)
             #folder_path = os.path.dirname(self.fileList[self.currentImg])+"/Centroid/"
@@ -350,8 +382,8 @@ class My_main_Window(QDialog):
     def RunCentriodFinder(self,dir,imagename):
         try:
             slopanderror = np.zeros(24)
-            R.analyse_data_v07(dir,imagename, slopanderror)
-            folder_path =self.pwd + "/../data/Centroid/Pass1/"
+            R.analyse_data_v07(dir,imagename, slopanderror,self.Pass)
+            folder_path =self.pwd + "/../data/Centroid/Pass"+self.Pass+"/"
             file_type = '*png'
             files = glob.glob(folder_path + file_type)
             max_file = max(files, key=os.path.getctime)
@@ -379,12 +411,15 @@ class My_main_Window(QDialog):
             print(e)
             print("Please select the first image first something wrong in RunForAll")
         if(self.RunForAllflag):
-            Run_centriodFinder_inloop(self.pwd + "/../data/CSV/Pass1/",self.pwd+"/offset_from_centroidFinder.csv")
+            Run_centriodFinder_inloop(self.pwd + "/../data/CSV/Pass"+self.Pass+"/",self.pwd+"/offset_from_centroidFinder.csv",self.Pass)
             self.RunForAllflag = False
             try:
                 apply_offset_correction(self.pwd + "/offset_from_centroidFinder.csv",
-                                        self.pwd + "/../data/CSV/Pass1/Proto_Board55555_75_Pass1_20210714.csv",
-                                        self.pwd + "/../data/CSV/Pass2/Proto_Board55555_75_Pass2_20210714.csv") # this file name is hard code because board numaber is not in the iamge name 
+                                        self.pwd + "/../data/CSV/Pass"+self.Pass+"/"+self.Runtype+"_"+self.BoardNumber+"_Pass"+self.Pass+"_"+self.date+".csv",
+                                        self.pwd + "/../data/CSV/Pass"+str(int(self.Pass)+1)+"/"+self.Runtype+"_"+self.BoardNumber+"_Pass"+str(int(self.Pass)+1)+"_"+self.date+".csv") # this file name is hard code because board numaber is not in the iamge name
+                print("csv file written : ",self.pwd + "/../data/CSV/Pass"+str(int(self.Pass)+1)+"/"+self.Runtype+"_"+self.BoardNumber+"_Pass"+str(int(self.Pass)+1)+"_"+self.date+".csv")
+
+
             except Exception as e:
                 print(e)
                 print("offset corrected file has not been created check the inputs of apply_offset_correction")
